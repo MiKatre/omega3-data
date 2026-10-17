@@ -1,0 +1,3258 @@
+{
+ "fetched_at": "2026-10-17T23:46:17+00:00",
+ "brands": [
+  {
+   "id": "PLLF",
+   "name": "+LIFE"
+  },
+  {
+   "id": "AMBW",
+   "name": "A M B Well Inc."
+  },
+  {
+   "id": "ABDI",
+   "name": "Abdi Ibrahim Ilac San. ve Tic. A.S"
+  },
+  {
+   "id": "ACAO",
+   "name": "Ação Magistral"
+  },
+  {
+   "id": "ADAN",
+   "name": "ADA Industria de Alimentos Ltda (ADA Nutraceuticals)"
+  },
+  {
+   "id": "AGOI",
+   "name": "AG1 EU Enterprise Limited"
+  },
+  {
+   "id": "ALSK",
+   "name": "AlaskOmega"
+  },
+  {
+   "id": "AWBC",
+   "name": "All Wealth Beauty Concept Co., Ltd"
+  },
+  {
+   "id": "ALFM",
+   "name": "Alma Farmacie"
+  },
+  {
+   "id": "ALTA",
+   "name": "Altra Health Inc."
+  },
+  {
+   "id": "AMPP",
+   "name": "Amplecare Pharmaceutical Pty Ltd"
+  },
+  {
+   "id": "ANEW",
+   "name": "Anew"
+  },
+  {
+   "id": "ANHO",
+   "name": "anhoa"
+  },
+  {
+   "id": "PLEO",
+   "name": "Aquaomega"
+  },
+  {
+   "id": "ARBE",
+   "name": "Arbee Biomarine Extracts Pvt Ltd."
+  },
+  {
+   "id": "ARKT",
+   "name": "Arktiqa Naturals"
+  },
+  {
+   "id": "ARSP",
+   "name": "Ars Pharmae"
+  },
+  {
+   "id": "ATPL",
+   "name": "Athletic Therapeutic Pharma (ATP Lab)"
+  },
+  {
+   "id": "AUSP",
+   "name": "AUSupreme"
+  },
+  {
+   "id": "AVAN",
+   "name": "Avance"
+  },
+  {
+   "id": "BHIN",
+   "name": "B. Health Industria"
+  },
+  {
+   "id": "BARE",
+   "name": "Bare Biology Ltd."
+  },
+  {
+   "id": "BPFN",
+   "name": "Bare Performance Nutrition"
+  },
+  {
+   "id": "BARL",
+   "name": "Barlean's"
+  },
+  {
+   "id": "BASE",
+   "name": "BASE"
+  },
+  {
+   "id": "BAYR",
+   "name": "Bayer Healthcare Limited"
+  },
+  {
+   "id": "BELV",
+   "name": "Believe Supplements"
+  },
+  {
+   "id": "BELT",
+   "name": "Belt Nutrition Comércio de Suplementos"
+  },
+  {
+   "id": "BEBI",
+   "name": "Better Bioscience"
+  },
+  {
+   "id": "BYVT",
+   "name": "Beyond Vitamins"
+  },
+  {
+   "id": "BFIT",
+   "name": "B-Fit"
+  },
+  {
+   "id": "BIGE",
+   "name": "Bigens"
+  },
+  {
+   "id": "BIOH",
+   "name": "BIO-H"
+  },
+  {
+   "id": "BHNY",
+   "name": "BioHarmony"
+  },
+  {
+   "id": "BITN",
+   "name": "BioTRUST Nutrition"
+  },
+  {
+   "id": "BOWL",
+   "name": "Biowell"
+  },
+  {
+   "id": "BLKC",
+   "name": "Blackmores China Co., Ltd."
+  },
+  {
+   "id": "BSTR",
+   "name": "Blue Star Nutraceuticals"
+  },
+  {
+   "id": "CAOC",
+   "name": "BNM"
+  },
+  {
+   "id": "BRRW",
+   "name": "Branraw Co., Ltd"
+  },
+  {
+   "id": "BRIE",
+   "name": "brieye®"
+  },
+  {
+   "id": "BVRE",
+   "name": "BVREMIERE"
+  },
+  {
+   "id": "BWEL",
+   "name": "Bwell"
+  },
+  {
+   "id": "BYHE",
+   "name": "BYHEALTH"
+  },
+  {
+   "id": "BYHH",
+   "name": "BYHEALTH"
+  },
+  {
+   "id": "CINM",
+   "name": "C.I. Naturmega S.A."
+  },
+  {
+   "id": "CCOM",
+   "name": "Cambridge Commodities"
+  },
+  {
+   "id": "CPRV",
+   "name": "CanPrev Natural Health Products Ltd."
+  },
+  {
+   "id": "CRLL",
+   "name": "Carlson Nutritional Supplements"
+  },
+  {
+   "id": "CTLO",
+   "name": "Catalo Natural Health Science Inc."
+  },
+  {
+   "id": "CENI",
+   "name": "Central Nutrition Industria, Comercio, Importacao E Exportacao LTDA"
+  },
+  {
+   "id": "CERN",
+   "name": "Certified Naturals"
+  },
+  {
+   "id": "CHST",
+   "name": "Child Story Nutrition Inc."
+  },
+  {
+   "id": "CHKA",
+   "name": "Cho and Kang"
+  },
+  {
+   "id": "CMRC",
+   "name": "Coco March"
+  },
+  {
+   "id": "COBI",
+   "name": "Comgle Biomedical Co., Ltd."
+  },
+  {
+   "id": "CTTL",
+   "name": "Coretrition Technology Limited"
+  },
+  {
+   "id": "CPKI",
+   "name": "CPTKING"
+  },
+  {
+   "id": "CREN",
+   "name": "CreNeuroS"
+  },
+  {
+   "id": "CYTO",
+   "name": "Cyto-Matrix"
+  },
+  {
+   "id": "DABI",
+   "name": "Daiken Biomedical Co., Ltd."
+  },
+  {
+   "id": "DLSP",
+   "name": "Dark Lab Suplementos"
+  },
+  {
+   "id": "DVLT",
+   "name": "DaVinci Laboratories"
+  },
+  {
+   "id": "DDRP",
+   "name": "Ddrops Company"
+  },
+  {
+   "id": "DSAU",
+   "name": "Dermofarm S.A.U"
+  },
+  {
+   "id": "VTBX",
+   "name": "Devotion International Co., Ltd. (vitabox®)"
+  },
+  {
+   "id": "DINA",
+   "name": "Dinamis"
+  },
+  {
+   "id": "DCHK",
+   "name": "Doctor Check"
+  },
+  {
+   "id": "DRSP",
+   "name": "Doctor Spanholtz GmbH"
+  },
+  {
+   "id": "DOFT",
+   "name": "Doctor's First"
+  },
+  {
+   "id": "DFIT",
+   "name": "Doctor's Formulas In Touch Health N.A. Fikioris Co."
+  },
+  {
+   "id": "DFNG",
+   "name": "Dong Fang You Xuan (Beijing) Technology Co., Ltd."
+  },
+  {
+   "id": "DRID",
+   "name": "DR IND. E COM. IMP. EXP. DE ALIM. LTDA"
+  },
+  {
+   "id": "PAHS",
+   "name": "Dr. Brian"
+  },
+  {
+   "id": "DRNM",
+   "name": "Dr+ Nom"
+  },
+  {
+   "id": "DUAL",
+   "name": "Dua + Labs"
+  },
+  {
+   "id": "DYBT",
+   "name": "Dynes Biotechnology Co,. Ltd"
+  },
+  {
+   "id": "EVPH",
+   "name": "EasyVit Pharmaceuticals BV"
+  },
+  {
+   "id": "ECOV",
+   "name": "Ecovik ApS"
+  },
+  {
+   "id": "ENRV",
+   "name": "Enervit S.p.A."
+  },
+  {
+   "id": "EPAX",
+   "name": "EPAX Norway AS"
+  },
+  {
+   "id": "EGLO",
+   "name": "Epigenetic Labs, LLC DBA Organixx"
+  },
+  {
+   "id": "EPSM",
+   "name": "Epsilon Health"
+  },
+  {
+   "id": "EQUA",
+   "name": "Equaliv Pharma Indústria, Comércio e Distribuição"
+  },
+  {
+   "id": "ERBA",
+   "name": "Erba Vita Group S.p.A."
+  },
+  {
+   "id": "ESIS",
+   "name": "ESI srl"
+  },
+  {
+   "id": "ESSN",
+   "name": "Essential Nutrition"
+  },
+  {
+   "id": "ETSP",
+   "name": "Ethic Sport"
+  },
+  {
+   "id": "ETLS",
+   "name": "Ethos Labs SRL"
+  },
+  {
+   "id": "ENHP",
+   "name": "Everydae"
+  },
+  {
+   "id": "EVBS",
+   "name": "Evidence Based Supplements"
+  },
+  {
+   "id": "PESN",
+   "name": "Farmacia Personale Ltda"
+  },
+  {
+   "id": "FRMA",
+   "name": "Farmavita Ilac A.S."
+  },
+  {
+   "id": "FAVR",
+   "name": "Favron Ilac Kimya San.Ve Tic.A.S"
+  },
+  {
+   "id": "FEMM",
+   "name": "FEMME 40+"
+  },
+  {
+   "id": "FENB",
+   "name": "Fengjie Biomedical Co., Ltd."
+  },
+  {
+   "id": "FPIT",
+   "name": "Fitopreparatori Italiani"
+  },
+  {
+   "id": "FJLL",
+   "name": "Fjord Labs Limited"
+  },
+  {
+   "id": "FJOD",
+   "name": "Fjorda AS"
+  },
+  {
+   "id": "FMWC",
+   "name": "FMW Corp."
+  },
+  {
+   "id": "FSCS",
+   "name": "Food Studio Complements, S.L."
+  },
+  {
+   "id": "FOYE",
+   "name": "FoYes"
+  },
+  {
+   "id": "FOAU",
+   "name": "fruit of ayu"
+  },
+  {
+   "id": "FGSS",
+   "name": "FullGas Sport, S.L."
+  },
+  {
+   "id": "FNCT",
+   "name": "funcare of taiwan co., ltd."
+  },
+  {
+   "id": "GCRO",
+   "name": "GC Rieber VivoMega AS"
+  },
+  {
+   "id": "GELO",
+   "name": "Gelovery"
+  },
+  {
+   "id": "GEMA",
+   "name": "Gema Herrerias S.L.U"
+  },
+  {
+   "id": "GEON",
+   "name": "Geonat"
+  },
+  {
+   "id": "3LEG",
+   "name": "GeZhi Biomedical Ltd."
+  },
+  {
+   "id": "GJAV",
+   "name": "GJAV"
+  },
+  {
+   "id": "GBLS",
+   "name": "Global Suplementos"
+  },
+  {
+   "id": "GNCG",
+   "name": "GNC Global"
+  },
+  {
+   "id": "GNCC",
+   "name": "GNC Hong Kong Limited"
+  },
+  {
+   "id": "GLDO",
+   "name": "Golden Omega S.A."
+  },
+  {
+   "id": "GDLK",
+   "name": "Goldlake"
+  },
+  {
+   "id": "GHPL",
+   "name": "Good Health Products Ltd"
+  },
+  {
+   "id": "GRTA",
+   "name": "GRUPO TAPAJOS"
+  },
+  {
+   "id": "HAOP",
+   "name": "HAO PET"
+  },
+  {
+   "id": "HAVE",
+   "name": "Haver Farma Ilac AS"
+  },
+  {
+   "id": "CLVR",
+   "name": "HC Clover Productos y Servicios S.L."
+  },
+  {
+   "id": "HNHC",
+   "name": "Health and Happiness (H&H) Hong Kong Limited"
+  },
+  {
+   "id": "H1ST",
+   "name": "Health First"
+  },
+  {
+   "id": "HEFO",
+   "name": "Health Formula"
+  },
+  {
+   "id": "HLBC",
+   "name": "Health Leader Biomedical Co., Ltd"
+  },
+  {
+   "id": "HBTC",
+   "name": "Hebei Iron Hammer Technology Co., Ltd"
+  },
+  {
+   "id": "HRCL",
+   "name": "Heracles"
+  },
+  {
+   "id": "HHHH",
+   "name": "Hong Kong Healthcare & HeartBioTech Co., Limited"
+  },
+  {
+   "id": "HSNS",
+   "name": "HSN - Harrison Sport Nutrition S.L."
+  },
+  {
+   "id": "HUPH",
+   "name": "Huatai Pharma Inc."
+  },
+  {
+   "id": "HPCP",
+   "name": "Humanwell PuraCap Pharmaceuticals (Wuhan) Co., Ltd."
+  },
+  {
+   "id": "HHRH",
+   "name": "Hunan Hot Rule Health Technology Co., Ltd."
+  },
+  {
+   "id": "HURR",
+   "name": "Hurra"
+  },
+  {
+   "id": "IDNN",
+   "name": "IDN"
+  },
+  {
+   "id": "IGLT",
+   "name": "Igennus Healthcare Nutrition"
+  },
+  {
+   "id": "IICA",
+   "name": "Indcaps Industria e Comercio de Produtos Alimenticios Ltda"
+  },
+  {
+   "id": "INWE",
+   "name": "Inessa Wellness"
+  },
+  {
+   "id": "INNP",
+   "name": "Innopharm"
+  },
+  {
+   "id": "IVAP",
+   "name": "InnovaPharma SRL"
+  },
+  {
+   "id": "INVX",
+   "name": "InnovixLabs"
+  },
+  {
+   "id": "INTR",
+   "name": "INTERO"
+  },
+  {
+   "id": "IOGE",
+   "name": "iO.GENIX NUTRITION"
+  },
+  {
+   "id": "JHBI",
+   "name": "J&H Bio Co. Ltd."
+  },
+  {
+   "id": "JZAO",
+   "name": "J.zao"
+  },
+  {
+   "id": "JAMN",
+   "name": "Jamieson"
+  },
+  {
+   "id": "JHAI",
+   "name": "Jiangsu Hainekon Biotechnology Co. Ltd."
+  },
+  {
+   "id": "JWEI",
+   "name": "Jiangsu Weisikang FSTD Co., Ltd."
+  },
+  {
+   "id": "JINF",
+   "name": "Jinan Falanxiu Biological Engineering Co., Ltd"
+  },
+  {
+   "id": "KDPH",
+   "name": "KD Pharma Group™ S.A."
+  },
+  {
+   "id": "KEFM",
+   "name": "Keforma"
+  },
+  {
+   "id": "KERN",
+   "name": "Kern Pharma"
+  },
+  {
+   "id": "KINO",
+   "name": "KinOmega Biopharm Inc."
+  },
+  {
+   "id": "KNHC",
+   "name": "KN.Healthcare Biosciences Co., Limited"
+  },
+  {
+   "id": "KOBH",
+   "name": "Kobho Labs"
+  },
+  {
+   "id": "KNRC",
+   "name": "Korea Nutrition Research Center (KNRC)"
+  },
+  {
+   "id": "KRES",
+   "name": "Kress Farmaceutica S.A."
+  },
+  {
+   "id": "KUCL",
+   "name": "KUKA & CHIC S.L."
+  },
+  {
+   "id": "KZUF",
+   "name": "Kzufy"
+  },
+  {
+   "id": "LABO",
+   "name": "LABO Nutrition"
+  },
+  {
+   "id": "LBCT",
+   "name": "Laboratorio Catarinense LTDA"
+  },
+  {
+   "id": "LDCN",
+   "name": "Laboratorio de Complementos Nutricionales, S.L."
+  },
+  {
+   "id": "LIFO",
+   "name": "Life & Food Inc"
+  },
+  {
+   "id": "LEXT",
+   "name": "Life Extension"
+  },
+  {
+   "id": "LFPR",
+   "name": "LIFE PRO NUTRITION"
+  },
+  {
+   "id": "LIPH",
+   "name": "Lifeline Pharma AS"
+  },
+  {
+   "id": "LTUM",
+   "name": "Little Umbrella Limited"
+  },
+  {
+   "id": "LOGF",
+   "name": "Longify"
+  },
+  {
+   "id": "LOSO",
+   "name": "LOSOKI®"
+  },
+  {
+   "id": "LUBM",
+   "name": "Luhua Biomarine(Shandong)Co.,Ltd"
+  },
+  {
+   "id": "LRKY",
+   "name": "Lurky"
+  },
+  {
+   "id": "MAGP",
+   "name": "MAG"
+  },
+  {
+   "id": "MRTT",
+   "name": "MarathonTime"
+  },
+  {
+   "id": "MVZF",
+   "name": "Marco Viti Farmaceutici SPA-Zeta Farmaceutici Group"
+  },
+  {
+   "id": "MNSA",
+   "name": "MARTÍNEZ NIETO, S.A."
+  },
+  {
+   "id": "MASM",
+   "name": "Masmusculo"
+  },
+  {
+   "id": "MAXN",
+   "name": "Maxinutri Laboratório Nutraceutico"
+  },
+  {
+   "id": "MEIN",
+   "name": "Mederi Integrative Nutrition"
+  },
+  {
+   "id": "MDPH",
+   "name": "Medipharm Corp"
+  },
+  {
+   "id": "MEGD",
+   "name": "MegaGold"
+  },
+  {
+   "id": "MNCR",
+   "name": "Menacor"
+  },
+  {
+   "id": "MTBG",
+   "name": "Metagenics Belgium BV"
+  },
+  {
+   "id": "MBLL",
+   "name": "Mindbyte Labs Ltd"
+  },
+  {
+   "id": "DRAR",
+   "name": "Mio"
+  },
+  {
+   "id": "MSNT",
+   "name": "Misung Nutrition Co., Ltd."
+  },
+  {
+   "id": "MITO",
+   "name": "MitoQ Limited"
+  },
+  {
+   "id": "MOMT",
+   "name": "Momentous"
+  },
+  {
+   "id": "MUTD",
+   "name": "Muted"
+  },
+  {
+   "id": "MYRM",
+   "name": "MyRemedium"
+  },
+  {
+   "id": "NSPA",
+   "name": "Named S.r.l."
+  },
+  {
+   "id": "NSPO",
+   "name": "Namedsport srl"
+  },
+  {
+   "id": "NAEN",
+   "name": "Natalben"
+  },
+  {
+   "id": "NAGN",
+   "name": "Naturagen Ilac Kozmetik Gida San. Ve Tic.A.S"
+  },
+  {
+   "id": "NFCT",
+   "name": "Natural Factors"
+  },
+  {
+   "id": "NANU",
+   "name": "Natural Nutrition"
+  },
+  {
+   "id": "NATI",
+   "name": "Naturalis Inc"
+  },
+  {
+   "id": "NATU",
+   "name": "Naturell"
+  },
+  {
+   "id": "NATG",
+   "name": "Naturlifes Group Inc"
+  },
+  {
+   "id": "NISN",
+   "name": "Natusvita Indústria de Suplementos Nutricionais"
+  },
+  {
+   "id": "NEEX",
+   "name": "Neuralex"
+  },
+  {
+   "id": "NEWL",
+   "name": "New Life EFA"
+  },
+  {
+   "id": "NWCL",
+   "name": "Newscience Chile"
+  },
+  {
+   "id": "NWPR",
+   "name": "NEWSCIENCE PERU S.A.C."
+  },
+  {
+   "id": "NJHB",
+   "name": "Niang Jia Healthcare Biotech"
+  },
+  {
+   "id": "NOBL",
+   "name": "Nobel Ilac"
+  },
+  {
+   "id": "NOME",
+   "name": "Noromega"
+  },
+  {
+   "id": "SANO",
+   "name": "Norsan GmbH"
+  },
+  {
+   "id": "NVCN",
+   "name": "Novacon Life Biotechnology Co., Ltd."
+  },
+  {
+   "id": "NVPN",
+   "name": "NovasPure Nutrition Inc."
+  },
+  {
+   "id": "NVSA",
+   "name": "NovoSana (Taicang) Co., Ltd."
+  },
+  {
+   "id": "NOWC",
+   "name": "NOW"
+  },
+  {
+   "id": "NSPE",
+   "name": "Nu Skin Products Europe BV"
+  },
+  {
+   "id": "NUAB",
+   "name": "Nua Biological Innovations, S.L."
+  },
+  {
+   "id": "NUHA",
+   "name": "NUHAIM"
+  },
+  {
+   "id": "NUMA",
+   "name": "NuMedica"
+  },
+  {
+   "id": "NULA",
+   "name": "Nuotelande"
+  },
+  {
+   "id": "NTBT",
+   "name": "Nutrabetter®"
+  },
+  {
+   "id": "NTGP",
+   "name": "NUTRAGROUP"
+  },
+  {
+   "id": "NUTE",
+   "name": "Nutralie"
+  },
+  {
+   "id": "NUTA",
+   "name": "NUTRATA"
+  },
+  {
+   "id": "NBTA",
+   "name": "Nutribiotica SL"
+  },
+  {
+   "id": "NTRC",
+   "name": "NUTRICA LTD"
+  },
+  {
+   "id": "NTCS",
+   "name": "Nutricionate SL"
+  },
+  {
+   "id": "NTRD",
+   "name": "Nutridom"
+  },
+  {
+   "id": "NUFM",
+   "name": "Nutrifarma"
+  },
+  {
+   "id": "NUTY",
+   "name": "Nutrify"
+  },
+  {
+   "id": "NLYA",
+   "name": "Nutrileya Inc."
+  },
+  {
+   "id": "NPUR",
+   "name": "Nutripur Inc."
+  },
+  {
+   "id": "NUBA",
+   "name": "Nutrition Balance"
+  },
+  {
+   "id": "NTSD",
+   "name": "NUTRITION STANDARD"
+  },
+  {
+   "id": "NYO3",
+   "name": "NYO3 INTERNATIONAL AS"
+  },
+  {
+   "id": "NYTL",
+   "name": "Nyuvitas Technology Limited"
+  },
+  {
+   "id": "NZOR",
+   "name": "NZ Origin"
+  },
+  {
+   "id": "OMAP",
+   "name": "Omapure"
+  },
+  {
+   "id": "OVIA",
+   "name": "OmegaVia"
+  },
+  {
+   "id": "OREN",
+   "name": "Or1gen"
+  },
+  {
+   "id": "ORZK",
+   "name": "Orzaks Ilac ve Kimya Sanayi Tic. A.S."
+  },
+  {
+   "id": "OSTV",
+   "name": "OstroVit sp. z o.o."
+  },
+  {
+   "id": "ORNR",
+   "name": "Our Nutri"
+  },
+  {
+   "id": "PANV",
+   "name": "Panvel Farmacias"
+  },
+  {
+   "id": "PERM",
+   "name": "PERMANENTE FARMACIAS"
+  },
+  {
+   "id": "PNZL",
+   "name": "Pharma New Zealand PNZ Limited（Phatma®️）"
+  },
+  {
+   "id": "PLOP",
+   "name": "PharmaSuisse"
+  },
+  {
+   "id": "PHTC",
+   "name": "Pharmatech AS"
+  },
+  {
+   "id": "PHWI",
+   "name": "PharmaWin S.r.l."
+  },
+  {
+   "id": "PIFT",
+   "name": "PINK FIT"
+  },
+  {
+   "id": "PLRS",
+   "name": "Polaris"
+  },
+  {
+   "id": "PRLG",
+   "name": "Primalg"
+  },
+  {
+   "id": "PRON",
+   "name": "pro nutrition"
+  },
+  {
+   "id": "PROA",
+   "name": "Proaction Srl"
+  },
+  {
+   "id": "PRMO",
+   "name": "PromoPharma SPA"
+  },
+  {
+   "id": "PROT",
+   "name": "Protherapix Sdn Bhd"
+  },
+  {
+   "id": "PUOR",
+   "name": "Puori, Inc"
+  },
+  {
+   "id": "PURP",
+   "name": "Pure Pharma S.R.L."
+  },
+  {
+   "id": "DUTO",
+   "name": "Pure Research"
+  },
+  {
+   "id": "PRSC",
+   "name": "Pure Science"
+  },
+  {
+   "id": "PRED",
+   "name": "Pure Science Ecuador"
+  },
+  {
+   "id": "PURB",
+   "name": "Purevitality Botanicals Inc."
+  },
+  {
+   "id": "PZEN",
+   "name": "PUREZEN"
+  },
+  {
+   "id": "PURO",
+   "name": "Puro Omega"
+  },
+  {
+   "id": "RADL",
+   "name": "RAIA DROGASIL S.A."
+  },
+  {
+   "id": "RANU",
+   "name": "Rational Nutrition LLC"
+  },
+  {
+   "id": "REDG",
+   "name": "RedDog"
+  },
+  {
+   "id": "RNWL",
+   "name": "Renew Life Formulas, LLC"
+  },
+  {
+   "id": "RTUA",
+   "name": "Rituária"
+  },
+  {
+   "id": "STAR",
+   "name": "Saintstar"
+  },
+  {
+   "id": "SALU",
+   "name": "Salugea"
+  },
+  {
+   "id": "SEAC",
+   "name": "Seacome Limited"
+  },
+  {
+   "id": "SHVM",
+   "name": "SENHORA VITAMINA"
+  },
+  {
+   "id": "SFHM",
+   "name": "SFH Marine Ingredient"
+  },
+  {
+   "id": "SHHO",
+   "name": "Shan Ho Co., Ltd."
+  },
+  {
+   "id": "SKMB",
+   "name": "Shandong Kangjing Marine Bioengineering Co.,Ltd"
+  },
+  {
+   "id": "SHYP",
+   "name": "Shandong Yuwang Pharmaceutical Co., Ltd."
+  },
+  {
+   "id": "SAID",
+   "name": "Shanghai Aiyisheng Industrial Development Co. Ltd"
+  },
+  {
+   "id": "SHRT",
+   "name": "Shanghai Rivsea trading co.,ltd"
+  },
+  {
+   "id": "SHTY",
+   "name": "SHITEYANG"
+  },
+  {
+   "id": "SFNR",
+   "name": "Sifar Nutra S.r.l."
+  },
+  {
+   "id": "SKNY",
+   "name": "Skuny Bioscience Co., Ltd."
+  },
+  {
+   "id": "SMTC",
+   "name": "SM WHOLEFOODS INC."
+  },
+  {
+   "id": "SOCD",
+   "name": "Sociedad Comercializadora NLS Nutraline Suplement Limitada"
+  },
+  {
+   "id": "SOLU",
+   "name": "Solutex GC"
+  },
+  {
+   "id": "SOTE",
+   "name": "Soome Tervisetooted OÜ"
+  },
+  {
+   "id": "SOCP",
+   "name": "Sorocaps Industria Farmaceutica Ltda"
+  },
+  {
+   "id": "SOVA",
+   "name": "Sorvagen"
+  },
+  {
+   "id": "SPFL",
+   "name": "Spoonful Corp."
+  },
+  {
+   "id": "SPRT",
+   "name": "Sports Research"
+  },
+  {
+   "id": "SPRI",
+   "name": "SpringLeaf"
+  },
+  {
+   "id": "SUOM",
+   "name": "STR Global Group Oy"
+  },
+  {
+   "id": "SUMB",
+   "name": "SummitBio Corporation"
+  },
+  {
+   "id": "SUMR",
+   "name": "Surmerrykids"
+  },
+  {
+   "id": "SWIT",
+   "name": "Swisse Italia (Health and Happiness Italy S.r.l.)"
+  },
+  {
+   "id": "SWPL",
+   "name": "Swisse Wellness Pty Ltd"
+  },
+  {
+   "id": "TBIS",
+   "name": "TAB Ilac Sanayi A.S."
+  },
+  {
+   "id": "TSGH",
+   "name": "Tasly Great Health"
+  },
+  {
+   "id": "TRSS",
+   "name": "Tersus Life Sciences"
+  },
+  {
+   "id": "TLIT",
+   "name": "The littles"
+  },
+  {
+   "id": "THVS",
+   "name": "THE VITAMIN SHOPPE"
+  },
+  {
+   "id": "TWPT",
+   "name": "The Wellness Project"
+  },
+  {
+   "id": "THRA",
+   "name": "Theralogix, LLC"
+  },
+  {
+   "id": "THPT",
+   "name": "Think Pets"
+  },
+  {
+   "id": "TTOS",
+   "name": "Triton Omegas"
+  },
+  {
+   "id": "TRSO",
+   "name": "TRUESOURCE"
+  },
+  {
+   "id": "TSNU",
+   "name": "Tsunami Nutrition SRL"
+  },
+  {
+   "id": "UGAN",
+   "name": "U.G.A. Nutraceuticals Srl"
+  },
+  {
+   "id": "UGNI",
+   "name": "UGN International Functional Nutrition Co. , Limited"
+  },
+  {
+   "id": "ULNA",
+   "name": "Uloter Natural Health Inc."
+  },
+  {
+   "id": "ULBR",
+   "name": "Ultra Bandz LLC."
+  },
+  {
+   "id": "UNAG",
+   "name": "UndoAge"
+  },
+  {
+   "id": "UBNG",
+   "name": "Unicorn Brands Ltd (Nutrition Geeks)"
+  },
+  {
+   "id": "UNIF",
+   "name": "UNIFABRA"
+  },
+  {
+   "id": "UNIL",
+   "name": "Unilife Vitamins"
+  },
+  {
+   "id": "UOPY",
+   "name": "UOPYI"
+  },
+  {
+   "id": "USPN",
+   "name": "US Pharmatech NV Inc."
+  },
+  {
+   "id": "VVPS",
+   "name": "Velavit Vitamin Pazarlama Sanayi ve Ticaret Anonim Şirketi"
+  },
+  {
+   "id": "VENA",
+   "name": "VENATURA SAGLIK ÜRÜNLERI TICARET VE SANAYI ANONIM SIRKETI"
+  },
+  {
+   "id": "VETW",
+   "name": "Vetwish"
+  },
+  {
+   "id": "VHVI",
+   "name": "Vhita"
+  },
+  {
+   "id": "VINU",
+   "name": "VIBE Nutraceuticals, SL"
+  },
+  {
+   "id": "VNBS",
+   "name": "Vinabas Formulations SL (IVB Wellness)"
+  },
+  {
+   "id": "VIIC",
+   "name": "Vinsic"
+  },
+  {
+   "id": "VESY",
+   "name": "VitaEsynce"
+  },
+  {
+   "id": "VFNX",
+   "name": "Vitafenix Ilaç Gida Takviyeleri A.S."
+  },
+  {
+   "id": "VTA4",
+   "name": "Vitafor"
+  },
+  {
+   "id": "VITK",
+   "name": "VitaKids"
+  },
+  {
+   "id": "VTPL",
+   "name": "Vital Planet, LLC"
+  },
+  {
+   "id": "VTBS",
+   "name": "Vitalbliss"
+  },
+  {
+   "id": "VTRM",
+   "name": "VitalRemedyMD Inc"
+  },
+  {
+   "id": "VITW",
+   "name": "Vitamin Way Nutrition"
+  },
+  {
+   "id": "VILI",
+   "name": "VitaminLife®"
+  },
+  {
+   "id": "VTPR",
+   "name": "VitaminPure"
+  },
+  {
+   "id": "VIPA",
+   "name": "VITAPAW"
+  },
+  {
+   "id": "VIPH",
+   "name": "Vitas Pharma International SRL"
+  },
+  {
+   "id": "VTRB",
+   "name": "Vitoria Biosciences"
+  },
+  {
+   "id": "VITS",
+   "name": "Vits"
+  },
+  {
+   "id": "VIVN",
+   "name": "Viva Naturals Inc."
+  },
+  {
+   "id": "VVAP",
+   "name": "Viva Pharmaceutical Inc."
+  },
+  {
+   "id": "VOCU",
+   "name": "VOCUR®"
+  },
+  {
+   "id": "WESA",
+   "name": "WE Salus srl"
+  },
+  {
+   "id": "WEBB",
+   "name": "Webber Naturals"
+  },
+  {
+   "id": "WEBO",
+   "name": "WEBOTANIX"
+  },
+  {
+   "id": "WETM",
+   "name": "Weetamin"
+  },
+  {
+   "id": "WEIN",
+   "name": "Weider Nutrition"
+  },
+  {
+   "id": "WEBT",
+   "name": "Wellbest"
+  },
+  {
+   "id": "WELC",
+   "name": "Wellcare-Ilko Ilac San. ve Tic. A.S."
+  },
+  {
+   "id": "WLNX",
+   "name": "Wellnex Solutions"
+  },
+  {
+   "id": "WEPL",
+   "name": "WELLPLUS"
+  },
+  {
+   "id": "WHCC",
+   "name": "WHC Labs BV"
+  },
+  {
+   "id": "WLPL",
+   "name": "Wright Life Pharmaceutical Limited"
+  },
+  {
+   "id": "XSPB",
+   "name": "Xiamen SeaPulse Biotech Co.,Ltd."
+  },
+  {
+   "id": "XYMO",
+   "name": "Xymogen"
+  },
+  {
+   "id": "YAMA",
+   "name": "Yamamoto S.P.A."
+  },
+  {
+   "id": "YNGV",
+   "name": "Youngevity"
+  },
+  {
+   "id": "ZHPR",
+   "name": "zanhuo pro+"
+  },
+  {
+   "id": "ZENE",
+   "name": "Zenement"
+  },
+  {
+   "id": "ZENT",
+   "name": "Zentrum"
+  },
+  {
+   "id": "ZJKB",
+   "name": "Zhejiang Keming Biopharmaceuticals Co., Ltd"
+  },
+  {
+   "id": "SNOB",
+   "name": "Zhoushan Sinomega Biotech Engineering Co., Ltd."
+  },
+  {
+   "id": "ZZEN",
+   "name": "ZZEN LABS, S.L."
+  }
+ ],
+ "products": [
+  {
+   "id": "PURO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0001",
+   "name": "Natural DHA alta concentración",
+   "summary": "DHA contributes to the maintenance of normal brain and visual function. The EFSA approved dose is 250 mg per day.",
+   "type": "Softgels",
+   "rda": "2 softgels per day with the dinner or as recommended by your physician.",
+   "lots": 4,
+   "lot_label": "Lot #: 1226.1 (Jul 31, 2029)",
+   "lot": "1226.1",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%201226.1%2044402026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 95.0,
+     "measured": 117.0
+    },
+    "dha": {
+     "label": 405.0,
+     "measured": 497.0
+    },
+    "total_o3": {
+     "label": 565.0,
+     "measured": 665.0
+    },
+    "totox": "9.94",
+    "peroxide": "0.92",
+    "anisidine": "8.10",
+    "acid_value": "0.15",
+    "mercury": "<0.0120",
+    "lead": "<0.0064",
+    "pcbs": "1.35"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "PURO0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0002",
+   "name": null,
+   "lots": 3,
+   "lot_label": "Lot #: 1226.1 (Jul 31, 2029)",
+   "lot": "1226.1",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%201226.1%2044432026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 95.0,
+     "measured": 117.0
+    },
+    "dha": {
+     "label": 405.0,
+     "measured": 497.0
+    },
+    "total_o3": {
+     "label": 565.0,
+     "measured": 665.0
+    },
+    "totox": "9.94",
+    "peroxide": "0.92",
+    "anisidine": "8.10",
+    "acid_value": "0.15",
+    "mercury": "<0.0120",
+    "lead": "<0.0064",
+    "pcbs": "1.35"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "PURO0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0003",
+   "name": null,
+   "lots": 1,
+   "lot_label": "Lot #: L049035 (Aug 31, 2027)",
+   "lot": "L049035",
+   "expiry": "Aug 31, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%20L049035%20Natural%20DHA%20Vegan%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 2.0,
+     "measured": 5.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 250.0
+    },
+    "total_o3": {
+     "label": 252.0,
+     "measured": 256.0
+    },
+    "totox": "18.08",
+    "peroxide": "1.49",
+    "anisidine": "15.10",
+    "acid_value": "0.21",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.0999",
+    "dioxins": "0.303",
+    "dl_pcbs": "0.00692"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "PURO0004",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0004",
+   "name": null,
+   "lots": 2,
+   "lot_label": "Lot #: 1325 3 (Apr 30, 2028)",
+   "lot": "1325 3",
+   "expiry": "Apr 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%201325%203%2030852025%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 529.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 272.0
+    },
+    "total_o3": {
+     "label": 800.0,
+     "measured": 894.0
+    },
+    "totox": "10.24",
+    "peroxide": "2.27",
+    "anisidine": "5.70",
+    "acid_value": "0.28",
+    "mercury": "<0.05",
+    "lead": "<0.02",
+    "pcbs": "<0.020",
+    "dioxins": "0.169",
+    "dl_pcbs": "0.141"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "PURO0005",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0005",
+   "name": null,
+   "lots": 2,
+   "lot_label": "Lot #: L51649101 (Jun 30, 2028)",
+   "lot": "L51649101",
+   "expiry": "Jun 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%20L51649101%2038882025%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 740.0,
+     "measured": 847.0
+    },
+    "dha": {
+     "label": 460.0,
+     "measured": 574.0
+    },
+    "total_o3": {
+     "label": 1390.0,
+     "measured": 1781.0
+    },
+    "totox": "10.94",
+    "peroxide": "0.67",
+    "anisidine": "9.6",
+    "acid_value": "0.09",
+    "mercury": "<0.005",
+    "lead": "<0.02",
+    "pcbs": "1.73",
+    "dioxins": "0.343",
+    "dl_pcbs": "0.207"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "PURO0006",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PURO0006",
+   "name": null,
+   "lots": 2,
+   "lot_label": "Lot #: 1625.5 (Sep 30, 2028)",
+   "lot": "1625.5",
+   "expiry": "Sep 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Beps%20Biopharm%20S.L.%201625.5%2041602025%20Report%20Rev%201.pdf",
+   "report": {
+    "epa": {
+     "label": 800.0,
+     "measured": 837.0
+    },
+    "total_o3": {
+     "label": 900.0,
+     "measured": 930.0
+    },
+    "totox": "8.25",
+    "peroxide": "1.34",
+    "anisidine": "5.57",
+    "acid_value": "0.15",
+    "mercury": "<0.0124",
+    "lead": "0.0165",
+    "pcbs": "0.122",
+    "dioxins": "0.221",
+    "dl_pcbs": "0.0104"
+   },
+   "brand_id": "PURO",
+   "brand": "Puro Omega"
+  },
+  {
+   "id": "LFPR0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LFPR0001",
+   "name": "OMEGA PRO",
+   "summary": "OMEGA PRO is a clean and highly concentrated fish oil product. Each softgel contains a minimum 360 mg of EPA and 240 mg of DHA.",
+   "type": "Softgels",
+   "rda": "3 softgels daily.",
+   "lots": 23,
+   "lot_label": "Lot #: 26-1390 (Dec 31, 2028)",
+   "lot": "26",
+   "expiry": "Dec 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/LIFE%20PRO%20NUTRITION%2026-1390%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 360.0,
+     "measured": 385.0
+    },
+    "dha": {
+     "label": 240.0,
+     "measured": 275.0
+    },
+    "totox": "11.32",
+    "peroxide": "2.27",
+    "anisidine": "6.78",
+    "acid_value": "0.12",
+    "mercury": "<0.0124",
+    "lead": "0.0096",
+    "pcbs": "0.105"
+   },
+   "brand_id": "LFPR",
+   "brand": "LIFE PRO NUTRITION"
+  },
+  {
+   "id": "SANO0006",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0006",
+   "name": "NORSAN Omega-3 Vegan",
+   "summary": "Omega-3 VEGAN is a 100% plant-based algal oil derived from microalgae (Schizochytrium sp.), combined with olive oil and natural lemon oil, supplying essential omega-3 fatty acids (EPA and DHA) and vegan Vitamin D3.",
+   "type": "Capsules",
+   "rda": "Take 5 ml (1 teaspoon) daily with or after a meal.",
+   "lots": 1,
+   "lot_label": "Lot #: 584282605 (Oct 31, 2027)",
+   "lot": "584282605",
+   "expiry": "Oct 31, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20584282605%2033992026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 609.0,
+     "measured": 740.0
+    },
+    "dha": {
+     "label": 1158.0,
+     "measured": 1307.0
+    },
+    "total_o3": {
+     "label": 2000.0,
+     "measured": 2235.0
+    },
+    "totox": "10.35",
+    "peroxide": "0.55",
+    "anisidine": "9.25",
+    "acid_value": "0.21",
+    "mercury": "<0.0117",
+    "lead": "<0.0063",
+    "pcbs": "0.172"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0008",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0008",
+   "name": "NORSAN Omega-3 VEGAN EPA",
+   "summary": "NORSAN Omega-3 VEGAN EPA is a 100% plant-based algal oil high in EPA derived from microalgae (Schizochytrium sp.), combined with olive oil, natural orange oil, and vegan Vitamin D3.",
+   "type": "Capsules",
+   "rda": "Take 5 ml (1 teaspoon) daily with or after a meal.",
+   "lots": 1,
+   "lot_label": "Lot #: 1053092605 (Oct 31, 2027)",
+   "lot": "1053092605",
+   "expiry": "Oct 31, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%201053092605%2034002026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 1104.0,
+     "measured": 1324.0
+    },
+    "dha": {
+     "label": 770.0,
+     "measured": 841.0
+    },
+    "total_o3": {
+     "label": 2000.0,
+     "measured": 2421.0
+    },
+    "totox": "9.03",
+    "peroxide": "1.50",
+    "anisidine": "6.03",
+    "acid_value": "0.20",
+    "mercury": "<0.0123",
+    "lead": "<0.0066",
+    "pcbs": "0.144"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0007",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0007",
+   "name": "NORSAN Omega-3 VEGAN Kapseln",
+   "summary": "NORSAN Omega-3 VEGAN Kapseln are 100% plant-based algal oil formula in softgel capsules derived from microalgae (Schizochytrium sp.), supplying essential omega-3 fatty acids (EPA and DHA).",
+   "type": "Capsules",
+   "rda": "Take 4 capsules daily with sufficient liquid during or after a meal.",
+   "lots": 1,
+   "lot_label": "Lot #: L050526 (May 31, 2028)",
+   "lot": "L050526",
+   "expiry": "May 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20L050526%2034012026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 517.0,
+     "measured": 565.0
+    },
+    "dha": {
+     "label": 984.0,
+     "measured": 1043.0
+    },
+    "total_o3": {
+     "label": 1700.0,
+     "measured": 1743.0
+    },
+    "totox": "9.28",
+    "peroxide": "2.79",
+    "anisidine": "3.70",
+    "acid_value": "0.13",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.0900"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0001",
+   "name": "Omega-3 ARKTIS",
+   "summary": "Omega-3 ARKTIS is a clean and Naturally concentrated omega-3 fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Liquids",
+   "rda": "10 ml daily",
+   "lots": 2,
+   "lot_label": "Lot #: 644322606 (May 31, 2028)",
+   "lot": "644322606",
+   "expiry": "May 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20644322606%2033942026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 750.0,
+     "measured": 750.0
+    },
+    "dha": {
+     "label": 975.0,
+     "measured": 1045.0
+    },
+    "total_o3": {
+     "label": 2000.0,
+     "measured": 2279.0
+    },
+    "totox": "7.05",
+    "peroxide": "1.07",
+    "anisidine": "4.91",
+    "acid_value": "0.06",
+    "mercury": "<0.0111",
+    "lead": "<0.0059",
+    "pcbs": "3.84"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0005",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0005",
+   "name": "Omega-3 ARKTIS KAPSELN",
+   "summary": "Omega-3 ARKTIS KAPSELN is a clean and Naturally concentrated omega3 fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Capsules",
+   "rda": "6 capsules",
+   "lots": 1,
+   "lot_label": "Lot #: Y0886 (Jun 30, 2027)",
+   "lot": "Y0886",
+   "expiry": "Jun 30, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20Y0886%2033332025%20Report%20Rev2.pdf",
+   "report": {
+    "epa": {
+     "label": 480.0,
+     "measured": 486.0
+    },
+    "dha": {
+     "label": 720.0,
+     "measured": 720.0
+    },
+    "total_o3": {
+     "label": 1500.0,
+     "measured": 1526.0
+    },
+    "totox": "4.42",
+    "peroxide": "2.11",
+    "anisidine": "0.20",
+    "acid_value": "0.06",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "0.678",
+    "dioxins": "0.139",
+    "dl_pcbs": "0.00673"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0002",
+   "name": "Omega-3 KAPSELN",
+   "summary": "Omega-3 KAPSELN is a clean and Naturally concentrated omega3 fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Capsules",
+   "rda": "4 capsules daily",
+   "lots": 2,
+   "lot_label": "Lot #: A4455 (Apr 30, 2028)",
+   "lot": "A4455",
+   "expiry": "Apr 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20A4455%2033972026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 707.0,
+     "measured": 720.0
+    },
+    "dha": {
+     "label": 368.0,
+     "measured": 385.0
+    },
+    "total_o3": {
+     "label": 1500.0,
+     "measured": 1500.0
+    },
+    "totox": "12.25",
+    "peroxide": "1.33",
+    "anisidine": "9.59",
+    "acid_value": "0.13",
+    "mercury": "<0.0123",
+    "lead": "<0.0066",
+    "pcbs": "1.27"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0003",
+   "name": "Omega-3 Total Naturell",
+   "summary": "Omega-3 Total Natural is a clean and Naturally concentrated omega-3 fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Liquids",
+   "rda": "8 ml daily",
+   "lots": 2,
+   "lot_label": "Lot #: 471102604 (Mar 31, 2028)",
+   "lot": "471102604",
+   "expiry": "Mar 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20471102604%2033962026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 1040.0,
+     "measured": 1040.0
+    },
+    "dha": {
+     "label": 600.0,
+     "measured": 682.0
+    },
+    "total_o3": {
+     "label": 2000.0,
+     "measured": 2111.0
+    },
+    "totox": "11.94",
+    "peroxide": "1.09",
+    "anisidine": "9.76",
+    "acid_value": "0.23",
+    "mercury": "<0.0122",
+    "lead": "<0.0065",
+    "pcbs": "4.84"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "SANO0004",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=SANO0004",
+   "name": "Omega-3 Total Zitrone",
+   "summary": "Omega-3 Total Lemon is a clean and Naturally concentrated omega-3 fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Liquids",
+   "rda": "8 ml daily",
+   "lots": 2,
+   "lot_label": "Lot #: 464262605 (Apr 30, 2028)",
+   "lot": "464262605",
+   "expiry": "Apr 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Norsan%20GmbH%20464262605%2033952026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 1040.0,
+     "measured": 1012.0
+    },
+    "dha": {
+     "label": 600.0,
+     "measured": 699.0
+    },
+    "total_o3": {
+     "label": 2000.0,
+     "measured": 2141.0
+    },
+    "totox": "16.48",
+    "peroxide": "2.17",
+    "anisidine": "12.14",
+    "acid_value": "0.25",
+    "mercury": "<0.0122",
+    "lead": "<0.0065",
+    "pcbs": "4.84"
+   },
+   "brand_id": "SANO",
+   "brand": "Norsan GmbH"
+  },
+  {
+   "id": "VNBS0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0002",
+   "name": "Omega 3 rico en DHA",
+   "summary": "DHA-rich Omega 3 is formulated to aid in brain health, vision, and male fertility. It is composed of Omegatex® 0076TG and 8000TG fish oils that come exclusively from body oils of wild fish, specifically anchovies, sardines and mackerel from the Pacific, Atlantic or Western Indian Oceans. Omegatex® 0076TG and 8000TG fish oils meet the demanding standards of the international organization GOED and a",
+   "type": "Capsules",
+   "rda": "Take 1 capsule a day.",
+   "lots": 4,
+   "lot_label": "Lot #: 1326.4 (Sep 30, 2029)",
+   "lot": "1326.4",
+   "expiry": "Sep 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.4%2049002026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 121.05,
+     "measured": 148.0
+    },
+    "dha": {
+     "label": 800.0,
+     "measured": 804.0
+    },
+    "total_o3": {
+     "label": 948.35,
+     "measured": 1028.0
+    },
+    "totox": "15.79",
+    "peroxide": "0.11",
+    "anisidine": "15.57",
+    "acid_value": "0.22",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "0.739657"
+   },
+   "brand_id": "VNBS",
+   "brand": "Vinabas Formulations SL (IVB Wellness)"
+  },
+  {
+   "id": "VNBS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0001",
+   "name": "Omega rico en EPA",
+   "summary": "EPA-rich omega-3s are formulated to support cardiovascular health , mental well-being , and inflammation control . Thanks to its high concentration of EPA, it's ideal for improving heart health, assisting with mental health conditions like anxiety and depression, and combating chronic inflammation. It is composed of Omegatex® 5020TG fish oil, which comes exclusively from the body oils of wild fish",
+   "type": "Capsules",
+   "rda": "Take 2 capsules a day.",
+   "lots": 4,
+   "lot_label": "Lot #: 1326.3 (Aug 31, 2029)",
+   "lot": "1326.3",
+   "expiry": "Aug 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.3%2044532026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 526.0
+    },
+    "dha": {
+     "label": 200.0,
+     "measured": 219.0
+    },
+    "total_o3": {
+     "label": 750.0,
+     "measured": 862.0
+    },
+    "totox": "5.61",
+    "peroxide": "0.07",
+    "anisidine": "5.47",
+    "acid_value": "0.20",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "1.79"
+   },
+   "brand_id": "VNBS",
+   "brand": "Vinabas Formulations SL (IVB Wellness)"
+  },
+  {
+   "id": "GEMA0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=GEMA0001",
+   "name": "Omega 1500 EPA/DHA",
+   "summary": "Food supplement based on anchovy fish oil, a source of omega-3 fatty acids EPA and DHA, enriched with vitamin E, an antioxidant that helps protect cells from oxidative stress.",
+   "type": "Capsules",
+   "rda": "It is recommended to take 2 capsules per day with a glass of water, preferably with a main meal.",
+   "lots": 1,
+   "lot_label": "Lot #: B3029 (Jul 31, 2028)",
+   "lot": "B3029",
+   "expiry": "Jul 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Gema%20Herrerias%20S.L.U%20B3029%2038252026%20Product%20Approval%20Report%20Rev1.pdf",
+   "report": {
+    "epa": {
+     "label": 1000.0,
+     "measured": 1037.0
+    },
+    "dha": {
+     "label": 500.0,
+     "measured": 595.0
+    },
+    "total_o3": {
+     "label": 1700.0,
+     "measured": 1804.0
+    },
+    "totox": "8.58",
+    "peroxide": "0.94",
+    "anisidine": "6.7",
+    "acid_value": "0.31",
+    "mercury": "<0.0122",
+    "lead": "<0.0065",
+    "pcbs": "0.660"
+   },
+   "brand_id": "GEMA",
+   "brand": "Gema Herrerias S.L.U"
+  },
+  {
+   "id": "ESIS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESIS0001",
+   "name": "OMEGA 3 Extra Pure",
+   "summary": "Omega 3 Extra Pure by ESI is an innovative food supplement rich in Omega 3. A very special technology avoids the return of taste and bad smell.",
+   "type": "Capsules",
+   "rda": "1-5 capsules daily",
+   "lots": 42,
+   "lot_label": "Lot #: C148K (Mar 31, 2028)",
+   "lot": "C148K",
+   "expiry": "Mar 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/ESI%20srl%20C148K%2031432026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 430.0,
+     "measured": 439.0
+    },
+    "dha": {
+     "label": 215.0,
+     "measured": 226.0
+    },
+    "total_o3": {
+     "label": 734.0,
+     "measured": 771.0
+    },
+    "totox": "3.72",
+    "peroxide": "0.26",
+    "anisidine": "3.2",
+    "acid_value": "0.80",
+    "mercury": "<0.05",
+    "lead": "<0.02",
+    "pcbs": "2",
+    "dioxins": "0.30",
+    "dl_pcbs": "0.173"
+   },
+   "brand_id": "ESIS",
+   "brand": "ESI srl"
+  },
+  {
+   "id": "NOWC0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NOWC0001",
+   "name": "NOW Ultra 97% Omega-3 Fish Oil",
+   "summary": "Total omega-3 purity is up to 97%, and raw materials is from the Peruvian fisheries of the deep sea wild fish, while mini particles are easy to swallow.Each 2-capsule serving contains 1230mg Omega-3, 670mg-EPA, 435mg-DHA, 12.5mg-DPA, 112.5mg-other Omega-3, rTG form, with high purity and high absorption rate at the same time, scientifically remodeling the heart and brain youthfulness.",
+   "type": "Softgels",
+   "rda": "Take 2 mini softgels daily with food",
+   "lots": 18,
+   "lot_label": "Lot #: 26061661 (Jun 11, 2028)",
+   "lot": "26061661",
+   "expiry": "Jun 11, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Ultra%2097%200mega-3%20fish%20oil%2012s%20exp%2011-06-2028%20-%2026061661%2042372026%20Report_rev1.pdf",
+   "report": {
+    "epa": {
+     "label": 670.0,
+     "measured": 716.0
+    },
+    "dha": {
+     "label": 435.0,
+     "measured": 474.0
+    },
+    "total_o3": {
+     "label": 1230.0,
+     "measured": 1276.0
+    },
+    "totox": "7.9",
+    "peroxide": "2.0",
+    "anisidine": "3.9",
+    "acid_value": "0.47",
+    "mercury": "<0.01",
+    "lead": "<0.02",
+    "pcbs": "7.42"
+   },
+   "brand_id": "NOWC",
+   "brand": "NOW"
+  },
+  {
+   "id": "IOGE0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=IOGE0001",
+   "name": "Super Omega 3",
+   "summary": "Super Omega 3 is a food supplement based on omega 3 fatty-acids with the best quality.",
+   "type": "Softgels",
+   "rda": "Take 1 softgel per day with a glass of water.",
+   "lots": 2,
+   "lot_label": "Lot #: 262675 (Mar 31, 2029)",
+   "lot": "262675",
+   "expiry": "Mar 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Ayolabs%20262675%2036082026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 521.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 281.0
+    },
+    "totox": "10.67",
+    "peroxide": "1.90",
+    "anisidine": "6.87",
+    "acid_value": "0.06",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "2.64"
+   },
+   "brand_id": "IOGE",
+   "brand": "iO.GENIX NUTRITION"
+  },
+  {
+   "id": "WEBO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WEBO0001",
+   "name": "OMEGA 3 Fórmula",
+   "summary": "Omega 3 Formula is a dietary supplement made with high-purity Golden Omega® fish oil and natural vitamin E, formulated to support cardiovascular, brain, eye, and metabolic health and protect against oxidation. IFOS-certified.",
+   "type": "Capsules",
+   "rda": "It is recommended to take 1 to 3 capsules a day, preferably with your main meals. Combine with a varied diet and daily physical activity.",
+   "lots": 0,
+   "brand_id": "WEBO",
+   "brand": "WEBOTANIX"
+  },
+  {
+   "id": "LEXT0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0003",
+   "name": null,
+   "lots": 1,
+   "lot_label": "Lot #: 44006213 (Feb 29, 2028)",
+   "lot": "44006213",
+   "expiry": "Feb 29, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%2044006213%2042152026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 300.0,
+     "measured": 330.0
+    },
+    "dha": {
+     "label": 225.0,
+     "measured": 248.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 656.0
+    },
+    "totox": "1.50",
+    "peroxide": "0.06",
+    "anisidine": "1.38",
+    "acid_value": "0.15",
+    "mercury": "<0.0112",
+    "lead": "<0.0060",
+    "pcbs": "0.0621"
+   },
+   "brand_id": "LEXT",
+   "brand": "Life Extension"
+  },
+  {
+   "id": "LEXT0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0002",
+   "name": "Super Omega-3 EPA/DHA",
+   "summary": "Life Extension Super Omega-3 is a clean and highly concentrated omega-3 fish oil product. Each 1000 mg sample contains a minimum 60% omega-3 concentration as combined EPA and DHA, as well as polyphen-oil TM olive fruit extract and sesame seed lignin extract.",
+   "type": "Softgels",
+   "rda": "Take two softgels twice daily with meals or as recommended by a healthcare practitioner",
+   "lots": 108,
+   "lot_label": "Lot #: 260348 (Jul 31, 2028)",
+   "lot": "260348",
+   "expiry": "Jul 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%20260348%2036622026%20Product%20Approval%20Report%20%282%29.pdf",
+   "report": {
+    "epa": {
+     "label": 700.0,
+     "measured": 858.0
+    },
+    "dha": {
+     "label": 500.0,
+     "measured": 607.0
+    },
+    "totox": "4.58",
+    "peroxide": "1.29",
+    "anisidine": "2",
+    "acid_value": "1.86",
+    "mercury": "<0.0118",
+    "lead": "<0.0063",
+    "pcbs": "0.743"
+   },
+   "brand_id": "LEXT",
+   "brand": "Life Extension"
+  },
+  {
+   "id": "NANU0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0001",
+   "name": null,
+   "lots": 0,
+   "brand_id": "NANU",
+   "brand": "Natural Nutrition"
+  },
+  {
+   "id": "NANU0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0002",
+   "name": null,
+   "lots": 0,
+   "brand_id": "NANU",
+   "brand": "Natural Nutrition"
+  },
+  {
+   "id": "WHCC00009",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC00009",
+   "name": "B-HADA",
+   "summary": "B-HADA contains purified borage oil that is richin gamma-linolenic acid (GLA). You can consumethis GLA (omega-6) with confidence thanks to thecombination with EPA and DHA from the powerfulfish oil concentrate (95% omega-3). The uniquecomplex is also enriched with organic seabuckthorn oil (omega-7).This makes B-HADA quite exceptional in providinga magnificent balance of fatty acids between omega-3,",
+   "type": "Capsules",
+   "rda": "2 softgels per day, preferably taken with food.",
+   "lots": 9,
+   "lot_label": "Lot #: 30026967 (Dec 31, 2028)",
+   "lot": "30026967",
+   "expiry": "Dec 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030026967%2032402026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 140.0,
+     "measured": 144.0
+    },
+    "dha": {
+     "label": 95.0,
+     "measured": 99.0
+    },
+    "total_o3": {
+     "label": 249.0,
+     "measured": 275.0
+    },
+    "totox": "3.24",
+    "peroxide": "0.12",
+    "anisidine": "3",
+    "acid_value": "2.02",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.347"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC000010",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC000010",
+   "name": "OMEGA 4 Dogs",
+   "summary": "Omega-3 fatty acids, especially EPA and DHA, support your dog’shealth: Help keep the joints supple, Support skin function and a shiny coat, Help maintain a healthy heart, Support brain function and eyesight",
+   "type": "Capsules",
+   "rda": "80-90mg. Directly in the mouth (after eating) or through the food.",
+   "lots": 1,
+   "lot_label": "Lot #: 50159101 (Feb 28, 2027)",
+   "lot": "50159101",
+   "expiry": "Feb 28, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2050159101%2021382026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 740.0,
+     "measured": 787.0
+    },
+    "dha": {
+     "label": 460.0,
+     "measured": 516.0
+    },
+    "total_o3": {
+     "label": 1390.0,
+     "measured": 1607.0
+    },
+    "totox": "16.15",
+    "peroxide": "2.27",
+    "anisidine": "11.61",
+    "acid_value": "0.08",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.264"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0004",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0004",
+   "name": "QuattrO3+PS",
+   "summary": "WHC QuattrO3+PS is a clean and highly concentrated omega-3 fish oil product. Two softgels contain a minimum 300 mg of EPA, 204 mg of DHA and 545 mg of Total Omega-3.",
+   "type": "Softgels",
+   "rda": "2 softgels daily.",
+   "lots": 16,
+   "lot_label": "Lot #: 30026951 (Dec 31, 2028)",
+   "lot": "30026951",
+   "expiry": "Dec 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030026951%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 300.0,
+     "measured": 317.0
+    },
+    "dha": {
+     "label": 204.0,
+     "measured": 219.0
+    },
+    "total_o3": {
+     "label": 545.0,
+     "measured": 588.0
+    },
+    "totox": "4.84",
+    "peroxide": "0.92",
+    "anisidine": "3",
+    "acid_value": "0.67",
+    "mercury": "<0.0122",
+    "lead": "0.0145",
+    "pcbs": "0.416"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0001",
+   "name": "UnoCardio 1000",
+   "summary": "WHC UnoCardio 1000 + Vitamin D 1000 is a clean and highly concentrated omega-3 fish oil product. Each softgel contains a minimum 675 mg of EPA, 460 mg of DHA and 1200 mg of Total Omega-3.",
+   "type": "Softgels",
+   "rda": "1 softgel once daily",
+   "lots": 108,
+   "lot_label": "Lot #: 30027306-7 (Apr 30, 2029)",
+   "lot": "30027306",
+   "expiry": "Apr 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030027306-7%2048842026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 675.0,
+     "measured": 706.0
+    },
+    "dha": {
+     "label": 460.0,
+     "measured": 480.0
+    },
+    "total_o3": {
+     "label": 1200.0,
+     "measured": 1305.0
+    },
+    "totox": "6.36",
+    "peroxide": "0.18",
+    "anisidine": "6",
+    "acid_value": "0.31",
+    "mercury": "<0.0123",
+    "lead": "<0.0066",
+    "pcbs": "0.503817"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0003",
+   "name": "UNOCARDIO 1000",
+   "summary": "UnoCardio 1000 is a clean and highly concentrated fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Softgels",
+   "rda": "1 softgel once daily",
+   "lots": 1,
+   "lot_label": "Lot #: 24C002 (Jun 30, 2027)",
+   "lot": "24C002",
+   "expiry": "Jun 30, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/QuattroMega%20Inc.%2024C002%20unocardio%201000.pdf",
+   "report": {
+    "epa": {
+     "label": 665.0,
+     "measured": 737.0
+    },
+    "dha": {
+     "label": 445.0,
+     "measured": 497.0
+    },
+    "total_o3": {
+     "label": 1180.0,
+     "measured": 1369.0
+    },
+    "peroxide": "0.67",
+    "anisidine": "5",
+    "acid_value": "0.13",
+    "mercury": "<0.0119",
+    "lead": "<0.0064",
+    "pcbs": "0.156",
+    "dioxins": "0.137",
+    "dl_pcbs": "0.00789"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0005",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0005",
+   "name": "UnoCardio 1000 MINI",
+   "summary": "WHC UnoCardio 1000 MINI is a clean and highly concentrated omega-3 fish oil product. Each softgel contain a minimum 335 mg of EPA, 230 mg of DHA and 600 mg of Total Omega-3.",
+   "type": "Softgels",
+   "rda": "1 softgel once daily.",
+   "lots": 38,
+   "lot_label": "Lot #: 30027099 (Jan 31, 2029)",
+   "lot": "30027099",
+   "expiry": "Jan 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030027099%2028942026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 335.0,
+     "measured": 352.0
+    },
+    "dha": {
+     "label": 230.0,
+     "measured": 239.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 648.0
+    },
+    "totox": "3.22",
+    "peroxide": "0.11",
+    "anisidine": "3",
+    "acid_value": "0.17",
+    "mercury": "<0.0120",
+    "lead": "0.0066",
+    "pcbs": "0.383"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0007",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0007",
+   "name": null,
+   "lots": 56,
+   "lot_label": "Lot #: 44006150 (Jun 30, 2028)",
+   "lot": "44006150",
+   "expiry": "Jun 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2044006150%2033062026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 320.0,
+     "measured": 337.0
+    },
+    "dha": {
+     "label": 240.0,
+     "measured": 261.0
+    },
+    "total_o3": {
+     "label": 640.0,
+     "measured": 679.0
+    },
+    "totox": "2.22",
+    "peroxide": "0.11",
+    "anisidine": "2",
+    "acid_value": "0.27",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.0730"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0002",
+   "name": "UNOCARDIO X2",
+   "summary": "UnoCardio X2 is a clean and highly concentrated fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Softgels",
+   "rda": "1 softgel once daily",
+   "lots": 21,
+   "lot_label": "Lot #: 30027143 (Feb 28, 2029)",
+   "lot": "30027143",
+   "expiry": "Feb 28, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030027143%2036452026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 622.0,
+     "measured": 668.0
+    },
+    "dha": {
+     "label": 420.0,
+     "measured": 453.0
+    },
+    "total_o3": {
+     "label": 1150.0,
+     "measured": 1228.0
+    },
+    "totox": "6.12",
+    "peroxide": "0.06",
+    "anisidine": "6",
+    "acid_value": "0.16",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.331"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0011",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0011",
+   "name": "WHC Promega Fish Oil Softgels",
+   "summary": "WHC Promega Fish Oil Softgels is a clean and highly concentrated EPA fish oil product. Each softgel contains a minimum of 534.5 mg of EPA. It is also WHC’s first product registered under China’s “Blue Hat” health food system, representing a new milestone in WHC’s development and commitment to better serving Chinese consumers.",
+   "type": "Softgels",
+   "rda": "Adults take one (1) softgel daily with a meal for daily nutritional support. Two (2) softgels daily may be taken with a meal for individuals seeking additional support for blood lipid management.",
+   "lots": 1,
+   "lot_label": "Lot #: GD00045938 (Aug 01, 2028)",
+   "lot": "GD00045938",
+   "expiry": "Aug 01, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Promega%20exp%202028-08-01%20-GD00045938%2045062026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 534.3,
+     "measured": 546.0
+    },
+    "dha": {
+     "label": 5.7,
+     "measured": 12.0
+    },
+    "totox": "6.7",
+    "peroxide": "0.79",
+    "anisidine": "5.1",
+    "acid_value": "0.06",
+    "mercury": "<0.01",
+    "lead": "<0.02",
+    "pcbs": "9.06"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "WHCC0008",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC0008",
+   "name": "WHC UnoCardio EPA",
+   "summary": "WHC UnoCadio EPA is a clean and highly concentrated omega-3 fish oil product. Each softgel contain a minimum 595 mg of EPA and 600 mg of Total Omega-3.WHCC0008",
+   "type": "Softgels",
+   "rda": "Children from 6 years old, take one(1), Adolescent and Adults take two(2) softgels daily during a meal.",
+   "lots": 7,
+   "lot_label": "Lot #: 30027033 (Jan 31, 2029)",
+   "lot": "30027033",
+   "expiry": "Jan 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/WHC%20Labs%20BV%2030027033%2036442026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 595.0,
+     "measured": 635.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 645.0
+    },
+    "totox": "8.52",
+    "peroxide": "2.71",
+    "anisidine": "3.1",
+    "acid_value": "0.27",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "0.0963"
+   },
+   "brand_id": "WHCC",
+   "brand": "WHC Labs BV"
+  },
+  {
+   "id": "PUOR0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PUOR0001",
+   "name": "Omega O3",
+   "summary": "Omega O3 is a clean and highly concentrated omega-3 fish oil product. Each 900 mg capsule contains a minimum 74% total omega-3 concentration, as well as gelatin, glycerin and natural mixed tocopherols.",
+   "type": "Capsules",
+   "rda": "3 capsules",
+   "lots": 16,
+   "lot_label": "Lot #: 0510010323-1 (Jan 31, 2029)",
+   "lot": "0510010323",
+   "expiry": "Jan 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Puori%2C%20Inc%200510010323-1%2047592026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 417.0,
+     "measured": 422.0
+    },
+    "dha": {
+     "label": 167.0,
+     "measured": 170.0
+    },
+    "total_o3": {
+     "label": 667.0,
+     "measured": 684.0
+    },
+    "totox": "6.86",
+    "peroxide": "2.23",
+    "anisidine": "2.4",
+    "acid_value": "0.06",
+    "mercury": "<0.0118",
+    "lead": "<0.0063",
+    "pcbs": "0.282288"
+   },
+   "brand_id": "PUOR",
+   "brand": "Puori, Inc"
+  },
+  {
+   "id": "PUOR0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PUOR0002",
+   "name": "Omega O3 Liquid",
+   "summary": "Puori Omega O3 Liquid is an ultra pure and highly concentrated liquid fish oil. Mixed with MCT oil from coconut and antioxidants from rosemary for stability to avoid any fishy taste or odor.",
+   "type": "Liquids",
+   "rda": "For adults and children 3 years and up: 1 tsp (5 ml) daily, preferably with a meal or as recommended by a physician",
+   "lots": 4,
+   "lot_label": "Lot #: 1119776 (Jun 30, 2028)",
+   "lot": "1119776",
+   "expiry": "Jun 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Puori%2C%20Inc%201119776%2036772026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 1280.0,
+     "measured": 1481.0
+    },
+    "dha": {
+     "label": 540.0,
+     "measured": 755.0
+    },
+    "total_o3": {
+     "label": 2081.0,
+     "measured": 2576.0
+    },
+    "totox": "12.32",
+    "peroxide": "4.61",
+    "anisidine": "3.1",
+    "acid_value": "0.13",
+    "mercury": "<0.0115",
+    "lead": "<0.0062",
+    "pcbs": "0.307"
+   },
+   "brand_id": "PUOR",
+   "brand": "Puori, Inc"
+  },
+  {
+   "id": "ZENE0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0002",
+   "name": "Zenement Omega-3",
+   "summary": "Zenement Omega-3 is a purified and concentrated omega-3 fish oil product in ethyl ester (EE) form. Each softgel contains a minimum of 65% omega-3 concentration, with 350 mg of EPA and 250 mg of DHA.",
+   "type": "Capsules",
+   "rda": "Take 1-2 softgels per day with meals",
+   "lots": 4,
+   "lot_label": "Lot #: FY260038 (Apr 28, 2028)",
+   "lot": "FY260038",
+   "expiry": "Apr 28, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Zenement%20Omega-3%20-%20exp%2028-04-2028%20-%20FY260038%2028662026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 358.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 253.0
+    },
+    "total_o3": {
+     "label": 650.0,
+     "measured": 721.0
+    },
+    "totox": "10.4",
+    "peroxide": "1.8",
+    "anisidine": "6.8",
+    "acid_value": "0.54",
+    "mercury": "<0.01",
+    "lead": "<0.02",
+    "pcbs": "8.51"
+   },
+   "brand_id": "ZENE",
+   "brand": "Zenement"
+  },
+  {
+   "id": "ZENE0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0001",
+   "name": "Zenement Premium Omega-3",
+   "summary": "Zenement Premium Omega-3 is a purified and highly concentrated omega-3 fish oil product in triglyceride (TG) form. Each softgel contains a minimum of 80% omega-3 concentration, with 500 mg of EPA and 250 mg of DHA.",
+   "type": "Capsules",
+   "rda": "Take 1-2 softgels per day with meals",
+   "lots": 6,
+   "lot_label": "Lot #: A-0407 (Mar 25, 2029)",
+   "lot": "A",
+   "expiry": "Mar 25, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Bitio%20Project%20S.L.%2051312026%20Premium%20Omega-3%20exp%2025-03-2029%20-%20VS260344%20-%20A-0407.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 520.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 268.0
+    },
+    "total_o3": {
+     "label": 800.0,
+     "measured": 912.0
+    },
+    "totox": "13.16",
+    "peroxide": "1.58",
+    "anisidine": "10.00",
+    "acid_value": "0.06",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "5.372387"
+   },
+   "brand_id": "ZENE",
+   "brand": "Zenement"
+  },
+  {
+   "id": "HSNS0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0002",
+   "name": "Premium Omega-3 TG 1000mg",
+   "summary": "HSN Premium Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each softgel contains at least 500mg of EPA and 250mg of DHA.",
+   "type": "Softgels",
+   "rda": "1 softgel a day",
+   "lots": 13,
+   "lot_label": "Lot #: 260112E3 (Jan 31, 2029)",
+   "lot": "260112E3",
+   "expiry": "Jan 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260112E3%202622026%20Report%20Rev%2001.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 543.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 274.0
+    },
+    "totox": "12.84",
+    "peroxide": "1.88",
+    "anisidine": "9.08",
+    "acid_value": "0.35",
+    "mercury": "<0.0120",
+    "lead": "<0.0064",
+    "pcbs": "5.37"
+   },
+   "brand_id": "HSNS",
+   "brand": "HSN - Harrison Sport Nutrition S.L."
+  },
+  {
+   "id": "HSNS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0001",
+   "name": "Ultra Omega-3 TG 1000mg",
+   "summary": "HSN Ultra Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each capsule contains at least 350mg of EPA and 250mg of DHA. The softgels contain D-alpha-tocopherol as antioxidant for slowing down lipid oxidation and extend oil’s shelf life at customer’s home.",
+   "type": "Softgels",
+   "rda": "1 softgel a day",
+   "lots": 22,
+   "lot_label": "Lot #: 260720E3 - 240 Softgels (Jul 31, 2029)",
+   "lot": "260720E3",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260720E3%2038602026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 352.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 260.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 705.0
+    },
+    "totox": "16.83",
+    "peroxide": "5",
+    "anisidine": "6.83",
+    "acid_value": "0.39",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "5.05"
+   },
+   "brand_id": "HSNS",
+   "brand": "HSN - Harrison Sport Nutrition S.L."
+  },
+  {
+   "id": "NSPO0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NSPO0002",
+   "name": null,
+   "lots": 0,
+   "brand_id": "NSPO",
+   "brand": "Namedsport srl"
+  },
+  {
+   "id": "NSPO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NSPO0001",
+   "name": "Omega 3 Double Plus",
+   "summary": "Omega3 Double Plus is a clean and naturally concentrated fish oil, containing 56% EPA and 23% DHA Fatty Acids.",
+   "type": "Softgels",
+   "rda": "Serving size: 1 to 4 softgels per day.",
+   "lots": 13,
+   "lot_label": "Lot #: D287V (Jun 30, 2029)",
+   "lot": "D287V",
+   "expiry": "Jun 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Namedsport%20srl%20D287V%2035782026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 530.0,
+     "measured": 593.0
+    },
+    "dha": {
+     "label": 210.0,
+     "measured": 264.0
+    },
+    "total_o3": {
+     "label": 840.0,
+     "measured": 957.0
+    },
+    "totox": "11.01",
+    "peroxide": "0.52",
+    "anisidine": "9.97",
+    "acid_value": "0.52",
+    "mercury": "<0.0123",
+    "lead": "<0.0065",
+    "pcbs": "1.10"
+   },
+   "brand_id": "NSPO",
+   "brand": "Namedsport srl"
+  },
+  {
+   "id": "ZENT0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENT0001",
+   "name": null,
+   "lots": 0,
+   "brand_id": "ZENT",
+   "brand": "Zentrum"
+  },
+  {
+   "id": "PRMO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PRMO0001",
+   "name": "OmegaRX3® 1200",
+   "summary": "OmegaRX3 1200 is a food supplement made up of omega 3 (EPA and DHA) from fish oil. Omega 3s play an important role in the body as components of the phospholipids that form the structures of cell membranes. They provide energy for the body and affect the endocrine, pulmonary, immune system.",
+   "type": "Capsules",
+   "rda": "It is recommended to take 1 (EPA 432 mg, DHA 288 mg) to 5 (EPA 2.16 g, DHA 1.44 g) pearls per day, preferably during meals depending on the specific EPA and DHA requirement.",
+   "lots": 4,
+   "lot_label": "Lot #: 14092 (Aug 31, 2030)",
+   "lot": "14092",
+   "expiry": "Aug 31, 2030",
+   "report_url": "https://andi.nutrasource.ca/files/PromoPharma%20SPA%2014092%2039762026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 432.0,
+     "measured": 432.0
+    },
+    "dha": {
+     "label": 288.0,
+     "measured": 289.0
+    },
+    "totox": "12.38",
+    "peroxide": "2.41",
+    "anisidine": "7.56",
+    "acid_value": "0.46",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "1.13"
+   },
+   "brand_id": "PRMO",
+   "brand": "PromoPharma SPA"
+  },
+  {
+   "id": "KOBH0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=KOBH0001",
+   "name": null,
+   "lots": 3,
+   "lot_label": "Lot #: 1226-9 (60 count) (Jun 30, 2029)",
+   "lot": "1226",
+   "expiry": "60 count",
+   "report_url": "https://andi.nutrasource.ca/files/Kobho%20Labs%201226-9%2037472026%20Product%20Approval%20Report%20%281%29.pdf",
+   "report": {
+    "epa": {
+     "label": 720.0,
+     "measured": 749.0
+    },
+    "dha": {
+     "label": 480.0,
+     "measured": 502.0
+    },
+    "total_o3": {
+     "label": 1300.0,
+     "measured": 1424.0
+    },
+    "totox": "15.33",
+    "peroxide": "2.04",
+    "anisidine": "11.25",
+    "acid_value": "0.16",
+    "mercury": "<0.05",
+    "lead": "<0.02",
+    "pcbs": "20"
+   },
+   "brand_id": "KOBH",
+   "brand": "Kobho Labs"
+  },
+  {
+   "id": "ESSN0004",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESSN0004",
+   "name": null,
+   "lots": 4,
+   "lot_label": "Lot #: 1000029546 (Nov 30, 2027)",
+   "lot": "1000029546",
+   "expiry": "Nov 30, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Essential%20Nutrition%201000029546%20Report%20Rev02.pdf",
+   "report": {
+    "epa": {
+     "label": 139.0,
+     "measured": 148.0
+    },
+    "dha": {
+     "label": 93.0,
+     "measured": 100.0
+    },
+    "totox": "5.2",
+    "peroxide": "0.9",
+    "anisidine": "3.4",
+    "acid_value": "1.45",
+    "mercury": "<0.0123",
+    "lead": "<0.0066",
+    "pcbs": "0.155"
+   },
+   "brand_id": "ESSN",
+   "brand": "Essential Nutrition"
+  },
+  {
+   "id": "ESSN0005",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESSN0005",
+   "name": "DHA Super Concentrated 1000mg",
+   "summary": "Essential Nutrition’s DHA Super Concentrated 100mg DHA is a clean and highly concentrated source of fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Capsules",
+   "rda": "3 capsules per day.",
+   "lots": 3,
+   "lot_label": "Lot #: P250121 DHA-10 (Jun 30, 2027)",
+   "lot": "P250121 DHA",
+   "expiry": "Jun 30, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Essential%20Nutrition%20P250121%20DHA-10%2045542025%20Report%20Rev1.pdf",
+   "report": {
+    "epa": {
+     "label": 150.0,
+     "measured": 184.0
+    },
+    "dha": {
+     "label": 500.0,
+     "measured": 517.0
+    },
+    "totox": "5.64",
+    "peroxide": "1.42",
+    "anisidine": "2.80",
+    "acid_value": "0.98",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "0.857",
+    "dioxins": "0.144",
+    "dl_pcbs": "0.0112"
+   },
+   "brand_id": "ESSN",
+   "brand": "Essential Nutrition"
+  },
+  {
+   "id": "ESSN0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESSN0001",
+   "name": "Super Omega 3 TG",
+   "summary": "Essential Nutrition’s Super Omega 3 is a clean and highly concentrated source of fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Capsules",
+   "rda": "Take 2 to 3 capsules per day with main meals, or as directed by a physician or nutritionist.",
+   "lots": 5,
+   "lot_label": "Lot #: 1000030018 (Feb 29, 2028)",
+   "lot": "1000030018",
+   "expiry": "Feb 29, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Essential%20Nutrition%201000030018%2018742026%20Report%20%281%29.pdf",
+   "report": {
+    "epa": {
+     "label": 360.0,
+     "measured": 387.0
+    },
+    "dha": {
+     "label": 240.0,
+     "measured": 261.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 784.0
+    },
+    "totox": "8.76",
+    "peroxide": "2.15",
+    "anisidine": "4.46",
+    "acid_value": "0.47",
+    "mercury": "<0.0123",
+    "lead": "0.0097",
+    "pcbs": "0.160"
+   },
+   "brand_id": "ESSN",
+   "brand": "Essential Nutrition"
+  },
+  {
+   "id": "ESSN0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESSN0003",
+   "name": "Super Omega 3 TG 500mg",
+   "summary": "Essential Nutrition’s Super Omega 3 is a clean and highly concentrated source of fish oil, containing purified omega-3 fatty acids EPA and DHA.",
+   "type": "Capsules",
+   "rda": "Take 4 to 6 capsules per day with main meals, or as directed by a physician or nutritionist.",
+   "lots": 8,
+   "lot_label": "Lot #: 1000030395 T46A14I251 (Apr 30, 2028)",
+   "lot": "1000030395 T46A14I251",
+   "expiry": "Apr 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Essential%20Nutrition%201000030395%20T46A14I251%2042132026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 180.0,
+     "measured": 199.0
+    },
+    "dha": {
+     "label": 120.0,
+     "measured": 135.0
+    },
+    "total_o3": {
+     "label": 325.0,
+     "measured": 387.0
+    },
+    "totox": "8.76",
+    "peroxide": "2.74",
+    "anisidine": "3.28",
+    "acid_value": "0.17",
+    "mercury": "<0.0123",
+    "lead": "<0.0066",
+    "pcbs": "0.279"
+   },
+   "brand_id": "ESSN",
+   "brand": "Essential Nutrition"
+  },
+  {
+   "id": "ESSN0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESSN0002",
+   "name": null,
+   "lots": 2,
+   "lot_label": "Lot #: 7000004185 (Aug 31, 2027)",
+   "lot": "7000004185",
+   "expiry": "Aug 31, 2027",
+   "report_url": "https://andi.nutrasource.ca/files/Essential%20Nutrition%207000004185%2045562025%20Report%20Rev3.pdf",
+   "report": {
+    "epa": {
+     "label": 360.0,
+     "measured": 372.0
+    },
+    "dha": {
+     "label": 240.0,
+     "measured": 251.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 750.0
+    },
+    "totox": "7.97",
+    "peroxide": "2.55",
+    "anisidine": "2.87",
+    "acid_value": "0.71",
+    "mercury": "<0.0121",
+    "lead": "<0.0065",
+    "pcbs": "1.26",
+    "dioxins": "0.197",
+    "dl_pcbs": "0.0149"
+   },
+   "brand_id": "ESSN",
+   "brand": "Essential Nutrition"
+  },
+  {
+   "id": "NUTE0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NUTE0001",
+   "name": "Omega 3 Complex",
+   "summary": "Food supplement based on fish oil and vitamins. Ingredients: Fish oil, Capsule (gelatin, humectant (glycerin), water), D-Alpha-Tocopherol (vitamin E), cholecalciferol (vitamin D).",
+   "type": "Softgels",
+   "rda": "2 softgels a day with a glass of water.",
+   "lots": 1,
+   "lot_label": "Lot #: 2126.5 (Jul 31, 2029)",
+   "lot": "2126.5",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Nutriexperts%20S.L%202126.5%2037762026%20Product%20Approval%20Report%20Rev%202.pdf",
+   "report": {
+    "epa": {
+     "label": 903.26,
+     "measured": 911.0
+    },
+    "dha": {
+     "label": 353.44,
+     "measured": 369.0
+    },
+    "total_o3": {
+     "label": 1433.4,
+     "measured": 1501.0
+    },
+    "totox": "11.83",
+    "peroxide": "3.38",
+    "anisidine": "5.07",
+    "acid_value": "0.27",
+    "mercury": "<0.0121",
+    "lead": "<0.0064",
+    "pcbs": "2.33"
+   },
+   "brand_id": "NUTE",
+   "brand": "Nutralie"
+  },
+  {
+   "id": "MASM0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=MASM0001",
+   "name": null,
+   "lots": 1,
+   "lot_label": "Lot #: 01251388 (Sep 30, 2028)",
+   "lot": "01251388",
+   "expiry": "Sep 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Masmusculo%2001251388%20Report%20Rev3.pdf",
+   "report": {
+    "epa": {
+     "label": 180.0,
+     "measured": 185.0
+    },
+    "dha": {
+     "label": 120.0,
+     "measured": 131.0
+    },
+    "total_o3": {
+     "label": 300.0,
+     "measured": 412.0
+    },
+    "totox": "11.89",
+    "peroxide": "2.59",
+    "anisidine": "6.71",
+    "acid_value": "0.26",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "0.621"
+   },
+   "brand_id": "MASM",
+   "brand": "Masmusculo"
+  },
+  {
+   "id": "MASM0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=MASM0002",
+   "name": "Omega 3 Ultra IFOS Quality",
+   "summary": "Omega-3 based food supplement",
+   "type": "Softgels",
+   "rda": "Take one softgel daily with food",
+   "lots": 1,
+   "lot_label": "Lot #: 0123194 (Aug 19, 2028)",
+   "lot": "0123194",
+   "expiry": "Aug 19, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Masmusculo%20%200123194%20Report%20Rev1.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 350.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 263.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 722.0
+    },
+    "totox": "11.04",
+    "peroxide": "2.68",
+    "anisidine": "5.68",
+    "acid_value": "0.08",
+    "mercury": "<0.0118",
+    "lead": "0.0121",
+    "pcbs": "18.3"
+   },
+   "brand_id": "MASM",
+   "brand": "Masmusculo"
+  },
+  {
+   "id": "O3SG0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=O3SG0001",
+   "name": "OMEGA 3 FISH OIL",
+   "summary": "Food supplement. Capsules to swallow with omega-3 fatty acids containing fish oil.",
+   "type": "Capsules",
+   "rda": "2",
+   "lots": 4,
+   "lot_label": "Lot #: A4803 (Sep 30, 2029)",
+   "lot": "A4803",
+   "expiry": "Sep 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Weider%20Nutrition%20A4803%2048392026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 350.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 251.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 685.0
+    },
+    "totox": "15.47",
+    "peroxide": "3.23",
+    "anisidine": "9.01",
+    "acid_value": "0.35",
+    "mercury": "<0.0111",
+    "lead": "<0.0059",
+    "pcbs": "2.700105"
+   },
+   "brand_id": "WEIN",
+   "brand": "Weider Nutrition"
+  }
+ ]
+}

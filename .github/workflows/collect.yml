@@ -1,0 +1,106 @@
+name: Collect omega-3 prices
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Space-separated source ids (empty = all)"
+        required: false
+        default: ""
+      browser:
+        description: "Run browser (Playwright) sources"
+        type: boolean
+        default: true
+      commit:
+        description: "Commit refreshed data"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: uv sync --locked --all-groups
+
+      - name: Tests
+        run: uv run ruff check . && uv run pytest -q
+
+      - name: Collect (HTTP sources)
+        continue-on-error: true
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+        run: |
+          if [ -n "$ONLY" ]; then
+            uv run python -m omega.collect --no-browser --only $ONLY
+          else
+            uv run python -m omega.collect --no-browser
+          fi
+
+      - name: Install Chromium
+        if: github.event_name == 'schedule' || github.event.inputs.browser == 'true'
+        run: uv run playwright install --with-deps chromium
+
+      - name: Collect (browser sources)
+        if: github.event_name == 'schedule' || github.event.inputs.browser == 'true'
+        continue-on-error: true
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+        run: |
+          if [ -n "$ONLY" ]; then
+            uv run python -m omega.collect --browser-only --only $ONLY
+          else
+            uv run python -m omega.collect --browser-only
+          fi
+
+      - name: IFOS lab reports
+        continue-on-error: true
+        run: uv run python -m omega.ifos
+
+      - name: Build
+        run: uv run python -m omega.build
+
+      - name: Upload raw offers and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-${{ github.run_number }}
+          path: |
+            .cache/raw/
+            runs/
+            data/
+          retention-days: 7
+
+      - name: Summary
+        if: always()
+        run: uv run python -m omega.summary >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Commit data
+        if: github.event_name == 'schedule' || github.event.inputs.commit == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json data/ifos.json data/report.json site/data.json data/offers/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore(data): refresh omega-3 prices"
+            git pull --rebase --autostash origin master
+            git push origin HEAD:master
+          fi
