@@ -4,8 +4,11 @@ Omega-3 supplements (fish oil, krill, algae, cod liver) sold in Spain and France
 **euros per gram of EPA+DHA**, with IFOS lab results (TOTOX, measured EPA/DHA, contaminants) where a
 lot report matches the product.
 
-- `catalog.json`: shops and how each is collected (Shopify feed, WooCommerce Store API, sitemap +
-  product pages, or headless Chromium for shops that block plain clients).
+- `catalog.json`: shops and how each is collected (Shopify feed, WooCommerce Store API, the shop's
+  public Algolia search index, sitemap + product pages, or headless Chromium for shops that block
+  plain clients).
+- `data/page_text/`: product-page text saved for shops whose pages block GitHub's IPs (Onatera); a
+  run that can reach the pages refreshes it, one that cannot falls back to it.
 - `omega/collect.py`: fetches offers into `.cache/raw/*.jsonl` (Chrome TLS fingerprint via curl_cffi;
   Playwright for `browser: true` sources).
 - `omega/composition.py`: reads EPA/DHA per capsule/ml from label text (row tables, column tables,

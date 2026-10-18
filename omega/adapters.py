@@ -5,6 +5,8 @@ import json
 import re
 from urllib.parse import urljoin, urlsplit
 
+from curl_cffi import requests as cr
+
 from .http import Blocked
 from .page import parse_product
 
@@ -14,7 +16,7 @@ MARINE = re.compile(
     re.I,
 )
 NOT_MARINE = re.compile(
-    r"\b(lin|linaza|lino|flax|chia|ch[ií]a|perilla|onagra|primrose|bourrache|borraja|argousier|"
+    r"\b(lin|linaza|lino|flax|chia|ch[ií]a|perilla|p[eé]rilla|onagra|primrose|bourrache|borraja|argousier|"
     r"espino amarillo|sacha inchi|nigelle|n[ée]gra|courge|calabaza|cannabis|chanvre|c[áa]ñamo)\b|"
     r"\b(perros?|gatos?|chiens?|chats?|mascotas?|pets?|dogs?|cats?|v[ée]t[ée]rinaire|veterinari[ao]|"
     r"caballos?|chevaux)\b|shampoo|champ[uú]|cr[eè]me|crema|s[ée]rum|lotion|gel douche|savon|"
@@ -124,6 +126,65 @@ def woo(src, http, log):
                 "_needs_page": True,
             }
         page += 1
+
+
+# ---------------------------------------------------------------- Algolia search index
+ALGOLIA_QUERIES = ("omega", "krill", "dha", "epa", "huile de poisson", "foie de morue", "calamar",
+                   "epax", "aceite de pescado", "fish oil")
+
+
+def algolia(src, http, log):
+    """Shops whose search runs on Algolia, using the search-only key the shop's own page publishes.
+    Algolia's hosts are not behind the shop's bot protection."""
+    a = src["algolia"]
+    url = f"https://{a['app']}-dsn.algolia.net/1/indexes/{a['index']}/query"
+    headers = {"X-Algolia-Application-Id": a["app"], "X-Algolia-API-Key": a["key"]}
+    base = src["base"].rstrip("/")
+    hits = {}
+    for q in a.get("queries", ALGOLIA_QUERIES):
+        for page in range(10):
+            body = json.dumps({"query": q, "hitsPerPage": 100, "page": page})
+            for attempt in range(3):
+                try:
+                    r = cr.post(url, data=body, headers=headers, timeout=30)
+                    r.raise_for_status()
+                    break
+                except Exception:
+                    if attempt == 2:
+                        raise
+            d = r.json()
+            for h in d.get("hits", []):
+                hits.setdefault(h["objectID"], h)
+            if page + 1 >= d.get("nbPages", 0):
+                break
+    log(f"{src['id']}: {len(hits)} index hits")
+    for h in hits.values():
+        name = htmllib.unescape(h.get("name") or "")
+        head = " ".join([name, h.get("slug") or "", " ".join(h.get("ingredients") or []),
+                         " ".join(h.get("active_ingredients") or [])])
+        if h.get("type") not in (None, "product") or h.get("bundle") or not is_candidate(head) \
+                or is_excluded(name) or re.match(r"(?i)pack\b", name):
+            continue
+        for v in h.get("variants") or []:
+            if v.get("enabled") is False:
+                continue
+            text = strip_html(" \n ".join(x or "" for x in (
+                v.get("short_description"), v.get("main_feature"), v.get("advantage"),
+                v.get("description"))))
+            yield {
+                "url": urljoin(base, v.get("url") or h.get("url")),
+                "product_name": f"{name} - {v.get('name')}" if v.get("name") else name,
+                "variant_name": v.get("name"),
+                "brand": h.get("brand_name"),
+                "gtin": None,
+                "sku": v.get("code"),
+                "price": v["price"] / 100 if v.get("price") else None,
+                "currency": src.get("currency", "EUR"),
+                "available": v.get("hasStock"),
+                "image": h.get("main_image_url"),
+                "text": text,
+                "_needs_page": a.get("pages", False),
+            }
 
 
 # ---------------------------------------------------------------- Sitemaps + product pages

@@ -5,9 +5,14 @@
    "id": "onatera",
    "name": "Onatera",
    "country": "FR",
-   "kind": "sitemap",
+   "kind": "algolia",
    "base": "https://www.onatera.com",
-   "include": "/FR/fr/produit-"
+   "algolia": {
+    "app": "F75BB6Q2SY",
+    "key": "ee8b35695e7b890536a32f2727dbba69",
+    "index": "intl.product.fr.fr",
+    "pages": true
+   }
   },
   {
    "id": "nutrimuscle",

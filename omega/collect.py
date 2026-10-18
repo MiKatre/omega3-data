@@ -25,6 +25,7 @@ from .http import Blocked, Http
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / ".cache"
 RAW = CACHE / "raw"
+PAGE_TEXT = ROOT / "data" / "page_text"
 HTML = CACHE / "html"
 
 
@@ -104,6 +105,8 @@ def run_source(src, http, cache, browser=None):
             gen = adapters.shopify(src, http, log)
         elif kind == "woo":
             gen = adapters.woo(src, http, log)
+        elif kind == "algolia":
+            gen = adapters.algolia(src, http, log)
         elif kind == "sitemap":
             fetch_xml = None
             if browser is not None:
@@ -131,18 +134,30 @@ def run_source(src, http, cache, browser=None):
     except Exception as e:
         stats["status"] = f"error: {type(e).__name__}: {str(e)[:200]}"
         traceback.print_exc()
-    if kind in ("woo", "shopify") and offers:
+    if offers and (kind in ("woo", "shopify") or src.get("algolia", {}).get("pages")):
         # Feeds carry short descriptions; composition tables live on the product page.
+        # A shop that blocks GitHub's IPs falls back to the page text saved by the last run that
+        # could reach it (data/page_text/<id>.json, also refreshable from any machine).
+        saved_path = PAGE_TEXT / f"{src['id']}.json"
+        saved = json.loads(saved_path.read_text()) if saved_path.exists() else {}
         pages = {}
         for o in offers:
             if o["url"] not in pages:
                 html = fetch_page(o["url"])
-                pages[o["url"]] = adapters.page_offers(src, o["url"], html) if html else []
+                found = adapters.page_offers(src, o["url"], html) if html else []
+                if found:
+                    saved[o["url"]] = {k: found[0].get(k) for k in ("gtin", "brand", "text")}
+                pages[o["url"]] = found[:1] or ([saved[o["url"]]] if o["url"] in saved else [])
             extra = pages[o["url"]]
             if extra:
                 o["gtin"] = o.get("gtin") or extra[0].get("gtin")
                 o["brand"] = o.get("brand") or extra[0].get("brand")
-                o["text"] = (o.get("text") or "") + " \n " + extra[0]["text"]
+                o["text"] = (o.get("text") or "") + " \n " + (extra[0].get("text") or "")
+        if src.get("algolia", {}).get("pages") and saved:
+            PAGE_TEXT.mkdir(parents=True, exist_ok=True)
+            saved_path.write_text(json.dumps(saved, ensure_ascii=False, indent=0, sort_keys=True))
+    if stats["status"] == "ok" and offers and stats["blocked"] and not stats["pages"]:
+        stats["status"] = "blocked: product pages"  # offers kept; the browser step retries
     if stats["status"] == "ok" and not offers:
         stats["status"] = "empty" if not stats["blocked"] else "blocked"
     stats["offers"] = len(offers)
