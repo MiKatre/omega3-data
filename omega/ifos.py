@@ -124,7 +124,7 @@ def product(http, pid):
     body = re.sub(r"<style.*?</style>|<script.*?</script>", "", page[page.find("<body"):], flags=re.S)
     txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body))
     rec = {"id": pid, "page": f"{BASE}/certified-products/product?id={pid}"}
-    m = re.search(r"Blog (.*?) Product Summary (.*?) Product Type: (.*?) Recommended Daily Allowance: "
+    m = re.search(r"Blog (.*?) Product Summary\s*(.*?)\s*Product Type: (.*?) Recommended Daily Allowance: "
                   r"(.*?) (?:Website|Testing Results)", txt)
     if m:
         rec.update(name=m.group(1).strip(), summary=m.group(2).strip()[:400],

@@ -146,6 +146,17 @@
    "browser": true
   },
   {
+   "id": "naturitas",
+   "name": "Naturitas",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.naturitas.es",
+   "include": "/p/",
+   "browser": true,
+   "max_pages": 150,
+   "budget_s": 900
+  },
+  {
    "id": "greenweez",
    "name": "Greenweez",
    "country": "FR",
@@ -153,7 +164,8 @@
    "base": "https://www.greenweez.com",
    "include": "/produit/",
    "browser": true,
-   "max_pages": 220
+   "max_pages": 60,
+   "budget_s": 480
   },
   {
    "id": "hsn",
@@ -302,16 +314,6 @@
    "country": "ES",
    "kind": "shopify",
    "base": "https://www.planetahuerto.es"
-  },
-  {
-   "id": "naturitas",
-   "name": "Naturitas",
-   "country": "ES",
-   "kind": "sitemap",
-   "base": "https://www.naturitas.es",
-   "include": "/p/",
-   "browser": true,
-   "max_pages": 220
   },
   {
    "id": "docmorris-fr",

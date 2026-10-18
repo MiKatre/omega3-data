@@ -248,7 +248,8 @@ function detail(p) {
       <div><span>PCBs (≤ 45 ppb)</span><b>${esc(i.pcbs ?? "–")}</b></div>
     </div><div class="dnote">Values per ${fmt(i.dose_units)} ${unitWord(p.unit, i.dose_units)} as printed in the report. ${i.lots} lot report${i.lots === 1 ? "" : "s"} on file. <a href="${esc(i.page)}" target="_blank" rel="noopener">IFOS page</a>${i.report_url ? ` · <a href="${esc(i.report_url)}" target="_blank" rel="noopener">Lot report (PDF)</a>` : ""}</div></div>`;
   }
-  const conf = { override: "Reviewed by hand", high: "Read from the label table", medium: "Read from the label; dose inferred" }[p.conf] || p.conf;
+  const conf = /^matched/.test(p.method || "") ? "Same product listed with its label at another shop"
+    : ({ override: "Reviewed by hand", high: "Read from the label table", medium: "Read from the label; dose inferred" }[p.conf] || p.conf);
   const src = `<div><div class="dh">Composition source · ${esc(conf)}</div><div class="snip">${esc(p.snippet || "")}</div>
     <div class="dnote">${p.epa != null ? `${fmt(p.epa, 1)} mg EPA + ${fmt(p.dha, 1)} mg DHA` : `${fmt(p.total, 1)} mg EPA+DHA`} per ${p.unit === "ml" ? "ml" : unitWord(p.unit, 1)}${p.form ? ` · form ${esc(p.form)}` : ""}${p.certs.length ? ` · mentions ${p.certs.map(esc).join(", ")}` : ""}${p.gtin ? ` · EAN ${esc(p.gtin)}` : ""}</div></div>`;
   return `<div class="dwrap">${offers}${lab}${src}</div>`;

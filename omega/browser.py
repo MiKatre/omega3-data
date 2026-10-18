@@ -67,7 +67,7 @@ class Browser:
             self.pw.stop()
 
     def get(self, url, wait_ms=(1500, 3000), selector=None):
-        for attempt in range(3):
+        for attempt in range(2):
             try:
                 resp = self.page.goto(url, wait_until="domcontentloaded", timeout=45000)
                 if selector:
@@ -89,13 +89,13 @@ class Browser:
                     return None
                 return html
             except Blocked:
-                if attempt == 2:
+                if attempt == 1:
                     raise
                 self.log(f"browser blocked on {url}; relaunching")
                 time.sleep(10 * (attempt + 1))
                 self._launch()
             except Exception as e:
-                if attempt == 2:
+                if attempt == 1:
                     raise
                 self.log(f"browser error {type(e).__name__} on {url}")
                 time.sleep(3)

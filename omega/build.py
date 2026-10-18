@@ -206,7 +206,9 @@ def match_ifos(group, by_brand, brand_names):
                 continue
             le, ld = rep["epa"]["label"], rep["dha"]["label"]
             fits = []
-            for k in ([n] if n else []) + [1, 2, 3, 4, 5, 6, 8, 10]:
+            # The report states its own daily dose; only fall back to guessing when it does not.
+            # Labels are per daily dose or per single unit.
+            for k in (sorted({n, 1.0}) if n else [1, 2, 3, 4, 5, 6, 8, 10]):
                 pe, pd = le / k, ld / k
                 if abs(pe - comp["epa"]) <= max(6, 0.06 * comp["epa"]) and abs(pd - comp["dha"]) <= max(
                     6, 0.06 * comp["dha"]
@@ -227,6 +229,10 @@ def match_ifos(group, by_brand, brand_names):
             if group["kind"] in ("fish", "cod_liver") and re.search(r"krill|alga|vegan", pname):
                 continue
             if p.get("name") and sim == 0 and len(by_brand.get(bid, [])) > 1:
+                continue
+            pn = name_tokens(p.get("name"), p.get("brand"))
+            gn = name_tokens(group["name"], group.get("brand"))
+            if p.get("name") and (pn ^ gn) & DISTINCT - {"1000", "500", "2000", "3000", "700", "1200", "1500"}:
                 continue
             score = 1 + sim + (0.5 if n in fits else 0)
             if best is None or score > best[0]:

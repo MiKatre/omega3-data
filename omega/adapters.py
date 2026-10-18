@@ -5,6 +5,7 @@ import json
 import re
 from urllib.parse import urljoin, urlsplit
 
+from .http import Blocked
 from .page import parse_product
 
 MARINE = re.compile(
@@ -136,7 +137,7 @@ def sitemap_urls(src, http, log, fetch_xml=None):
         except Exception:
             rb = ""
         maps = re.findall(r"(?im)^sitemap:\s*(\S+)", rb) or [src["base"].rstrip("/") + "/sitemap.xml"]
-    seen, queue, urls = set(), list(dict.fromkeys(maps)), []
+    seen, queue, urls, blocked = set(), list(dict.fromkeys(maps)), [], []
     include = re.compile(src["include"]) if src.get("include") else None
     while queue and len(seen) < src.get("max_sitemaps", 80):
         m = queue.pop(0)
@@ -147,6 +148,8 @@ def sitemap_urls(src, http, log, fetch_xml=None):
             x = get_xml(m)
         except Exception as e:
             log(f"{src['id']}: sitemap {m} failed: {e}")
+            if isinstance(e, Blocked):
+                blocked.append(e)
             continue
         locs = [htmllib.unescape(u) for u in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", x or "")]
         if "<sitemapindex" in (x or ""):
@@ -164,6 +167,9 @@ def sitemap_urls(src, http, log, fetch_xml=None):
                         continue
                     if urlsplit(u).netloc.split(":")[0].endswith(host.replace("www.", "")):
                         urls.append(u)
+    if not urls and blocked:
+        # Every sitemap was refused: report the source as blocked so it is retried in Chromium.
+        raise blocked[0]
     return sorted(set(urls))
 
 
