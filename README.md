@@ -15,7 +15,9 @@ lot report matches the product.
   reading, matches IFOS lots by brand and label values, computes €/g → `data/latest.json` and the
   slim `site/data.json`.
 - `overrides.json`: hand-reviewed composition, pack size or exclusions, keyed by EAN/URL/name.
-- `site/index.html`: static page that reads `data.json`.
+- `site/index.html`: static page that reads `data.json`, published at
+  https://omega3-per-gram.netlify.app (Netlify serves `site/`; the daily workflow calls the
+  `NETLIFY_BUILD_HOOK` secret after it commits new data).
 
 ```sh
 uv sync --all-groups

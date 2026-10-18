@@ -94,6 +94,7 @@ jobs:
         run: uv run python -m omega.summary >> "$GITHUB_STEP_SUMMARY" || true
 
       - name: Commit data
+        id: commit
         if: github.event_name == 'schedule' || github.event.inputs.commit == 'true'
         run: |
           git config user.name "github-actions[bot]"
@@ -105,4 +106,10 @@ jobs:
             git commit -m "chore(data): refresh omega-3 prices"
             git pull --rebase --autostash origin master
             git push origin HEAD:master
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Deploy website
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: curl -fsS -X POST -d '{}' "$NETLIFY_BUILD_HOOK"
