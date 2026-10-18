@@ -151,12 +151,15 @@ def parse_product(html, url):
             if n is not None:
                 price = _num(n.attributes.get("content") or n.text())
         if price is not None:
+            # PrestaShop puts the selected combination in the itemprop url fragment.
+            hint = meta.get("url") or ""
+            frag = hint.split("#", 1)[1].replace("_", " ").replace("-", " ") if "#" in hint else None
             rec["variants"].append(
                 {
                     "price": price,
                     "currency": meta.get("product:price:currency") or meta.get("og:price:currency"),
                     "availability": meta.get("product:availability"),
-                    "name": rec.get("name"),
+                    "name": frag or rec.get("name"),
                 }
             )
     rec["text"] = clean_text(tree)

@@ -138,10 +138,12 @@
    "id": "nutripure",
    "name": "Nutripure",
    "country": "FR",
-   "kind": "sitemap",
+   "kind": "urls",
    "base": "https://www.nutripure.fr",
-   "browser": true,
-   "max_pages": 220
+   "urls": [
+    "https://www.nutripure.fr/fr/sante/2-omega-3-EPAX.html"
+   ],
+   "browser": true
   },
   {
    "id": "greenweez",

@@ -3,6 +3,7 @@
 Usage: python -m omega.build
 """
 
+import html as htmllib
 import json
 import re
 import sys
@@ -37,7 +38,7 @@ def slug(s):
 
 
 def clean_name(n):
-    n = re.sub(r"\s+", " ", (n or "").replace("&#039;", "'").replace("&amp;", "&")).strip()
+    n = re.sub(r"\s+", " ", htmllib.unescape(htmllib.unescape(n or ""))).strip()
     prev = None
     while prev != n:
         prev = n
@@ -107,7 +108,8 @@ def offer_record(raw, rules):
         pack = pack_from_text(text, variant or name)
     o = {
         "source": raw["source"], "shop": raw["shop"], "country": raw["country"],
-        "url": raw["url"], "name": full, "base_name": name, "brand": raw.get("brand"),
+        "url": raw["url"], "name": full, "base_name": name,
+        "brand": htmllib.unescape(raw["brand"]).strip() if raw.get("brand") else None,
         "gtin": gtin_of(raw.get("gtin")), "price": raw.get("price"),
         "available": raw.get("available"), "image": raw.get("image"),
         "fetched_at": raw.get("fetched_at"), "pack": pack,
@@ -243,6 +245,71 @@ def match_ifos(group, by_brand, brand_names):
     }
 
 
+NAME_STOP = {"omega", "omega3", "3", "aceite", "huile", "oil", "de", "del", "la", "le", "les", "el", "con",
+             "avec", "with", "y", "et", "and", "en", "pescado", "poisson", "poissons", "fish", "capsulas",
+             "capsules", "capsule", "caps", "perlas", "perla", "gelules", "softgels", "blandas", "mg", "ml",
+             "pack", "x", "complemento", "alimenticio", "complement", "alimentaire", "food", "supplement",
+             "acidos", "grasos", "acides", "gras", "a", "au", "aux", "for", "para", "pour", "gel", "softgel"}
+# Words that make a different product when one name has them and the other does not.
+DISTINCT = {"ultra", "premium", "forte", "plus", "double", "dobbel", "doble", "triple", "super", "extra",
+            "max", "mega", "concentrado", "concentrated", "concentre", "concentree", "dha", "epa", "kids",
+            "ninos", "nino", "enfants", "enfant", "junior", "child", "children", "vegan", "vegano", "vegana",
+            "vegetal", "vegetale", "krill", "higado", "foie", "morue", "bacalao", "cod", "liver", "6", "9",
+            "d3", "k2", "cardio", "cerveau", "vision", "embarazo", "prenatal", "grossesse", "gummies",
+            "gominolas", "gommes", "liquido", "liquide", "liquid", "msc", "1000", "500", "2000", "3000",
+            "700", "1200", "1500", "infantil", "memoire", "memoria", "joint", "articulaciones", "q10"}
+
+
+def name_tokens(name, brand):
+    s = unicodedata.normalize("NFKD", strip_pack(name or "")).encode("ascii", "ignore").decode().lower()
+    bt = set(re.findall(r"[a-z0-9]+", unicodedata.normalize("NFKD", brand or "").encode(
+        "ascii", "ignore").decode().lower()))
+    return {t for t in re.findall(r"[a-z0-9]+", s)
+            if t not in NAME_STOP and t not in bt and (len(t) > 1 or t.isdigit())}
+
+
+def propagate(products):
+    """Give a composition to products whose listing has none, from the same product elsewhere.
+
+    Same brand, same unit (capsule/ml), same kind and a near-identical name; candidates must agree.
+    """
+    known = defaultdict(list)
+    for g in products:
+        c = g["comp"]
+        if c and c["confidence"] in ("high", "medium", "override") and "matched" not in c["method"]:
+            known[(brand_key(g), g["kind"], c["unit"])].append((name_tokens(g["name"], g["brand"]), c, g))
+    n = 0
+    for g in products:
+        if g["comp"] and g["comp"]["confidence"] != "low":
+            continue
+        unit = (g.get("pack") or {}).get("unit") or "capsule"
+        cands = known.get((brand_key(g), g["kind"], unit), [])
+        mine = name_tokens(g["name"], g["brand"])
+        if not mine or not cands:
+            continue
+        scored = []
+        for toks, c, other in cands:
+            if not toks:
+                continue
+            if (mine ^ toks) & DISTINCT:
+                continue
+            sim = len(mine & toks) / len(mine | toks)
+            scored.append((sim, c, other))
+        scored.sort(key=lambda x: -x[0])
+        if not scored or scored[0][0] < 0.6:
+            continue
+        top = [x for x in scored if x[0] >= scored[0][0] - 0.1]
+        totals = {round(x[1]["total"]) for x in top}
+        if len(totals) != 1:
+            continue
+        sim, c, other = scored[0]
+        g["comp"] = dict(c, confidence="medium", method=f"matched from {other['offers'][0]['shop']}",
+                         snippet=f"Same product as \"{other['name']}\" ({other['offers'][0]['shop']}): "
+                                 + (c.get("snippet") or "")[:200])
+        n += 1
+    return n
+
+
 def carry_over(products, report, max_age_days=7):
     """Keep last-known offers for sources that failed this run (marked by their old fetched_at)."""
     prev_path = ROOT / "data" / "latest.json"
@@ -310,6 +377,13 @@ def main():
             "comp": comp, "offers": offs, "pack": pack,
             "image": next((o["image"] for o in offs if o["image"]), None),
         }
+        products.append(g)
+    stats["propagated"] = propagate(products)
+    final = []
+    for g in products:
+        offs = g["offers"]
+        comp = g["comp"]
+        pack = g["pack"]
         g["ifos"] = match_ifos(g, by_brand, brand_names)
         out_offers = []
         for o in offs:
@@ -339,7 +413,8 @@ def main():
         stats["with_comp"] += bool(comp)
         stats["comparable"] += bool(priced)
         stats["ifos"] += bool(g["ifos"])
-        products.append(g)
+        final.append(g)
+    products = final
 
     for g in products:
         g.pop("pack", None)
@@ -375,11 +450,30 @@ def main():
 
 
 
+PACK_WORDS = re.compile(
+    r"[\s,\-–]*(?:\(|\b)(?:pack\s+(?:de\s+)?)?(?:\d+\s*[x×]\s*)?\d+(?:\s*\+\s*\d+)?\s*"
+    r"(?:c[áa]psulas?(?:\s+blandas)?|capsules?|caps|g[ée]lules?|perlas?|p[ée]rolas?|softgels?|"
+    r"comprimidos?|comprim[ée]s?|gominolas?|gummies|ml|uds?|unidades)\b\.?\)?(?:\s+(?:offertes?|gratis))?",
+    re.I,
+)
+
+
+def strip_pack(name):
+    out = PACK_WORDS.sub("", name or "").strip(" -–,")
+    return out or name
+
+
+BRAND_ALIASES = {"essential": "hsn", "vitaminalia": "hsn", "gh": "gema", "zentrum": "ynsadiet",
+                 "arkogelules": "arkopharma", "mollers": "moller", "moller-s": "moller", "now": "now",
+                 "nature": "naturessential", "natural": "naturalhealth"}
+
+
 def brand_key(g):
     b = g.get("brand") or ""
     if not b or b.lower() in ("default", "generic"):
         b = g["name"].split()[0] if g["name"] else ""
-    return slug(b).split("-")[0]
+    k = slug(b).replace("-s-", "s-").split("-")[0]
+    return BRAND_ALIASES.get(k, k)
 
 
 def family_key(g):
@@ -428,7 +522,7 @@ def export_site(out):
                 offers.append({k: o[k] for k in ("shop", "country", "url", "price", "count", "unit",
                                                   "eur_per_g", "available", "fetched_at")})
         offers.sort(key=lambda o: o["eur_per_g"])
-        names = Counter(it[0]["name"] for it in items)
+        names = Counter(strip_pack(it[0]["name"]) for it in items)
         site_rows.append({
             "id": lead["id"], "name": min(names, key=lambda n: (len(n) > 70, -names[n], len(n))),
             "brand": next((it[0]["brand"] for it in items if it[0]["brand"]), None),

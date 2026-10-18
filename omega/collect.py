@@ -113,6 +113,8 @@ def run_source(src, http, cache, browser=None):
                     except Exception:
                         return browser.get_raw(u)
             gen = adapters.sitemap(src, http, log, fetch_page, fetch_xml)
+        elif kind == "urls":
+            gen = adapters.urls(src, http, log, fetch_page)
         elif kind == "listing":
             gen = adapters.listing(src, http, log, fetch_page)
         elif kind == "custom":
@@ -156,7 +158,7 @@ def run_source(src, http, cache, browser=None):
 
 def main(argv=None):
     # If a request ever hangs past the per-request timeout, dump every thread's stack once.
-    faulthandler.dump_traceback_later(1800, exit=False)
+    faulthandler.dump_traceback_later(1500, exit=False)
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--skip", nargs="*", default=[])

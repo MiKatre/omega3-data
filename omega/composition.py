@@ -298,8 +298,8 @@ def epa_dha(text, name=""):
             after_gap = t[tk["e"]:after["s"]] if after is not None else ""
             if before is not None and strong and id(before) not in used_amounts:
                 pick, layout = before, "reverse"
-            elif before is not None and after is not None and re.search(r"[,;·]", after_gap) and (
-                    id(before) not in used_amounts):
+            elif before is not None and after is not None and re.search(
+                    r"[,;·+/]|\b(?:y|et|and|e|und)\b", after_gap) and id(before) not in used_amounts:
                 # "3840mg DHA TG, 240mg EPA": the amount after the comma belongs to the next item.
                 pick, layout = before, "reverse"
             elif after is not None:

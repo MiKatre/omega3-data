@@ -235,3 +235,11 @@ def listing(src, http, log, fetch_page):
         html = fetch_page(u)
         if html:
             yield from page_offers(src, u, html)
+
+
+def urls(src, http, log, fetch_page):
+    """A fixed list of product pages (shops with one or two omega-3 products and no usable sitemap)."""
+    for u in src["urls"]:
+        html = fetch_page(u)
+        if html:
+            yield from page_offers(src, u, html)
