@@ -1,1 +1,29 @@
-{"rules": []}
+{
+  "note": "Hand-reviewed values. composition is per single unit (capsule, ml or gummy). Sources: IFOS lot report labels or the product's own label table.",
+  "rules": [
+    {"match": {"source": "norsan", "url": "/omega-3-total/"}, "pack": {"count": 200, "unit": "ml"},
+     "composition": {"epa": 130, "dha": 75, "unit": "ml", "snippet": "IFOS label: 1040 mg EPA + 600 mg DHA per 8 ml"}},
+    {"match": {"source": "norsan", "url": "/aceite-de-higado-de-bacalao/"}, "pack": {"count": 200, "unit": "ml"}, "kind": "cod_liver",
+     "composition": {"epa": 75, "dha": 97.5, "unit": "ml", "snippet": "IFOS label: 750 mg EPA + 975 mg DHA per 10 ml"}},
+    {"match": {"source": "norsan", "url": "/omega-3-fisk-aceite/"}, "pack": {"count": 150, "unit": "ml"},
+     "composition": {"epa": 89.6, "dha": 76.4, "unit": "ml", "snippet": "Label: one teaspoon (5 ml) gives 448 mg EPA and 382 mg DHA"}},
+    {"match": {"source": "norsan", "url": "/omega-3-vegano-aceite/"}, "pack": {"count": 100, "unit": "ml"}, "kind": "algae",
+     "composition": {"epa": 121.8, "dha": 231.6, "unit": "ml", "snippet": "IFOS label: 609 mg EPA + 1158 mg DHA per 5 ml"}},
+    {"match": {"source": "norsan", "url": "/omega-3-vegan-epa-aceite/"}, "pack": {"count": 100, "unit": "ml"}, "kind": "algae",
+     "composition": {"epa": 220.8, "dha": 154, "unit": "ml", "snippet": "IFOS label: 1104 mg EPA + 770 mg DHA per 5 ml"}},
+    {"match": {"source": "norsan", "url": "/omega-3-total-capsulas/"}, "pack": {"count": 120, "unit": "capsule"},
+     "composition": {"epa": 176.75, "dha": 92, "unit": "capsule", "snippet": "IFOS label: 707 mg EPA + 368 mg DHA per 4 capsules"}},
+    {"match": {"source": "norsan", "url": "/omega-3-arktis-capsulas/"}, "pack": {"count": 120, "unit": "capsule"}, "kind": "cod_liver",
+     "composition": {"epa": 80, "dha": 120, "unit": "capsule", "snippet": "IFOS label: 480 mg EPA + 720 mg DHA per 6 capsules"}},
+    {"match": {"source": "norsan", "url": "/omega-3-vegano-capsulas/"}, "pack": {"count": 80, "unit": "capsule"}, "kind": "algae",
+     "composition": {"epa": 129.25, "dha": 246, "unit": "capsule", "snippet": "IFOS label: 517 mg EPA + 984 mg DHA per 4 capsules"}},
+    {"match": {"source": "norsan", "url": "-set/"}, "exclude": true},
+    {"match": {"source": "norsan", "url": "-jelly/"}, "exclude": true},
+    {"match": {"source": "norsan", "url": "/omega-3-alga/"}, "exclude": true},
+
+    {"match": {"source": "hsn", "url": "/omega-3-vegano-aceite-de-algas-1000mg"}, "kind": "algae",
+     "composition": {"epa": 0, "dha": 400, "unit": "capsule", "snippet": "Label: El mayor contenido de DHA garantizado: 40% real = 400mg por perla"}},
+    {"match": {"source": "hsn", "url": "/omega-3-3000mg"},
+     "composition": {"epa": 180, "dha": 120, "unit": "capsule", "snippet": "18/12 fish oil, 1000 mg per softgel; 3000 mg = 3 softgels"}}
+  ]
+}

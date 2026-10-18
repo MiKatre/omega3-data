@@ -11,12 +11,15 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .composition import certs_of, form_of, kind_of, pack_size, resolve, totox_claim
+from .composition import certs_of, form_of, kind_of, pack_from_text, pack_size, resolve, totox_claim
 from .ifos import ALIASES
 from .ifos import norm as brand_norm
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / ".cache" / "raw"
+# Natural oils cannot be concentrated beyond these EPA+DHA amounts per unit.
+KIND_MAX = {("cod_liver", "capsule"): 400, ("cod_liver", "ml"): 300, ("krill", "capsule"): 350,
+            ("krill", "ml"): 300, ("blend", "capsule"): 700, ("algae", "capsule"): 900}
 CONF_RANK = {"override": 4, "high": 3, "medium": 2, "low": 1, None: 0}
 
 SHOP_SUFFIX = re.compile(
@@ -100,6 +103,8 @@ def offer_record(raw, rules):
             text, re.I)
         if m:
             pack = pack_size(m.group(1))
+    if not pack:
+        pack = pack_from_text(text, variant or name)
     o = {
         "source": raw["source"], "shop": raw["shop"], "country": raw["country"],
         "url": raw["url"], "name": full, "base_name": name, "brand": raw.get("brand"),
@@ -107,8 +112,13 @@ def offer_record(raw, rules):
         "available": raw.get("available"), "image": raw.get("image"),
         "fetched_at": raw.get("fetched_at"), "pack": pack,
     }
-    o["comp"] = resolve(name, variant, text, pack)
     o["kind"] = kind_of(full, text)
+    o["comp"] = resolve(name, variant, text, pack)
+    c = o["comp"]
+    if c and c["confidence"] != "override":
+        cap = KIND_MAX.get((o["kind"], c["unit"]))
+        if cap and c["total"] > cap:
+            o["comp"] = None
     o["form"] = form_of(text)
     o["certs"] = certs_of(f"{full} {text}")
     o["totox_claim"] = totox_claim(text)
@@ -205,6 +215,17 @@ def match_ifos(group, by_brand, brand_names):
             nt = tokens(p.get("name"))
             gt = tokens(group["name"])
             sim = len(nt & gt) / max(1, len(nt | gt))
+            pname = (p.get("name") or "").lower() + " " + (p.get("summary") or "").lower()
+            if group["kind"] == "krill" and "krill" not in pname:
+                continue
+            if group["kind"] == "blend" and not re.search(r"3-6-9|omega 3-6|omega-6", pname):
+                continue
+            if group["kind"] == "algae" and not re.search(r"alga|vegan|schizo", pname):
+                continue
+            if group["kind"] in ("fish", "cod_liver") and re.search(r"krill|alga|vegan", pname):
+                continue
+            if p.get("name") and sim == 0 and len(by_brand.get(bid, [])) > 1:
+                continue
             score = 1 + sim + (0.5 if n in fits else 0)
             if best is None or score > best[0]:
                 best = (score, p, fits[0])
@@ -273,11 +294,6 @@ def main():
         comps = [o["comp"] for o in offs if o["comp"]]
         comps.sort(key=lambda c: -CONF_RANK.get(c.get("confidence"), 0))
         comp = comps[0] if comps else None
-        # Agreeing readings from several shops raise confidence.
-        if comp and comp["confidence"] == "low":
-            same = [c for c in comps if abs(c["total"] - comp["total"]) < 1]
-            if len({id(c) for c in same}) >= 2 and len(offs) >= 2:
-                comp = dict(comp, confidence="medium", method=comp["method"] + " +agree")
         names = Counter(o["base_name"] for o in offs)
         name = min(names, key=lambda n: (-names[n], len(n)))
         packs = [o["pack"] for o in offs if o["pack"]]
@@ -309,7 +325,10 @@ def main():
             if ok:
                 grams = pk["count"] * comp["total"] / 1000
                 row["eur_per_g"] = round(o["price"] / grams, 4) if grams else None
-                if not row["eur_per_g"] or not 0.03 <= row["eur_per_g"] <= 15:
+                floor = 0.03 if comp["confidence"] == "override" else 0.12
+                if not row["eur_per_g"] or not floor <= row["eur_per_g"] <= 15:
+                    # Far below every reviewed product: almost always a misread dose; hide it.
+                    row["suspect_eur_per_g"] = row["eur_per_g"]
                     row["eur_per_g"] = None
                     stats["implausible_eur_per_g"] += 1
             out_offers.append(row)
@@ -324,11 +343,15 @@ def main():
 
     for g in products:
         g.pop("pack", None)
-    report = {"sources": []}
+    merged = {}
     for name in ("report.json", "report-browser.json"):
         rp = ROOT / "runs" / name
         if rp.exists():
-            report["sources"] += json.loads(rp.read_text()).get("sources", [])
+            for src in json.loads(rp.read_text()).get("sources", []):
+                # A source retried in Chromium appears twice: keep the attempt with more offers.
+                if src["id"] not in merged or src["offers"] >= merged[src["id"]]["offers"]:
+                    merged[src["id"]] = src
+    report = {"sources": list(merged.values())}
     carried = carry_over(products, report)
     products.sort(key=lambda g: (g["best_eur_per_g"] is None, g["best_eur_per_g"] or 0))
     per_source = Counter(o["source"] for o in offers)
@@ -352,35 +375,82 @@ def main():
 
 
 
+def brand_key(g):
+    b = g.get("brand") or ""
+    if not b or b.lower() in ("default", "generic"):
+        b = g["name"].split()[0] if g["name"] else ""
+    return slug(b).split("-")[0]
+
+
+def family_key(g):
+    c = g["comp"]
+    return (brand_key(g), g["kind"], c["unit"], round(c["total"] / 5) * 5,
+            round((c["epa"] or 0) / 10) * 10)
+
+
 def export_site(out):
-    """Slim, comparable-only copy for the static site."""
+    """Slim, comparable-only copy for the static site, one row per product family."""
     rows = []
     for g in out["products"]:
         offers = [o for o in g["offers"] if o.get("eur_per_g")]
         if not offers:
             continue
-        c = g["comp"]
+        rows.append((g, offers))
+    # Merge SKUs of the same product sold in other pack sizes or under other listing names.
+    families = defaultdict(list)
+    for g, offers in rows:
+        families[family_key(g)].append((g, offers))
+    merged = []
+    for fam in families.values():
+        clusters = []
+        for g, offers in fam:
+            gt = tokens(g["name"])
+            for cl in clusters:
+                ct = cl["tokens"]
+                if len(gt & ct) / max(1, min(len(gt), len(ct))) >= 0.5:
+                    cl["items"].append((g, offers))
+                    cl["tokens"] |= gt
+                    break
+            else:
+                clusters.append({"tokens": set(gt), "items": [(g, offers)]})
+        merged += [cl["items"] for cl in clusters]
+    site_rows = []
+    for items in merged:
+        items.sort(key=lambda it: min(o["eur_per_g"] for o in it[1]))
+        lead = items[0][0]
+        rank = {"override": 0, "high": 1, "medium": 2}
+        best_comp = min((it[0] for it in items), key=lambda g: rank.get(g["comp"]["confidence"], 3))
+        c = best_comp["comp"]
+        ifos = next((it[0]["ifos"] for it in items if it[0]["ifos"]), None)
+        offers = []
+        for g, offs in items:
+            for o in offs:
+                offers.append({k: o[k] for k in ("shop", "country", "url", "price", "count", "unit",
+                                                  "eur_per_g", "available", "fetched_at")})
         offers.sort(key=lambda o: o["eur_per_g"])
-        rows.append({
-            "id": g["id"], "name": g["name"], "brand": g["brand"], "kind": g["kind"], "form": g["form"],
-            "certs": g["certs"], "gtin": g["gtin"],
+        names = Counter(it[0]["name"] for it in items)
+        site_rows.append({
+            "id": lead["id"], "name": min(names, key=lambda n: (len(n) > 70, -names[n], len(n))),
+            "brand": next((it[0]["brand"] for it in items if it[0]["brand"]), None),
+            "kind": lead["kind"], "form": next((it[0]["form"] for it in items if it[0]["form"]), None),
+            "certs": sorted({x for it in items for x in it[0]["certs"]}),
+            "gtin": lead["gtin"],
             "epa": c["epa"], "dha": c["dha"], "total": c["total"], "unit": c["unit"],
             "conf": c["confidence"], "method": c["method"], "snippet": (c.get("snippet") or "")[:260],
             "dose": c.get("daily_dose"),
-            "totox_claim": g["totox_claim"], "ifos": g["ifos"],
-            "offers": [{k: o[k] for k in ("shop", "country", "url", "price", "count", "unit",
-                                           "eur_per_g", "available", "fetched_at")} for o in offers],
+            "totox_claim": next((it[0]["totox_claim"] for it in items if it[0]["totox_claim"]), None),
+            "ifos": ifos, "offers": offers[:40],
         })
+    site_rows.sort(key=lambda r: r["offers"][0]["eur_per_g"])
     site = {
         "generated_at": out["generated_at"],
         "stats": out["stats"],
-        "shops": sorted({(o["shop"], o["country"]) for r in rows for o in r["offers"]}),
-        "products": rows,
+        "shops": sorted({(o["shop"], o["country"]) for r in site_rows for o in r["offers"]}),
+        "products": site_rows,
     }
     (ROOT / "site").mkdir(exist_ok=True)
     (ROOT / "site" / "data.json").write_text(json.dumps(site, ensure_ascii=False, separators=(",", ":")))
-    return len(rows)
-
+    return len(site_rows)
 
 if __name__ == "__main__":
     sys.exit(main())

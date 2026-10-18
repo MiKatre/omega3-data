@@ -1,47 +1,373 @@
 {
-  "schema_version": 1,
-  "sources": [
-    {"id": "onatera", "name": "Onatera", "country": "FR", "kind": "sitemap", "base": "https://www.onatera.com", "include": "/FR/fr/produit-"},
-    {"id": "nutrimuscle", "name": "Nutrimuscle", "country": "FR", "kind": "shopify", "base": "https://www.nutrimuscle.com"},
-    {"id": "novoma", "name": "Novoma", "country": "FR", "kind": "shopify", "base": "https://novoma.com"},
-    {"id": "dynveo", "name": "Dynveo", "country": "FR", "kind": "shopify", "base": "https://www.dynveo.fr"},
-    {"id": "natesis", "name": "Natésis", "country": "FR", "kind": "shopify", "base": "https://natesis.com"},
-    {"id": "apyforme", "name": "Apyforme", "country": "FR", "kind": "shopify", "base": "https://apyforme.com"},
-    {"id": "biocyte", "name": "Biocyte", "country": "FR", "kind": "shopify", "base": "https://www.biocyte.com"},
-    {"id": "arkopharma", "name": "Arkopharma", "country": "FR", "kind": "shopify", "base": "https://fr.arkopharma.com"},
-    {"id": "supersmart-fr", "name": "Supersmart", "country": "FR", "kind": "sitemap", "base": "https://www.supersmart.com", "include": "www\\.supersmart\\.com/fr/"},
-    {"id": "pharma-gdd", "name": "Pharma GDD", "country": "FR", "kind": "sitemap", "base": "https://www.pharma-gdd.com", "include": "/fr/"},
-    {"id": "pharmashopi", "name": "Pharmashopi", "country": "FR", "kind": "sitemap", "base": "https://www.pharmashopi.com"},
-    {"id": "cocooncenter", "name": "Cocooncenter", "country": "FR", "kind": "sitemap", "base": "https://www.cocooncenter.com"},
-    {"id": "newpharma-fr", "name": "Newpharma", "country": "FR", "kind": "sitemap", "base": "https://www.newpharma.fr", "include": "www\\.newpharma\\.fr/"},
-    {"id": "atida-fr", "name": "Atida", "country": "FR", "kind": "sitemap", "base": "https://www.atida.fr"},
-    {"id": "bulk-fr", "name": "Bulk", "country": "FR", "kind": "sitemap", "base": "https://www.bulk.com", "include": "bulk\\.com/fr/products/"},
-    {"id": "granions", "name": "Granions", "country": "FR", "kind": "sitemap", "base": "https://www.granions.fr", "include": "www\\.granions\\.fr/"},
-    {"id": "nutergia-fr", "name": "Nutergia", "country": "FR", "kind": "sitemap", "base": "https://www.nutergia.com", "include": "nutergia\\.com/fr/fr/"},
-    {"id": "unae", "name": "Unaé", "country": "FR", "kind": "woo", "base": "https://www.unae.fr"},
-    {"id": "nutripure", "name": "Nutripure", "country": "FR", "kind": "sitemap", "base": "https://www.nutripure.fr", "browser": true},
-    {"id": "greenweez", "name": "Greenweez", "country": "FR", "kind": "sitemap", "base": "https://www.greenweez.com", "include": "/produit/", "browser": true},
-
-    {"id": "hsn", "name": "HSN", "country": "ES", "kind": "sitemap", "base": "https://www.hsnstore.com", "include": "/marcas/"},
-    {"id": "myprotein-es", "name": "Myprotein", "country": "ES", "kind": "sitemap", "base": "https://www.myprotein.es"},
-    {"id": "bulk-es", "name": "Bulk", "country": "ES", "kind": "sitemap", "base": "https://www.bulk.com", "include": "bulk\\.com/es/products/"},
-    {"id": "bulevip", "name": "Bulevip", "country": "ES", "kind": "sitemap", "base": "https://www.bulevip.com"},
-    {"id": "nutritienda", "name": "Nutritienda", "country": "ES", "kind": "sitemap", "base": "https://www.nutritienda.com", "include": "/es/"},
-    {"id": "dosfarma", "name": "Dosfarma", "country": "ES", "kind": "sitemap", "base": "https://www.dosfarma.com"},
-    {"id": "promofarma", "name": "PromoFarma", "country": "ES", "kind": "sitemap", "base": "https://www.promofarma.com", "include": "/es/"},
-    {"id": "atida-es", "name": "Atida | Mifarma", "country": "ES", "kind": "sitemap", "base": "https://www.atida.com", "include": "/es-es/"},
-    {"id": "solgar-es", "name": "Solgar", "country": "ES", "kind": "sitemap", "base": "https://www.solgar.es"},
-    {"id": "drasanvi", "name": "Drasanvi", "country": "ES", "kind": "sitemap", "base": "https://drasanvi.com", "include": "drasanvi\\.com/producto/"},
-    {"id": "puroomega", "name": "Puro Omega", "country": "ES", "kind": "sitemap", "base": "https://www.puroomega.com", "include": "/producto/"},
-    {"id": "farmaciasdirect", "name": "FarmaciasDirect", "country": "ES", "kind": "shopify", "base": "https://www.farmaciasdirect.com"},
-    {"id": "norsan", "name": "Norsan", "country": "ES", "kind": "woo", "base": "https://norsan.es"},
-    {"id": "lamberts-es", "name": "Lamberts", "country": "ES", "kind": "woo", "base": "https://lamberts.es"},
-    {"id": "nutergia-es", "name": "Nutergia", "country": "ES", "kind": "woo", "base": "https://www.nutergia.es"},
-    {"id": "vitae", "name": "Vitae", "country": "ES", "kind": "woo", "base": "https://www.vitae.es"},
-    {"id": "ecoceutics", "name": "Ecoceutics", "country": "ES", "kind": "woo", "base": "https://www.ecoceutics.com"},
-    {"id": "belevels", "name": "be levels", "country": "ES", "kind": "shopify", "base": "https://belevels.com"},
-    {"id": "gemaherrerias", "name": "Gema Herrerías", "country": "ES", "kind": "shopify", "base": "https://gemaherrerias.com"},
-    {"id": "planetahuerto", "name": "Planeta Huerto", "country": "ES", "kind": "shopify", "base": "https://www.planetahuerto.es"},
-    {"id": "naturitas", "name": "Naturitas", "country": "ES", "kind": "sitemap", "base": "https://www.naturitas.es", "include": "/p/", "browser": true}
-  ]
+ "schema_version": 1,
+ "sources": [
+  {
+   "id": "onatera",
+   "name": "Onatera",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.onatera.com",
+   "include": "/FR/fr/produit-"
+  },
+  {
+   "id": "nutrimuscle",
+   "name": "Nutrimuscle",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://www.nutrimuscle.com"
+  },
+  {
+   "id": "novoma",
+   "name": "Novoma",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://novoma.com"
+  },
+  {
+   "id": "dynveo",
+   "name": "Dynveo",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://www.dynveo.fr"
+  },
+  {
+   "id": "natesis",
+   "name": "Natésis",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://natesis.com"
+  },
+  {
+   "id": "apyforme",
+   "name": "Apyforme",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://apyforme.com"
+  },
+  {
+   "id": "biocyte",
+   "name": "Biocyte",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://www.biocyte.com"
+  },
+  {
+   "id": "arkopharma",
+   "name": "Arkopharma",
+   "country": "FR",
+   "kind": "shopify",
+   "base": "https://fr.arkopharma.com"
+  },
+  {
+   "id": "supersmart-fr",
+   "name": "Supersmart",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.supersmart.com",
+   "include": "www\\.supersmart\\.com/fr/"
+  },
+  {
+   "id": "pharma-gdd",
+   "name": "Pharma GDD",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.pharma-gdd.com",
+   "include": "/fr/"
+  },
+  {
+   "id": "pharmashopi",
+   "name": "Pharmashopi",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.pharmashopi.com"
+  },
+  {
+   "id": "cocooncenter",
+   "name": "Cocooncenter",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.cocooncenter.com"
+  },
+  {
+   "id": "newpharma-fr",
+   "name": "Newpharma",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.newpharma.fr",
+   "include": "www\\.newpharma\\.fr/"
+  },
+  {
+   "id": "atida-fr",
+   "name": "Atida",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.atida.fr"
+  },
+  {
+   "id": "bulk-fr",
+   "name": "Bulk",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.bulk.com",
+   "include": "bulk\\.com/fr/products/"
+  },
+  {
+   "id": "granions",
+   "name": "Granions",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.granions.fr",
+   "include": "www\\.granions\\.fr/"
+  },
+  {
+   "id": "nutergia-fr",
+   "name": "Nutergia",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.nutergia.com",
+   "include": "nutergia\\.com/fr/fr/"
+  },
+  {
+   "id": "unae",
+   "name": "Unaé",
+   "country": "FR",
+   "kind": "woo",
+   "base": "https://www.unae.fr"
+  },
+  {
+   "id": "nutripure",
+   "name": "Nutripure",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.nutripure.fr",
+   "browser": true,
+   "max_pages": 220
+  },
+  {
+   "id": "greenweez",
+   "name": "Greenweez",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.greenweez.com",
+   "include": "/produit/",
+   "browser": true,
+   "max_pages": 220
+  },
+  {
+   "id": "hsn",
+   "name": "HSN",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.hsnstore.com",
+   "include": "/marcas/"
+  },
+  {
+   "id": "myprotein-es",
+   "name": "Myprotein",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.myprotein.es"
+  },
+  {
+   "id": "bulk-es",
+   "name": "Bulk",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.bulk.com",
+   "include": "bulk\\.com/es/products/"
+  },
+  {
+   "id": "bulevip",
+   "name": "Bulevip",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.bulevip.com"
+  },
+  {
+   "id": "nutritienda",
+   "name": "Nutritienda",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.nutritienda.com",
+   "include": "/es/"
+  },
+  {
+   "id": "dosfarma",
+   "name": "Dosfarma",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.dosfarma.com"
+  },
+  {
+   "id": "promofarma",
+   "name": "PromoFarma",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.promofarma.com",
+   "include": "/es/"
+  },
+  {
+   "id": "atida-es",
+   "name": "Atida | Mifarma",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.atida.com",
+   "include": "/es-es/"
+  },
+  {
+   "id": "solgar-es",
+   "name": "Solgar",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.solgar.es",
+   "disabled": true
+  },
+  {
+   "id": "drasanvi",
+   "name": "Drasanvi",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://drasanvi.com",
+   "include": "drasanvi\\.com/producto/"
+  },
+  {
+   "id": "puroomega",
+   "name": "Puro Omega",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.puroomega.com",
+   "include": "/producto/"
+  },
+  {
+   "id": "farmaciasdirect",
+   "name": "FarmaciasDirect",
+   "country": "ES",
+   "kind": "shopify",
+   "base": "https://www.farmaciasdirect.com"
+  },
+  {
+   "id": "norsan",
+   "name": "Norsan",
+   "country": "ES",
+   "kind": "woo",
+   "base": "https://norsan.es"
+  },
+  {
+   "id": "lamberts-es",
+   "name": "Lamberts",
+   "country": "ES",
+   "kind": "woo",
+   "base": "https://lamberts.es"
+  },
+  {
+   "id": "nutergia-es",
+   "name": "Nutergia",
+   "country": "ES",
+   "kind": "woo",
+   "base": "https://www.nutergia.es"
+  },
+  {
+   "id": "vitae",
+   "name": "Vitae",
+   "country": "ES",
+   "kind": "woo",
+   "base": "https://www.vitae.es"
+  },
+  {
+   "id": "ecoceutics",
+   "name": "Ecoceutics",
+   "country": "ES",
+   "kind": "woo",
+   "base": "https://www.ecoceutics.com"
+  },
+  {
+   "id": "belevels",
+   "name": "be levels",
+   "country": "ES",
+   "kind": "shopify",
+   "base": "https://belevels.com"
+  },
+  {
+   "id": "gemaherrerias",
+   "name": "Gema Herrerías",
+   "country": "ES",
+   "kind": "shopify",
+   "base": "https://gemaherrerias.com"
+  },
+  {
+   "id": "planetahuerto",
+   "name": "Planeta Huerto",
+   "country": "ES",
+   "kind": "shopify",
+   "base": "https://www.planetahuerto.es"
+  },
+  {
+   "id": "naturitas",
+   "name": "Naturitas",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.naturitas.es",
+   "include": "/p/",
+   "browser": true,
+   "max_pages": 220
+  },
+  {
+   "id": "docmorris-fr",
+   "name": "DocMorris",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.docmorris.fr",
+   "include": "docmorris\\.fr/fr/"
+  },
+  {
+   "id": "easypara",
+   "name": "Easypara",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.easypara.fr"
+  },
+  {
+   "id": "pharmaciedesdrakkars",
+   "name": "Pharmacie des Drakkars",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.pharmaciedesdrakkars.com"
+  },
+  {
+   "id": "parapharmacie-et-medicament",
+   "name": "Parapharmacie et Médicament",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.parapharmacie-et-medicament.com"
+  },
+  {
+   "id": "pharmaciepolygone",
+   "name": "Pharmacie Polygone",
+   "country": "FR",
+   "kind": "sitemap",
+   "base": "https://www.pharmaciepolygone.com",
+   "include": "/fr/products/"
+  },
+  {
+   "id": "farmaciaribera",
+   "name": "Farmacia Ribera",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://farmaciaribera.es"
+  },
+  {
+   "id": "herbolarionavarro",
+   "name": "Herbolario Navarro",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.herbolarionavarro.es"
+  },
+  {
+   "id": "arenal",
+   "name": "Arenal",
+   "country": "ES",
+   "kind": "sitemap",
+   "base": "https://www.arenal.com"
+  }
+ ]
 }

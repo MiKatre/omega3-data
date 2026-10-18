@@ -66,3 +66,23 @@ def test_boilerplate_only_gives_nothing():
 def test_pack_size(name, count, unit):
     p = pack_size(name)
     assert p["count"] == count and p["unit"] == unit
+
+
+def test_basis_after_amounts():
+    text = ("Huile de poisson ultra pure (90% de triglycérides). 800 mg d’EPA et 600 mg de DHA par dose "
+            "journalière (4 capsules).")
+    c = resolve("Oméga 3 Epax", None, text, CAP)
+    assert (c["epa"], c["dha"], c["confidence"]) == (200, 150, "high")
+
+
+def test_oil_weight_is_not_epa_dha_total():
+    text = ("Ingrédients pour 4 capsules : Huile de poisson Omegavie concentrée riche en acides gras "
+            "essentiels (EPA et DHA) 2708 mg, capsule (gélatine de poisson).")
+    assert resolve("Fleurance Nature Oméga 3 60 Capsules", None, text, CAP) is None
+
+
+def test_pair_beats_combined_label():
+    text = ("Ingredientes por cápsula blanda: Aceite de pescado azul rico en Omega 3 35/25 E.P.A/DHA EE "
+            "(1000 mg): EPA (ácido eicosapentaenoico, 350mg), DHA (acido docosahexaenoico, 250mg).")
+    c = resolve("H4U Omega 3 Concentrado 30 cápsulas", None, text, CAP)
+    assert (c["epa"], c["dha"]) == (350, 250)

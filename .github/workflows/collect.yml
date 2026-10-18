@@ -44,6 +44,7 @@ jobs:
 
       - name: Collect (HTTP sources)
         continue-on-error: true
+        timeout-minutes: 30
         env:
           ONLY: ${{ github.event.inputs.only }}
         run: |
@@ -60,6 +61,7 @@ jobs:
       - name: Collect (browser sources)
         if: github.event_name == 'schedule' || github.event.inputs.browser == 'true'
         continue-on-error: true
+        timeout-minutes: 40
         env:
           ONLY: ${{ github.event.inputs.only }}
         run: |

@@ -6,6 +6,7 @@ reviewer can check it and the site can hide guesses.
 """
 
 import re
+from collections import Counter
 
 NUM = r"\d{1,2}(?:[ .  ]\d{3})+(?:,\d+)?|\d+(?:[.,]\d+)?"
 UNIT_WORDS = (
@@ -186,7 +187,12 @@ def _basis_of(text, toks, i, amount_tok):
     """Nearest basis before token i (or right after the amount)."""
     # Right after the amount: "500 mg d'EPA par capsule".
     if amount_tok is not None:
-        tail = text[amount_tok["e"]:amount_tok["e"] + 60]
+        tail = text[amount_tok["e"]:amount_tok["e"] + 90]
+        m = re.match(rf"[^\d\n.;]{{0,60}}?\b(?:par|por|per|pour)\s+(?:dose|dosis|toma|portion|raci[oó]n|serving)"
+                     rf"(?:\s+(?:journali[eè]re|diaria|quotidienne|recommand[ée]e|recomendada|daily))?\s*"
+                     rf"[(:]?\s*(?:de\s+)?(\d{{1,2}})\s*({UNIT_WORDS}|ml\b)", tail, re.I)
+        if m:
+            return num(m.group(1)), unit_kind(m.group(2)), m.group(0), "high"
         m = re.match(rf"[^\d\n.;]{{0,30}}?\b(?:par|por|per|pour|cada|each|chaque)\s+(?:(\d{{1,2}})\s*)?"
                      rf"({UNIT_WORDS}|ml\b)", tail, re.I)
         if m:
@@ -308,9 +314,13 @@ def epa_dha(text, name=""):
     for a in range(len(vals)):
         la, ia, ta, lay = vals[a]
         if la in ("ED", "DE") and ta["u"] in ("mg", "g"):
+            # "Huile de poisson riche en (EPA et DHA) 2708 mg" is the oil weight, not EPA+DHA.
+            if any(toks[j]["k"] == "OIL" and toks[ia]["s"] - toks[j]["e"] < 90
+                   for j in range(max(0, ia - 4), ia)):
+                continue
             total = ta["v"] * (1000 if ta["u"] == "g" else 1)
             readings.append({"epa": None, "dha": None, "total": total, "unit_kind": "mg",
-                             "i": ia, "amount": ta, "layout": lay})
+                             "i": ia, "amount": dict(ta, e=max(ta["e"], toks[ia]["e"])), "layout": lay})
             continue
         if la != "E":
             continue
@@ -326,9 +336,11 @@ def epa_dha(text, name=""):
                 best = (dist, ib, tb)
         if best:
             mult = 1000 if ta["u"] == "g" else 1
+            last = ta if ta["e"] >= best[2]["e"] else best[2]
+            tail_end = max(last["e"], toks[ia]["e"], toks[best[1]]["e"])
             readings.append({"epa": ta["v"] * mult, "dha": best[2]["v"] * mult, "total": None,
                              "unit_kind": "%" if ta["u"] == "%" else "mg", "i": min(ia, best[1]),
-                             "amount": ta, "layout": lay})
+                             "amount": dict(last, e=tail_end), "layout": lay})
     out = []
     for r in readings:
         if r["unit_kind"] == "mg":
@@ -340,10 +352,13 @@ def epa_dha(text, name=""):
         oil = None
         for j in range(r["i"] - 1, max(-1, r["i"] - 8), -1):
             if toks[j]["k"] == "OIL" and re.match(r"(huile|aceite|fish|krill|algal)", t[toks[j]["s"]:toks[j]["e"]], re.I):
-                if j + 1 < len(toks) and toks[j + 1]["k"] == "AMT" and toks[j + 1]["u"] == "mg" and (
-                        toks[j + 1]["s"] - toks[j]["e"] < 60):
-                    if 200 <= toks[j + 1]["v"] <= 8000:
-                        oil = toks[j + 1]["v"]
+                for jj in range(j + 1, min(len(toks), j + 4)):
+                    a = toks[jj]
+                    if a["k"] == "AMT" and a["u"] == "mg" and a["s"] - toks[j]["e"] < 70:
+                        own = a["v"] in (r["epa"], r["dha"], r["total"])
+                        if 200 <= a["v"] <= 8000 and not own and "." not in t[toks[j]["e"]:a["s"]]:
+                            oil = a["v"]
+                        break
                 break
         out.append({
             "epa": r["epa"], "dha": r["dha"], "total": r["total"], "kind": r["unit_kind"],
@@ -352,7 +367,9 @@ def epa_dha(text, name=""):
             "snippet": t[max(0, s - 140):s + 160].strip(),
         })
     # Explicit-basis readings first, then document order.
-    out.sort(key=lambda r: (r["kind"] == "%", r["confidence"] != "high", r["confidence"] is None))
+    # Explicit EPA and DHA pairs beat combined "EPA+DHA" totals; percentages come last.
+    out.sort(key=lambda r: (r["kind"] == "%", r["epa"] is None, r["confidence"] != "high",
+                            r["confidence"] is None))
     if not out and name:
         ne = re.search(rf"\bEPA\s*({AMT_NUM})\s*mg", name, re.I)
         nd = re.search(rf"\bDHA\s*({AMT_NUM})\s*mg", name, re.I)
@@ -425,7 +442,7 @@ def totox_claim(text):
     return None
 
 
-PLAUSIBLE = {"capsule": (25, 1050), "gummy": (15, 700), "ml": (40, 450)}
+PLAUSIBLE = {"capsule": (25, 1100), "gummy": (15, 700), "ml": (40, 450)}
 OIL_RE = re.compile(
     rf"(?:c[áa]psulas?|perlas?|capsules?|g[ée]lules?|softgels?|perles?)\s*(?:blandas?\s+)?(?:de|d['’]|of|:)\s*({NUM})\s*mg|"
     rf"({NUM})\s*mg\s*(?:par|por|per)\s+(?:c[áa]psula|perla|capsule|g[ée]lule|softgel)",
@@ -491,6 +508,15 @@ def resolve(name, variant, text, pack=None):
         total = (tot if tot is not None else e + d) / per
         if oil_label and total > 0.95 * oil_label / per:
             continue
+        cap_weight = oil_per_unit(name, "") if unit == "capsule" else None
+        if cap_weight and cap_weight <= 1500 and total > 0.92 * cap_weight:
+            # "Omega 3 1000 mg" cannot hold 900+ mg EPA+DHA per capsule unless it says so per dose.
+            if dose and dose[1] == unit and total / dose[0] <= 0.92 * cap_weight and conf != "high":
+                per *= dose[0]
+                total /= dose[0]
+                method += " /capsule weight"
+            else:
+                continue
         lo, hi = PLAUSIBLE.get(unit, (25, 1400))
         if not lo <= total <= hi:
             if dose and conf == "low" and dose[1] == unit and lo <= total / dose[0] <= hi:
@@ -511,4 +537,50 @@ def resolve(name, variant, text, pack=None):
             "snippet": r["snippet"][:400],
             "daily_dose": dose[0] if dose and dose[1] == unit else None,
         }
-    return None
+    return dha_only(name, text, pack_unit)
+
+
+DHA_ONLY_RE = re.compile(
+    rf"({NUM})\s*mg\s*(?:de\s+|d['’]\s*|of\s+)?DHA[^.\d]{{0,25}}?(?:por|par|per|pour|cada|each|chaque|/)\s*"
+    rf"({UNIT_WORDS})|(?:{UNIT_WORDS})\s*=\s*({NUM})\s*mg\s*(?:de\s+)?DHA|DHA\s*:?\s*({NUM})\s*mg\s*"
+    rf"(?:por|par|per|pour|/)\s*({UNIT_WORDS})",
+    re.I,
+)
+
+
+def dha_only(name, text, pack_unit):
+    """Algae/DHA products that state only DHA per capsule ("250 mg de DHA por perla")."""
+    if not re.search(r"\bDHA\b", name or "", re.I) or re.search(r"\bEPA\b", name or "", re.I):
+        return None
+    m = DHA_ONLY_RE.search(focus(text or ""))
+    if not m:
+        return None
+    v = num(m.group(1) or m.group(3) or m.group(4))
+    lo, hi = PLAUSIBLE["capsule"]
+    if not lo <= v <= hi or (pack_unit and pack_unit != "capsule"):
+        return None
+    return {"epa": 0.0, "dha": v, "total": v, "unit": "capsule", "per_label": 1.0,
+            "confidence": "medium", "method": "DHA only", "snippet": m.group(0), "daily_dose": None}
+
+
+COMMON_PACKS = {30, 40, 45, 50, 60, 70, 80, 90, 100, 112, 120, 150, 160, 180, 200, 220, 240, 250, 270,
+                300, 360, 400, 500, 600}
+
+
+def pack_from_text(text, variant=None):
+    """Most frequent common pack size mentioned in the page text, times a "x2 flacons" multiplier."""
+    counts = Counter()
+    for m in re.finditer(rf"\b(\d{{2,3}})\s*({UNIT_WORDS})", text or "", re.I):
+        n = int(m.group(1))
+        if n in COMMON_PACKS:
+            counts[(n, unit_kind(m.group(2)))] += 1
+    if not counts:
+        return None
+    (n, unit), hits = counts.most_common(1)[0]
+    if hits < 2 and len(counts) > 1:
+        return None
+    mult = 1
+    mm = re.search(r"(?:x\s*(\d)|(\d)\s*(?:x|flacons|botes|frascos|bo[iî]tes|pots|envases))", variant or "", re.I)
+    if mm:
+        mult = int(mm.group(1) or mm.group(2))
+    return {"count": n * mult, "unit": unit, "multi": mult, "from_text": True}

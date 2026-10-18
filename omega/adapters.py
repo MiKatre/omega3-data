@@ -126,11 +126,15 @@ def woo(src, http, log):
 
 
 # ---------------------------------------------------------------- Sitemaps + product pages
-def sitemap_urls(src, http, log):
+def sitemap_urls(src, http, log, fetch_xml=None):
     host = urlsplit(src["base"]).netloc
+    get_xml = fetch_xml or (lambda u: http.get(u, accept="application/xml,text/xml,*/*"))
     maps = src.get("sitemaps")
     if not maps:
-        rb = http.get(src["base"].rstrip("/") + "/robots.txt", allow_404=True) or ""
+        try:
+            rb = get_xml(src["base"].rstrip("/") + "/robots.txt") or ""
+        except Exception:
+            rb = ""
         maps = re.findall(r"(?im)^sitemap:\s*(\S+)", rb) or [src["base"].rstrip("/") + "/sitemap.xml"]
     seen, queue, urls = set(), list(dict.fromkeys(maps)), []
     include = re.compile(src["include"]) if src.get("include") else None
@@ -140,7 +144,7 @@ def sitemap_urls(src, http, log):
             continue
         seen.add(m)
         try:
-            x = http.get(m, accept="application/xml,text/xml,*/*")
+            x = get_xml(m)
         except Exception as e:
             log(f"{src['id']}: sitemap {m} failed: {e}")
             continue
@@ -203,8 +207,8 @@ def page_offers(src, url, html):
     return list(uniq.values())
 
 
-def sitemap(src, http, log, fetch_page):
-    urls = sitemap_urls(src, http, log)
+def sitemap(src, http, log, fetch_page, fetch_xml=None):
+    urls = sitemap_urls(src, http, log, fetch_xml)
     limit = src.get("max_pages", 400)
     log(f"{src['id']}: {len(urls)} candidate URLs from sitemaps")
     for u in urls[:limit]:

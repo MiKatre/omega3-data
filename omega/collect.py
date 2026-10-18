@@ -8,6 +8,7 @@ Usage:
 
 import argparse
 import concurrent.futures as cf
+import faulthandler
 import gzip
 import hashlib
 import json
@@ -57,34 +58,44 @@ class PageCache:
 
 def run_source(src, http, cache, browser=None):
     t0 = time.time()
-    stats = {"id": src["id"], "pages": 0, "blocked": 0, "errors": 0, "offers": 0, "status": "ok"}
+    budget = src.get("budget_s", 1500 if browser else 1200)
+    stats = {"id": src["id"], "pages": 0, "blocked": 0, "errors": 0, "offers": 0, "status": "ok",
+             "via": "browser" if browser else "http"}
     offers = []
-    blocked_streak = [0]
+    streak = {"blocked": 0, "errors": 0}
 
     def fetch_page(url):
         cached = cache.get(url)
         if cached is not None:
             return cached
-        if blocked_streak[0] >= 4:
+        if streak["blocked"] >= 4 or streak["errors"] >= 8:
+            return None
+        if time.time() - t0 > budget:
+            if not stats.get("partial"):
+                stats["partial"] = f"time budget {budget}s reached"
+                log(f"{src['id']}: time budget reached after {stats['pages']} pages")
             return None
         try:
             if browser is not None:
                 html = browser.get(url, selector=src.get("wait_for"))
             else:
                 html = http.get(url)
-            blocked_streak[0] = 0
+            streak["blocked"] = streak["errors"] = 0
         except Blocked as e:
             stats["blocked"] += 1
-            blocked_streak[0] += 1
+            streak["blocked"] += 1
             log(f"{src['id']}: blocked {e}")
             return None
         except Exception as e:
             stats["errors"] += 1
+            streak["errors"] += 1
             log(f"{src['id']}: error {type(e).__name__} {str(e)[:120]}")
             return None
         if html:
             stats["pages"] += 1
             cache.put(url, html)
+            if stats["pages"] % 50 == 0:
+                log(f"{src['id']}: {stats['pages']} pages, {round(time.time() - t0)}s")
         return html
 
     kind = src["kind"]
@@ -94,7 +105,14 @@ def run_source(src, http, cache, browser=None):
         elif kind == "woo":
             gen = adapters.woo(src, http, log)
         elif kind == "sitemap":
-            gen = adapters.sitemap(src, http, log, fetch_page)
+            fetch_xml = None
+            if browser is not None:
+                def fetch_xml(u):
+                    try:
+                        return http.get(u, accept="application/xml,text/xml,*/*")
+                    except Exception:
+                        return browser.get_raw(u)
+            gen = adapters.sitemap(src, http, log, fetch_page, fetch_xml)
         elif kind == "listing":
             gen = adapters.listing(src, http, log, fetch_page)
         elif kind == "custom":
@@ -111,16 +129,18 @@ def run_source(src, http, cache, browser=None):
     except Exception as e:
         stats["status"] = f"error: {type(e).__name__}: {str(e)[:200]}"
         traceback.print_exc()
-    if kind == "woo" and offers:
-        # Store API lacks GTIN and composition tables: enrich from the product page itself.
+    if kind in ("woo", "shopify") and offers:
+        # Feeds carry short descriptions; composition tables live on the product page.
+        pages = {}
         for o in offers:
-            html = fetch_page(o["url"])
-            if html:
-                extra = adapters.page_offers(src, o["url"], html)
-                if extra:
-                    o["gtin"] = o.get("gtin") or extra[0].get("gtin")
-                    o["brand"] = o.get("brand") or extra[0].get("brand")
-                    o["text"] = (o.get("text") or "") + " \n " + extra[0]["text"]
+            if o["url"] not in pages:
+                html = fetch_page(o["url"])
+                pages[o["url"]] = adapters.page_offers(src, o["url"], html) if html else []
+            extra = pages[o["url"]]
+            if extra:
+                o["gtin"] = o.get("gtin") or extra[0].get("gtin")
+                o["brand"] = o.get("brand") or extra[0].get("brand")
+                o["text"] = (o.get("text") or "") + " \n " + extra[0]["text"]
     if stats["status"] == "ok" and not offers:
         stats["status"] = "empty" if not stats["blocked"] else "blocked"
     stats["offers"] = len(offers)
@@ -135,13 +155,15 @@ def run_source(src, http, cache, browser=None):
 
 
 def main(argv=None):
+    # If a request ever hangs past the per-request timeout, dump every thread's stack once.
+    faulthandler.dump_traceback_later(1800, exit=False)
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--skip", nargs="*", default=[])
     ap.add_argument("--no-browser", action="store_true")
     ap.add_argument("--browser-only", action="store_true")
     ap.add_argument("--cache-age", type=int, default=int(os.environ.get("OMEGA_CACHE_AGE", "0")))
-    ap.add_argument("--workers", type=int, default=10)
+    ap.add_argument("--workers", type=int, default=24)
     args = ap.parse_args(argv)
 
     catalog = json.loads((ROOT / "catalog.json").read_text())["sources"]
@@ -155,10 +177,21 @@ def main(argv=None):
 
     plain = [s for s in sources if not s.get("browser")]
     via_browser = [s for s in sources if s.get("browser")]
+    delay = float(os.environ.get("OMEGA_DELAY", "1.0"))
     if not args.browser_only:
         with cf.ThreadPoolExecutor(args.workers) as ex:
-            for st in ex.map(lambda s: run_source(s, http, cache), plain):
+            # One client per source: curl sessions are not shared between threads.
+            for st in ex.map(lambda s: run_source(s, Http(delay=delay, log=log), cache), plain):
                 report["sources"].append(st)
+    if args.browser_only:
+        # Retry in Chromium the plain sources that were blocked in the HTTP phase.
+        prev = ROOT / "runs" / "report.json"
+        if prev.exists():
+            blocked = {s["id"] for s in json.loads(prev.read_text())["sources"]
+                       if not s["offers"] and (s["blocked"] or "blocked" in s["status"])}
+            via_browser += [s for s in plain if s["id"] in blocked]
+            if blocked:
+                log(f"retrying in browser: {', '.join(sorted(blocked))}")
     if via_browser and not args.no_browser:
         from .browser import Browser
 

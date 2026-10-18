@@ -101,5 +101,17 @@ class Browser:
                 time.sleep(3)
         return None
 
+    def get_raw(self, url):
+        """Raw response body (sitemaps, JSON) fetched with the browser's cookies and fingerprint."""
+        resp = self.page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        if resp is None:
+            return None
+        if resp.status in (403, 429):
+            self.page.wait_for_timeout(6000)
+            resp = self.page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        if resp is None or resp.status != 200:
+            raise Blocked(f"browser HTTP {resp.status if resp else 0} {url}")
+        return resp.text()
+
     def evaluate(self, js):
         return self.page.evaluate(js)
