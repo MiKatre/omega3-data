@@ -8,7 +8,7 @@
    "offers": 22,
    "status": "blocked: product pages",
    "via": "http",
-   "seconds": 128
+   "seconds": 127
   },
   {
    "id": "nutrimuscle",
@@ -28,7 +28,7 @@
    "offers": 1,
    "status": "ok",
    "via": "http",
-   "seconds": 4
+   "seconds": 5
   },
   {
    "id": "dynveo",
@@ -58,7 +58,7 @@
    "offers": 3,
    "status": "ok",
    "via": "http",
-   "seconds": 3
+   "seconds": 4
   },
   {
    "id": "biocyte",
@@ -78,7 +78,7 @@
    "offers": 6,
    "status": "ok",
    "via": "http",
-   "seconds": 11
+   "seconds": 10
   },
   {
    "id": "supersmart-fr",
@@ -88,7 +88,7 @@
    "offers": 9,
    "status": "ok",
    "via": "http",
-   "seconds": 38
+   "seconds": 31
   },
   {
    "id": "pharma-gdd",
@@ -98,7 +98,7 @@
    "offers": 63,
    "status": "ok",
    "via": "http",
-   "seconds": 86
+   "seconds": 81
   },
   {
    "id": "pharmashopi",
@@ -108,17 +108,17 @@
    "offers": 52,
    "status": "ok",
    "via": "http",
-   "seconds": 153
+   "seconds": 136
   },
   {
    "id": "cocooncenter",
-   "pages": 24,
+   "pages": 31,
    "blocked": 0,
    "errors": 0,
-   "offers": 22,
+   "offers": 30,
    "status": "ok",
    "via": "http",
-   "seconds": 65
+   "seconds": 78
   },
   {
    "id": "newpharma-fr",
@@ -128,7 +128,7 @@
    "offers": 249,
    "status": "ok",
    "via": "http",
-   "seconds": 892
+   "seconds": 798
   },
   {
    "id": "atida-fr",
@@ -138,7 +138,7 @@
    "offers": 153,
    "status": "ok",
    "via": "http",
-   "seconds": 542
+   "seconds": 446
   },
   {
    "id": "bulk-fr",
@@ -148,7 +148,7 @@
    "offers": 10,
    "status": "ok",
    "via": "http",
-   "seconds": 95
+   "seconds": 90
   },
   {
    "id": "granions",
@@ -178,7 +178,7 @@
    "offers": 1,
    "status": "ok",
    "via": "http",
-   "seconds": 6
+   "seconds": 5
   },
   {
    "id": "hsn",
@@ -188,7 +188,7 @@
    "offers": 11,
    "status": "ok",
    "via": "http",
-   "seconds": 21
+   "seconds": 29
   },
   {
    "id": "myprotein-es",
@@ -198,7 +198,7 @@
    "offers": 11,
    "status": "ok",
    "via": "http",
-   "seconds": 21
+   "seconds": 20
   },
   {
    "id": "bulk-es",
@@ -208,7 +208,7 @@
    "offers": 10,
    "status": "ok",
    "via": "http",
-   "seconds": 96
+   "seconds": 89
   },
   {
    "id": "bulevip",
@@ -218,7 +218,7 @@
    "offers": 30,
    "status": "ok",
    "via": "http",
-   "seconds": 65
+   "seconds": 63
   },
   {
    "id": "nutritienda",
@@ -228,17 +228,17 @@
    "offers": 152,
    "status": "ok",
    "via": "http",
-   "seconds": 480
+   "seconds": 463
   },
   {
    "id": "dosfarma",
-   "pages": 288,
+   "pages": 291,
    "blocked": 0,
    "errors": 0,
-   "offers": 282,
+   "offers": 285,
    "status": "ok",
    "via": "http",
-   "seconds": 878
+   "seconds": 773
   },
   {
    "id": "promofarma",
@@ -248,7 +248,7 @@
    "offers": 396,
    "status": "ok",
    "via": "http",
-   "seconds": 829
+   "seconds": 791
   },
   {
    "id": "atida-es",
@@ -258,7 +258,7 @@
    "offers": 289,
    "status": "ok",
    "via": "http",
-   "seconds": 1018
+   "seconds": 867
   },
   {
    "id": "drasanvi",
@@ -268,7 +268,7 @@
    "offers": 7,
    "status": "ok",
    "via": "http",
-   "seconds": 58
+   "seconds": 69
   },
   {
    "id": "puroomega",
@@ -278,7 +278,7 @@
    "offers": 10,
    "status": "ok",
    "via": "http",
-   "seconds": 25
+   "seconds": 27
   },
   {
    "id": "farmaciasdirect",
@@ -288,7 +288,7 @@
    "offers": 57,
    "status": "ok",
    "via": "http",
-   "seconds": 224
+   "seconds": 218
   },
   {
    "id": "norsan",
@@ -298,7 +298,7 @@
    "offers": 16,
    "status": "ok",
    "via": "http",
-   "seconds": 34
+   "seconds": 39
   },
   {
    "id": "lamberts-es",
@@ -308,7 +308,7 @@
    "offers": 12,
    "status": "ok",
    "via": "http",
-   "seconds": 58
+   "seconds": 54
   },
   {
    "id": "nutergia-es",
@@ -318,7 +318,7 @@
    "offers": 0,
    "status": "empty",
    "via": "http",
-   "seconds": 8
+   "seconds": 7
   },
   {
    "id": "vitae",
@@ -328,7 +328,7 @@
    "offers": 1,
    "status": "ok",
    "via": "http",
-   "seconds": 13
+   "seconds": 15
   },
   {
    "id": "ecoceutics",
@@ -348,7 +348,7 @@
    "offers": 5,
    "status": "ok",
    "via": "http",
-   "seconds": 7
+   "seconds": 10
   },
   {
    "id": "gemaherrerias",
@@ -368,7 +368,7 @@
    "offers": 34,
    "status": "ok",
    "via": "http",
-   "seconds": 138
+   "seconds": 156
   },
   {
    "id": "docmorris-fr",
@@ -378,17 +378,17 @@
    "offers": 394,
    "status": "ok",
    "via": "http",
-   "seconds": 835
+   "seconds": 802
   },
   {
    "id": "easypara",
-   "pages": 32,
-   "blocked": 4,
+   "pages": 114,
+   "blocked": 0,
    "errors": 0,
-   "offers": 32,
+   "offers": 114,
    "status": "ok",
    "via": "http",
-   "seconds": 176
+   "seconds": 459
   },
   {
    "id": "pharmaciedesdrakkars",
@@ -398,7 +398,7 @@
    "offers": 91,
    "status": "ok",
    "via": "http",
-   "seconds": 134
+   "seconds": 126
   },
   {
    "id": "parapharmacie-et-medicament",
@@ -408,7 +408,7 @@
    "offers": 75,
    "status": "ok",
    "via": "http",
-   "seconds": 149
+   "seconds": 140
   },
   {
    "id": "pharmaciepolygone",
@@ -418,7 +418,7 @@
    "offers": 46,
    "status": "ok",
    "via": "http",
-   "seconds": 144
+   "seconds": 133
   },
   {
    "id": "farmaciaribera",
@@ -428,7 +428,7 @@
    "offers": 100,
    "status": "ok",
    "via": "http",
-   "seconds": 151
+   "seconds": 147
   },
   {
    "id": "herbolarionavarro",
@@ -438,7 +438,7 @@
    "offers": 29,
    "status": "ok",
    "via": "http",
-   "seconds": 98
+   "seconds": 78
   },
   {
    "id": "arenal",
@@ -448,7 +448,7 @@
    "offers": 13,
    "status": "ok",
    "via": "http",
-   "seconds": 34
+   "seconds": 40
   },
   {
    "id": "nutripure",
@@ -468,18 +468,18 @@
    "offers": 127,
    "status": "ok",
    "via": "browser",
-   "seconds": 694
+   "seconds": 628
   },
   {
    "id": "greenweez",
    "pages": 13,
-   "blocked": 11,
+   "blocked": 12,
    "errors": 0,
    "offers": 12,
    "status": "ok",
    "via": "browser",
    "partial": "time budget 480s reached",
-   "seconds": 489
+   "seconds": 503
   }
  ]
 }
