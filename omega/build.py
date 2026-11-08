@@ -340,7 +340,11 @@ def carry_over(products, report, max_age_days=7):
             continue
         carried.update(o["source"] for o in keep)
         if g["id"] in by_id:
-            by_id[g["id"]]["offers"].extend(keep)
+            cur = by_id[g["id"]]
+            cur["offers"].extend(keep)
+            # Carried eur_per_g was priced from last run's composition; keep it with the offers.
+            if not cur["comp"] and any(o.get("eur_per_g") for o in keep):
+                cur["comp"] = g.get("comp")
         else:
             g = dict(g, offers=keep)
             products.append(g)
@@ -494,6 +498,10 @@ def export_site(out):
     for g in out["products"]:
         offers = [o for o in g["offers"] if o.get("eur_per_g")]
         if not offers:
+            continue
+        if not g["comp"]:
+            print(f"warning: {g['id']} has priced offers but no composition; left off the site",
+                  file=sys.stderr)
             continue
         rows.append((g, offers))
     # Merge SKUs of the same product sold in other pack sizes or under other listing names.
