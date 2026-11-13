@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-12T12:12:37+00:00",
+ "fetched_at": "2026-11-13T11:51:56+00:00",
  "brands": [
   {
    "id": "PLLF",
@@ -1444,6 +1444,112 @@
  ],
  "products": [
   {
+   "id": "ESIS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESIS0001",
+   "name": "OMEGA 3 Extra Pure",
+   "summary": "Omega 3 Extra Pure by ESI is an innovative food supplement rich in Omega 3. A very special technology avoids the return of taste and bad smell.",
+   "type": "Capsules",
+   "rda": "1-5 capsules daily",
+   "lots": 45,
+   "lot_label": "Lot #: C247K (Jul 31, 2028)",
+   "lot": "C247K",
+   "expiry": "Jul 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/ESI%20srl%20C247K%2053112026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 430.0,
+     "measured": 430.0
+    },
+    "dha": {
+     "label": 215.0,
+     "measured": 219.0
+    },
+    "total_o3": {
+     "label": 734.0,
+     "measured": 754.0
+    },
+    "totox": "11",
+    "peroxide": "2.10",
+    "anisidine": "6.8",
+    "acid_value": "0.83",
+    "mercury": "<0.03",
+    "lead": "<0.02",
+    "pcbs": "20",
+    "dioxins": "0.199",
+    "dl_pcbs": "0.297"
+   },
+   "brand_id": "ESIS",
+   "brand": "ESI srl"
+  },
+  {
+   "id": "HSNS0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0002",
+   "name": "Premium Omega-3 TG 1000mg",
+   "summary": "HSN Premium Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each softgel contains at least 500mg of EPA and 250mg of DHA.",
+   "type": "Softgels",
+   "rda": "1 softgel a day",
+   "lots": 12,
+   "lot_label": "Lot #: 260112E3 (Jan 31, 2029)",
+   "lot": "260112E3",
+   "expiry": "Jan 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260112E3%202622026%20Report%20Rev%2001.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 543.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 274.0
+    },
+    "totox": "12.84",
+    "peroxide": "1.88",
+    "anisidine": "9.08",
+    "acid_value": "0.35",
+    "mercury": "<0.0120",
+    "lead": "<0.0064",
+    "pcbs": "5.37"
+   },
+   "brand_id": "HSNS",
+   "brand": "HSN - Harrison Sport Nutrition S.L."
+  },
+  {
+   "id": "HSNS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0001",
+   "name": "Ultra Omega-3 TG 1000mg",
+   "summary": "HSN Ultra Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each capsule contains at least 350mg of EPA and 250mg of DHA. The softgels contain D-alpha-tocopherol as antioxidant for slowing down lipid oxidation and extend oil’s shelf life at customer’s home.",
+   "type": "Softgels",
+   "rda": "1 softgel a day",
+   "lots": 22,
+   "lot_label": "Lot #: 260720E3 - 240 Softgels (Jul 31, 2029)",
+   "lot": "260720E3",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260720E3%2038602026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 352.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 260.0
+    },
+    "total_o3": {
+     "label": 600.0,
+     "measured": 705.0
+    },
+    "totox": "16.83",
+    "peroxide": "5",
+    "anisidine": "6.83",
+    "acid_value": "0.39",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "5.05"
+   },
+   "brand_id": "HSNS",
+   "brand": "HSN - Harrison Sport Nutrition S.L."
+  },
+  {
    "id": "WHCC00009",
    "page": "https://certifications.nutrasource.ca/certified-products/product?id=WHCC00009",
    "name": "B-HADA",
@@ -1797,170 +1903,72 @@
    "brand": "WHC Labs BV"
   },
   {
-   "id": "ZENE0002",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0002",
-   "name": "Zenement Omega-3",
-   "summary": "Zenement Omega-3 is a purified and concentrated omega-3 fish oil product in ethyl ester (EE) form. Each softgel contains a minimum of 65% omega-3 concentration, with 350 mg of EPA and 250 mg of DHA.",
-   "type": "Capsules",
-   "rda": "Take 1-2 softgels per day with meals",
-   "lots": 4,
-   "lot_label": "Lot #: FY260038 (Apr 28, 2028)",
-   "lot": "FY260038",
-   "expiry": "Apr 28, 2028",
-   "report_url": "https://andi.nutrasource.ca/files/Zenement%20Omega-3%20-%20exp%2028-04-2028%20-%20FY260038%2028662026%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 350.0,
-     "measured": 358.0
-    },
-    "dha": {
-     "label": 250.0,
-     "measured": 253.0
-    },
-    "total_o3": {
-     "label": 650.0,
-     "measured": 721.0
-    },
-    "totox": "10.4",
-    "peroxide": "1.8",
-    "anisidine": "6.8",
-    "acid_value": "0.54",
-    "mercury": "<0.01",
-    "lead": "<0.02",
-    "pcbs": "8.51"
-   },
-   "brand_id": "ZENE",
-   "brand": "Zenement"
-  },
-  {
-   "id": "ZENE0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0001",
-   "name": "Zenement Premium Omega-3",
-   "summary": "Zenement Premium Omega-3 is a purified and highly concentrated omega-3 fish oil product in triglyceride (TG) form. Each softgel contains a minimum of 80% omega-3 concentration, with 500 mg of EPA and 250 mg of DHA.",
-   "type": "Capsules",
-   "rda": "Take 1-2 softgels per day with meals",
-   "lots": 6,
-   "lot_label": "Lot #: A-0407 (Mar 25, 2029)",
-   "lot": "A",
-   "expiry": "Mar 25, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Bitio%20Project%20S.L.%2051312026%20Premium%20Omega-3%20exp%2025-03-2029%20-%20VS260344%20-%20A-0407.pdf",
-   "report": {
-    "epa": {
-     "label": 500.0,
-     "measured": 520.0
-    },
-    "dha": {
-     "label": 250.0,
-     "measured": 268.0
-    },
-    "total_o3": {
-     "label": 800.0,
-     "measured": 912.0
-    },
-    "totox": "13.16",
-    "peroxide": "1.58",
-    "anisidine": "10.00",
-    "acid_value": "0.06",
-    "mercury": "<0.0124",
-    "lead": "<0.0066",
-    "pcbs": "5.372387"
-   },
-   "brand_id": "ZENE",
-   "brand": "Zenement"
-  },
-  {
-   "id": "NANU0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0001",
-   "name": "FISH OIL‑BASED – DIETARY SUPPLEMENT IN SOFTGEL CAPSULES. GLUTEN‑FREE",
-   "summary": "",
+   "id": "LFPR0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LFPR0001",
+   "name": "OMEGA PRO",
+   "summary": "OMEGA PRO is a clean and highly concentrated fish oil product. Each softgel contains a minimum 360 mg of EPA and 240 mg of DHA.",
    "type": "Softgels",
-   "rda": "Take two Softgels daily with main meals or as professionally directed.",
-   "lots": 0,
-   "brand_id": "NANU",
-   "brand": "Natural Nutrition"
-  },
-  {
-   "id": "NANU0002",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0002",
-   "name": "FISH OIL‑BASED – DIETARY SUPPLEMENT IN SOFTGEL CAPSULES. GLUTEN‑FREE",
-   "summary": "",
-   "type": "Softgels",
-   "rda": "Take two Softgels daily with main meals or as professionally directed.",
-   "lots": 0,
-   "brand_id": "NANU",
-   "brand": "Natural Nutrition"
-  },
-  {
-   "id": "VNBS0002",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0002",
-   "name": "Omega 3 rico en DHA",
-   "summary": "DHA-rich Omega 3 is formulated to aid in brain health, vision, and male fertility. It is composed of Omegatex® 0076TG and 8000TG fish oils that come exclusively from body oils of wild fish, specifically anchovies, sardines and mackerel from the Pacific, Atlantic or Western Indian Oceans. Omegatex® 0076TG and 8000TG fish oils meet the demanding standards of the international organization GOED and a",
-   "type": "Capsules",
-   "rda": "Take 1 capsule a day.",
-   "lots": 4,
-   "lot_label": "Lot #: 1326.4 (Sep 30, 2029)",
-   "lot": "1326.4",
-   "expiry": "Sep 30, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.4%2049002026%20Product%20Approval%20Report.pdf",
+   "rda": "3 softgels daily.",
+   "lots": 23,
+   "lot_label": "Lot #: 26-1390 (Dec 31, 2028)",
+   "lot": "26",
+   "expiry": "Dec 31, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/LIFE%20PRO%20NUTRITION%2026-1390%20Report.pdf",
    "report": {
     "epa": {
-     "label": 121.05,
-     "measured": 148.0
+     "label": 360.0,
+     "measured": 385.0
     },
     "dha": {
-     "label": 800.0,
-     "measured": 804.0
+     "label": 240.0,
+     "measured": 275.0
     },
-    "total_o3": {
-     "label": 948.35,
-     "measured": 1028.0
-    },
-    "totox": "15.79",
-    "peroxide": "0.11",
-    "anisidine": "15.57",
-    "acid_value": "0.22",
-    "mercury": "<0.0125",
-    "lead": "<0.0067",
-    "pcbs": "0.739657"
-   },
-   "brand_id": "VNBS",
-   "brand": "Vinabas Formulations SL (IVB Wellness)"
-  },
-  {
-   "id": "VNBS0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0001",
-   "name": "Omega rico en EPA",
-   "summary": "EPA-rich omega-3s are formulated to support cardiovascular health , mental well-being , and inflammation control . Thanks to its high concentration of EPA, it's ideal for improving heart health, assisting with mental health conditions like anxiety and depression, and combating chronic inflammation. It is composed of Omegatex® 5020TG fish oil, which comes exclusively from the body oils of wild fish",
-   "type": "Capsules",
-   "rda": "Take 2 capsules a day.",
-   "lots": 4,
-   "lot_label": "Lot #: 1326.3 (Aug 31, 2029)",
-   "lot": "1326.3",
-   "expiry": "Aug 31, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.3%2044532026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 500.0,
-     "measured": 526.0
-    },
-    "dha": {
-     "label": 200.0,
-     "measured": 219.0
-    },
-    "total_o3": {
-     "label": 750.0,
-     "measured": 862.0
-    },
-    "totox": "5.61",
-    "peroxide": "0.07",
-    "anisidine": "5.47",
-    "acid_value": "0.20",
+    "totox": "11.32",
+    "peroxide": "2.27",
+    "anisidine": "6.78",
+    "acid_value": "0.12",
     "mercury": "<0.0124",
-    "lead": "<0.0066",
-    "pcbs": "1.79"
+    "lead": "0.0096",
+    "pcbs": "0.105"
    },
-   "brand_id": "VNBS",
-   "brand": "Vinabas Formulations SL (IVB Wellness)"
+   "brand_id": "LFPR",
+   "brand": "LIFE PRO NUTRITION"
+  },
+  {
+   "id": "NUTE0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NUTE0001",
+   "name": "Omega 3 Complex",
+   "summary": "Food supplement based on fish oil and vitamins. Ingredients: Fish oil, Capsule (gelatin, humectant (glycerin), water), D-Alpha-Tocopherol (vitamin E), cholecalciferol (vitamin D).",
+   "type": "Softgels",
+   "rda": "2 softgels a day with a glass of water.",
+   "lots": 1,
+   "lot_label": "Lot #: 2126.5 (Jul 31, 2029)",
+   "lot": "2126.5",
+   "expiry": "Jul 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Nutriexperts%20S.L%202126.5%2037762026%20Product%20Approval%20Report%20Rev%202.pdf",
+   "report": {
+    "epa": {
+     "label": 903.26,
+     "measured": 911.0
+    },
+    "dha": {
+     "label": 353.44,
+     "measured": 369.0
+    },
+    "total_o3": {
+     "label": 1433.4,
+     "measured": 1501.0
+    },
+    "totox": "11.83",
+    "peroxide": "3.38",
+    "anisidine": "5.07",
+    "acid_value": "0.27",
+    "mercury": "<0.0121",
+    "lead": "<0.0064",
+    "pcbs": "2.33"
+   },
+   "brand_id": "NUTE",
+   "brand": "Nutralie"
   },
   {
    "id": "SANO0006",
@@ -2253,176 +2261,40 @@
    "brand": "Norsan GmbH"
   },
   {
-   "id": "LEXT0003",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0003",
-   "name": "Omega-3 Fish Oil Gummy Bites",
-   "summary": "",
-   "type": "Gummies",
-   "rda": "Take one (1) gummy bite daily or as recommended by a healthcare practitioner.",
-   "lots": 1,
-   "lot_label": "Lot #: 44006213 (Feb 29, 2028)",
-   "lot": "44006213",
-   "expiry": "Feb 29, 2028",
-   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%2044006213%2042152026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 300.0,
-     "measured": 330.0
-    },
-    "dha": {
-     "label": 225.0,
-     "measured": 248.0
-    },
-    "total_o3": {
-     "label": 600.0,
-     "measured": 656.0
-    },
-    "totox": "1.50",
-    "peroxide": "0.06",
-    "anisidine": "1.38",
-    "acid_value": "0.15",
-    "mercury": "<0.0112",
-    "lead": "<0.0060",
-    "pcbs": "0.0621"
-   },
-   "brand_id": "LEXT",
-   "brand": "Life Extension"
-  },
-  {
-   "id": "LEXT0002",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0002",
-   "name": "Super Omega-3 EPA/DHA",
-   "summary": "Life Extension Super Omega-3 is a clean and highly concentrated omega-3 fish oil product. Each 1000 mg sample contains a minimum 60% omega-3 concentration as combined EPA and DHA, as well as polyphen-oil TM olive fruit extract and sesame seed lignin extract.",
-   "type": "Softgels",
-   "rda": "Take two softgels twice daily with meals or as recommended by a healthcare practitioner",
-   "lots": 108,
-   "lot_label": "Lot #: 260519 (Sep 30, 2028)",
-   "lot": "260519",
-   "expiry": "Sep 30, 2028",
-   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%20260519%2052732026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 700.0,
-     "measured": 747.0
-    },
-    "dha": {
-     "label": 500.0,
-     "measured": 501.0
-    },
-    "totox": "6.76",
-    "peroxide": "1.98",
-    "anisidine": "2.8",
-    "acid_value": "0.5",
-    "mercury": "<0.0121",
-    "lead": "<0.0065",
-    "pcbs": "1.107255"
-   },
-   "brand_id": "LEXT",
-   "brand": "Life Extension"
-  },
-  {
-   "id": "NSPO0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NSPO0001",
-   "name": "Omega 3 Double Plus",
-   "summary": "Omega3 Double Plus is a clean and naturally concentrated fish oil, containing 56% EPA and 23% DHA Fatty Acids.",
-   "type": "Softgels",
-   "rda": "Serving size: 1 to 4 softgels per day.",
-   "lots": 13,
-   "lot_label": "Lot #: D287V (Jun 30, 2029)",
-   "lot": "D287V",
-   "expiry": "Jun 30, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Namedsport%20srl%20D287V%2035782026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 530.0,
-     "measured": 593.0
-    },
-    "dha": {
-     "label": 210.0,
-     "measured": 264.0
-    },
-    "total_o3": {
-     "label": 840.0,
-     "measured": 957.0
-    },
-    "totox": "11.01",
-    "peroxide": "0.52",
-    "anisidine": "9.97",
-    "acid_value": "0.52",
-    "mercury": "<0.0123",
-    "lead": "<0.0065",
-    "pcbs": "1.10"
-   },
-   "brand_id": "NSPO",
-   "brand": "Namedsport srl"
-  },
-  {
-   "id": "HSNS0002",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0002",
-   "name": "Premium Omega-3 TG 1000mg",
-   "summary": "HSN Premium Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each softgel contains at least 500mg of EPA and 250mg of DHA.",
-   "type": "Softgels",
-   "rda": "1 softgel a day",
-   "lots": 12,
-   "lot_label": "Lot #: 260112E3 (Jan 31, 2029)",
-   "lot": "260112E3",
-   "expiry": "Jan 31, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260112E3%202622026%20Report%20Rev%2001.pdf",
-   "report": {
-    "epa": {
-     "label": 500.0,
-     "measured": 543.0
-    },
-    "dha": {
-     "label": 250.0,
-     "measured": 274.0
-    },
-    "totox": "12.84",
-    "peroxide": "1.88",
-    "anisidine": "9.08",
-    "acid_value": "0.35",
-    "mercury": "<0.0120",
-    "lead": "<0.0064",
-    "pcbs": "5.37"
-   },
-   "brand_id": "HSNS",
-   "brand": "HSN - Harrison Sport Nutrition S.L."
-  },
-  {
-   "id": "HSNS0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=HSNS0001",
-   "name": "Ultra Omega-3 TG 1000mg",
-   "summary": "HSN Ultra Omega-3 TG 1000mg is a clean and highly concentrated fish oil in omega-3 natural triglycerides. Each capsule contains at least 350mg of EPA and 250mg of DHA. The softgels contain D-alpha-tocopherol as antioxidant for slowing down lipid oxidation and extend oil’s shelf life at customer’s home.",
-   "type": "Softgels",
-   "rda": "1 softgel a day",
-   "lots": 22,
-   "lot_label": "Lot #: 260720E3 - 240 Softgels (Jul 31, 2029)",
-   "lot": "260720E3",
-   "expiry": "Jul 31, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/HSN%20-%20Harrison%20Sport%20Nutrition%20S.L.%20260720E3%2038602026%20Product%20Approval%20Report.pdf",
+   "id": "O3SG0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=O3SG0001",
+   "name": "OMEGA 3 FISH OIL",
+   "summary": "Food supplement. Capsules to swallow with omega-3 fatty acids containing fish oil.",
+   "type": "Capsules",
+   "rda": "2",
+   "lots": 4,
+   "lot_label": "Lot #: A4803 (Sep 30, 2029)",
+   "lot": "A4803",
+   "expiry": "Sep 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Weider%20Nutrition%20A4803%2048392026%20Product%20Approval%20Report.pdf",
    "report": {
     "epa": {
      "label": 350.0,
-     "measured": 352.0
+     "measured": 350.0
     },
     "dha": {
      "label": 250.0,
-     "measured": 260.0
+     "measured": 251.0
     },
     "total_o3": {
      "label": 600.0,
-     "measured": 705.0
+     "measured": 685.0
     },
-    "totox": "16.83",
-    "peroxide": "5",
-    "anisidine": "6.83",
-    "acid_value": "0.39",
-    "mercury": "<0.0125",
-    "lead": "<0.0067",
-    "pcbs": "5.05"
+    "totox": "15.47",
+    "peroxide": "3.23",
+    "anisidine": "9.01",
+    "acid_value": "0.35",
+    "mercury": "<0.0111",
+    "lead": "<0.0059",
+    "pcbs": "2.700105"
    },
-   "brand_id": "HSNS",
-   "brand": "HSN - Harrison Sport Nutrition S.L."
+   "brand_id": "WEIN",
+   "brand": "Weider Nutrition"
   },
   {
    "id": "PURO0001",
@@ -2645,6 +2517,146 @@
    "brand": "Puro Omega"
   },
   {
+   "id": "NSPO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NSPO0001",
+   "name": "Omega 3 Double Plus",
+   "summary": "Omega3 Double Plus is a clean and naturally concentrated fish oil, containing 56% EPA and 23% DHA Fatty Acids.",
+   "type": "Softgels",
+   "rda": "Serving size: 1 to 4 softgels per day.",
+   "lots": 13,
+   "lot_label": "Lot #: D287V (Jun 30, 2029)",
+   "lot": "D287V",
+   "expiry": "Jun 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Namedsport%20srl%20D287V%2035782026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 530.0,
+     "measured": 593.0
+    },
+    "dha": {
+     "label": 210.0,
+     "measured": 264.0
+    },
+    "total_o3": {
+     "label": 840.0,
+     "measured": 957.0
+    },
+    "totox": "11.01",
+    "peroxide": "0.52",
+    "anisidine": "9.97",
+    "acid_value": "0.52",
+    "mercury": "<0.0123",
+    "lead": "<0.0065",
+    "pcbs": "1.10"
+   },
+   "brand_id": "NSPO",
+   "brand": "Namedsport srl"
+  },
+  {
+   "id": "ZENE0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0002",
+   "name": "Zenement Omega-3",
+   "summary": "Zenement Omega-3 is a purified and concentrated omega-3 fish oil product in ethyl ester (EE) form. Each softgel contains a minimum of 65% omega-3 concentration, with 350 mg of EPA and 250 mg of DHA.",
+   "type": "Capsules",
+   "rda": "Take 1-2 softgels per day with meals",
+   "lots": 4,
+   "lot_label": "Lot #: FY260038 (Apr 28, 2028)",
+   "lot": "FY260038",
+   "expiry": "Apr 28, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Zenement%20Omega-3%20-%20exp%2028-04-2028%20-%20FY260038%2028662026%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 350.0,
+     "measured": 358.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 253.0
+    },
+    "total_o3": {
+     "label": 650.0,
+     "measured": 721.0
+    },
+    "totox": "10.4",
+    "peroxide": "1.8",
+    "anisidine": "6.8",
+    "acid_value": "0.54",
+    "mercury": "<0.01",
+    "lead": "<0.02",
+    "pcbs": "8.51"
+   },
+   "brand_id": "ZENE",
+   "brand": "Zenement"
+  },
+  {
+   "id": "ZENE0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ZENE0001",
+   "name": "Zenement Premium Omega-3",
+   "summary": "Zenement Premium Omega-3 is a purified and highly concentrated omega-3 fish oil product in triglyceride (TG) form. Each softgel contains a minimum of 80% omega-3 concentration, with 500 mg of EPA and 250 mg of DHA.",
+   "type": "Capsules",
+   "rda": "Take 1-2 softgels per day with meals",
+   "lots": 6,
+   "lot_label": "Lot #: A-0407 (Mar 25, 2029)",
+   "lot": "A",
+   "expiry": "Mar 25, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Bitio%20Project%20S.L.%2051312026%20Premium%20Omega-3%20exp%2025-03-2029%20-%20VS260344%20-%20A-0407.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 520.0
+    },
+    "dha": {
+     "label": 250.0,
+     "measured": 268.0
+    },
+    "total_o3": {
+     "label": 800.0,
+     "measured": 912.0
+    },
+    "totox": "13.16",
+    "peroxide": "1.58",
+    "anisidine": "10.00",
+    "acid_value": "0.06",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "5.372387"
+   },
+   "brand_id": "ZENE",
+   "brand": "Zenement"
+  },
+  {
+   "id": "PRMO0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PRMO0001",
+   "name": "OmegaRX3® 1200",
+   "summary": "OmegaRX3 1200 is a food supplement made up of omega 3 (EPA and DHA) from fish oil. Omega 3s play an important role in the body as components of the phospholipids that form the structures of cell membranes. They provide energy for the body and affect the endocrine, pulmonary, immune system.",
+   "type": "Capsules",
+   "rda": "It is recommended to take 1 (EPA 432 mg, DHA 288 mg) to 5 (EPA 2.16 g, DHA 1.44 g) pearls per day, preferably during meals depending on the specific EPA and DHA requirement.",
+   "lots": 4,
+   "lot_label": "Lot #: 14092 (Aug 31, 2030)",
+   "lot": "14092",
+   "expiry": "Aug 31, 2030",
+   "report_url": "https://andi.nutrasource.ca/files/PromoPharma%20SPA%2014092%2039762026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 432.0,
+     "measured": 432.0
+    },
+    "dha": {
+     "label": 288.0,
+     "measured": 289.0
+    },
+    "totox": "12.38",
+    "peroxide": "2.41",
+    "anisidine": "7.56",
+    "acid_value": "0.46",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "1.13"
+   },
+   "brand_id": "PRMO",
+   "brand": "PromoPharma SPA"
+  },
+  {
    "id": "KOBH0001",
    "page": "https://certifications.nutrasource.ca/certified-products/product?id=KOBH0001",
    "name": "Omega 3",
@@ -2681,146 +2693,72 @@
    "brand": "Kobho Labs"
   },
   {
-   "id": "O3SG0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=O3SG0001",
-   "name": "OMEGA 3 FISH OIL",
-   "summary": "Food supplement. Capsules to swallow with omega-3 fatty acids containing fish oil.",
-   "type": "Capsules",
-   "rda": "2",
-   "lots": 4,
-   "lot_label": "Lot #: A4803 (Sep 30, 2029)",
-   "lot": "A4803",
-   "expiry": "Sep 30, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Weider%20Nutrition%20A4803%2048392026%20Product%20Approval%20Report.pdf",
+   "id": "LEXT0003",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0003",
+   "name": "Omega-3 Fish Oil Gummy Bites",
+   "summary": "",
+   "type": "Gummies",
+   "rda": "Take one (1) gummy bite daily or as recommended by a healthcare practitioner.",
+   "lots": 1,
+   "lot_label": "Lot #: 44006213 (Feb 29, 2028)",
+   "lot": "44006213",
+   "expiry": "Feb 29, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%2044006213%2042152026%20Product%20Approval%20Report.pdf",
    "report": {
     "epa": {
-     "label": 350.0,
-     "measured": 350.0
+     "label": 300.0,
+     "measured": 330.0
     },
     "dha": {
-     "label": 250.0,
-     "measured": 251.0
+     "label": 225.0,
+     "measured": 248.0
     },
     "total_o3": {
      "label": 600.0,
-     "measured": 685.0
+     "measured": 656.0
     },
-    "totox": "15.47",
-    "peroxide": "3.23",
-    "anisidine": "9.01",
-    "acid_value": "0.35",
-    "mercury": "<0.0111",
-    "lead": "<0.0059",
-    "pcbs": "2.700105"
+    "totox": "1.50",
+    "peroxide": "0.06",
+    "anisidine": "1.38",
+    "acid_value": "0.15",
+    "mercury": "<0.0112",
+    "lead": "<0.0060",
+    "pcbs": "0.0621"
    },
-   "brand_id": "WEIN",
-   "brand": "Weider Nutrition"
+   "brand_id": "LEXT",
+   "brand": "Life Extension"
   },
   {
-   "id": "ESIS0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=ESIS0001",
-   "name": "OMEGA 3 Extra Pure",
-   "summary": "Omega 3 Extra Pure by ESI is an innovative food supplement rich in Omega 3. A very special technology avoids the return of taste and bad smell.",
-   "type": "Capsules",
-   "rda": "1-5 capsules daily",
-   "lots": 45,
-   "lot_label": "Lot #: C247K (Jul 31, 2028)",
-   "lot": "C247K",
-   "expiry": "Jul 31, 2028",
-   "report_url": "https://andi.nutrasource.ca/files/ESI%20srl%20C247K%2053112026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 430.0,
-     "measured": 430.0
-    },
-    "dha": {
-     "label": 215.0,
-     "measured": 219.0
-    },
-    "total_o3": {
-     "label": 734.0,
-     "measured": 754.0
-    },
-    "totox": "11",
-    "peroxide": "2.10",
-    "anisidine": "6.8",
-    "acid_value": "0.83",
-    "mercury": "<0.03",
-    "lead": "<0.02",
-    "pcbs": "20",
-    "dioxins": "0.199",
-    "dl_pcbs": "0.297"
-   },
-   "brand_id": "ESIS",
-   "brand": "ESI srl"
-  },
-  {
-   "id": "NUTE0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NUTE0001",
-   "name": "Omega 3 Complex",
-   "summary": "Food supplement based on fish oil and vitamins. Ingredients: Fish oil, Capsule (gelatin, humectant (glycerin), water), D-Alpha-Tocopherol (vitamin E), cholecalciferol (vitamin D).",
+   "id": "LEXT0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LEXT0002",
+   "name": "Super Omega-3 EPA/DHA",
+   "summary": "Life Extension Super Omega-3 is a clean and highly concentrated omega-3 fish oil product. Each 1000 mg sample contains a minimum 60% omega-3 concentration as combined EPA and DHA, as well as polyphen-oil TM olive fruit extract and sesame seed lignin extract.",
    "type": "Softgels",
-   "rda": "2 softgels a day with a glass of water.",
-   "lots": 1,
-   "lot_label": "Lot #: 2126.5 (Jul 31, 2029)",
-   "lot": "2126.5",
-   "expiry": "Jul 31, 2029",
-   "report_url": "https://andi.nutrasource.ca/files/Nutriexperts%20S.L%202126.5%2037762026%20Product%20Approval%20Report%20Rev%202.pdf",
+   "rda": "Take two softgels twice daily with meals or as recommended by a healthcare practitioner",
+   "lots": 108,
+   "lot_label": "Lot #: 260519 (Sep 30, 2028)",
+   "lot": "260519",
+   "expiry": "Sep 30, 2028",
+   "report_url": "https://andi.nutrasource.ca/files/Life%20Extension%20260519%2052732026%20Product%20Approval%20Report.pdf",
    "report": {
     "epa": {
-     "label": 903.26,
-     "measured": 911.0
+     "label": 700.0,
+     "measured": 747.0
     },
     "dha": {
-     "label": 353.44,
-     "measured": 369.0
+     "label": 500.0,
+     "measured": 501.0
     },
-    "total_o3": {
-     "label": 1433.4,
-     "measured": 1501.0
-    },
-    "totox": "11.83",
-    "peroxide": "3.38",
-    "anisidine": "5.07",
-    "acid_value": "0.27",
+    "totox": "6.76",
+    "peroxide": "1.98",
+    "anisidine": "2.8",
+    "acid_value": "0.5",
     "mercury": "<0.0121",
-    "lead": "<0.0064",
-    "pcbs": "2.33"
+    "lead": "<0.0065",
+    "pcbs": "1.107255"
    },
-   "brand_id": "NUTE",
-   "brand": "Nutralie"
-  },
-  {
-   "id": "PRMO0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=PRMO0001",
-   "name": "OmegaRX3® 1200",
-   "summary": "OmegaRX3 1200 is a food supplement made up of omega 3 (EPA and DHA) from fish oil. Omega 3s play an important role in the body as components of the phospholipids that form the structures of cell membranes. They provide energy for the body and affect the endocrine, pulmonary, immune system.",
-   "type": "Capsules",
-   "rda": "It is recommended to take 1 (EPA 432 mg, DHA 288 mg) to 5 (EPA 2.16 g, DHA 1.44 g) pearls per day, preferably during meals depending on the specific EPA and DHA requirement.",
-   "lots": 4,
-   "lot_label": "Lot #: 14092 (Aug 31, 2030)",
-   "lot": "14092",
-   "expiry": "Aug 31, 2030",
-   "report_url": "https://andi.nutrasource.ca/files/PromoPharma%20SPA%2014092%2039762026%20Product%20Approval%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 432.0,
-     "measured": 432.0
-    },
-    "dha": {
-     "label": 288.0,
-     "measured": 289.0
-    },
-    "totox": "12.38",
-    "peroxide": "2.41",
-    "anisidine": "7.56",
-    "acid_value": "0.46",
-    "mercury": "<0.0124",
-    "lead": "<0.0066",
-    "pcbs": "1.13"
-   },
-   "brand_id": "PRMO",
-   "brand": "PromoPharma SPA"
+   "brand_id": "LEXT",
+   "brand": "Life Extension"
   },
   {
    "id": "PUOR0001",
@@ -2895,6 +2833,100 @@
    "brand": "Puori, Inc"
   },
   {
+   "id": "VNBS0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0002",
+   "name": "Omega 3 rico en DHA",
+   "summary": "DHA-rich Omega 3 is formulated to aid in brain health, vision, and male fertility. It is composed of Omegatex® 0076TG and 8000TG fish oils that come exclusively from body oils of wild fish, specifically anchovies, sardines and mackerel from the Pacific, Atlantic or Western Indian Oceans. Omegatex® 0076TG and 8000TG fish oils meet the demanding standards of the international organization GOED and a",
+   "type": "Capsules",
+   "rda": "Take 1 capsule a day.",
+   "lots": 4,
+   "lot_label": "Lot #: 1326.4 (Sep 30, 2029)",
+   "lot": "1326.4",
+   "expiry": "Sep 30, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.4%2049002026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 121.05,
+     "measured": 148.0
+    },
+    "dha": {
+     "label": 800.0,
+     "measured": 804.0
+    },
+    "total_o3": {
+     "label": 948.35,
+     "measured": 1028.0
+    },
+    "totox": "15.79",
+    "peroxide": "0.11",
+    "anisidine": "15.57",
+    "acid_value": "0.22",
+    "mercury": "<0.0125",
+    "lead": "<0.0067",
+    "pcbs": "0.739657"
+   },
+   "brand_id": "VNBS",
+   "brand": "Vinabas Formulations SL (IVB Wellness)"
+  },
+  {
+   "id": "VNBS0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=VNBS0001",
+   "name": "Omega rico en EPA",
+   "summary": "EPA-rich omega-3s are formulated to support cardiovascular health , mental well-being , and inflammation control . Thanks to its high concentration of EPA, it's ideal for improving heart health, assisting with mental health conditions like anxiety and depression, and combating chronic inflammation. It is composed of Omegatex® 5020TG fish oil, which comes exclusively from the body oils of wild fish",
+   "type": "Capsules",
+   "rda": "Take 2 capsules a day.",
+   "lots": 4,
+   "lot_label": "Lot #: 1326.3 (Aug 31, 2029)",
+   "lot": "1326.3",
+   "expiry": "Aug 31, 2029",
+   "report_url": "https://andi.nutrasource.ca/files/Vinabas%20Formulations%20SL%20%28IVB%20Wellness%29%201326.3%2044532026%20Product%20Approval%20Report.pdf",
+   "report": {
+    "epa": {
+     "label": 500.0,
+     "measured": 526.0
+    },
+    "dha": {
+     "label": 200.0,
+     "measured": 219.0
+    },
+    "total_o3": {
+     "label": 750.0,
+     "measured": 862.0
+    },
+    "totox": "5.61",
+    "peroxide": "0.07",
+    "anisidine": "5.47",
+    "acid_value": "0.20",
+    "mercury": "<0.0124",
+    "lead": "<0.0066",
+    "pcbs": "1.79"
+   },
+   "brand_id": "VNBS",
+   "brand": "Vinabas Formulations SL (IVB Wellness)"
+  },
+  {
+   "id": "NANU0001",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0001",
+   "name": "FISH OIL‑BASED – DIETARY SUPPLEMENT IN SOFTGEL CAPSULES. GLUTEN‑FREE",
+   "summary": "",
+   "type": "Softgels",
+   "rda": "Take two Softgels daily with main meals or as professionally directed.",
+   "lots": 0,
+   "brand_id": "NANU",
+   "brand": "Natural Nutrition"
+  },
+  {
+   "id": "NANU0002",
+   "page": "https://certifications.nutrasource.ca/certified-products/product?id=NANU0002",
+   "name": "FISH OIL‑BASED – DIETARY SUPPLEMENT IN SOFTGEL CAPSULES. GLUTEN‑FREE",
+   "summary": "",
+   "type": "Softgels",
+   "rda": "Take two Softgels daily with main meals or as professionally directed.",
+   "lots": 0,
+   "brand_id": "NANU",
+   "brand": "Natural Nutrition"
+  },
+  {
    "id": "NOWC0001",
    "page": "https://certifications.nutrasource.ca/certified-products/product?id=NOWC0001",
    "name": "NOW Ultra 97% Omega-3 Fish Oil",
@@ -2957,38 +2989,6 @@
    },
    "brand_id": "NOWC",
    "brand": "NOW"
-  },
-  {
-   "id": "LFPR0001",
-   "page": "https://certifications.nutrasource.ca/certified-products/product?id=LFPR0001",
-   "name": "OMEGA PRO",
-   "summary": "OMEGA PRO is a clean and highly concentrated fish oil product. Each softgel contains a minimum 360 mg of EPA and 240 mg of DHA.",
-   "type": "Softgels",
-   "rda": "3 softgels daily.",
-   "lots": 23,
-   "lot_label": "Lot #: 26-1390 (Dec 31, 2028)",
-   "lot": "26",
-   "expiry": "Dec 31, 2028",
-   "report_url": "https://andi.nutrasource.ca/files/LIFE%20PRO%20NUTRITION%2026-1390%20Report.pdf",
-   "report": {
-    "epa": {
-     "label": 360.0,
-     "measured": 385.0
-    },
-    "dha": {
-     "label": 240.0,
-     "measured": 275.0
-    },
-    "totox": "11.32",
-    "peroxide": "2.27",
-    "anisidine": "6.78",
-    "acid_value": "0.12",
-    "mercury": "<0.0124",
-    "lead": "0.0096",
-    "pcbs": "0.105"
-   },
-   "brand_id": "LFPR",
-   "brand": "LIFE PRO NUTRITION"
   }
  ]
 }
