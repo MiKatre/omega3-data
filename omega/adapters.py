@@ -17,7 +17,8 @@ MARINE = re.compile(
 )
 NOT_MARINE = re.compile(
     r"\b(lin|linaza|lino|flax|chia|ch[ií]a|perilla|p[eé]rilla|onagra|primrose|bourrache|borraja|argousier|"
-    r"espino amarillo|sacha inchi|nigelle|n[ée]gra|courge|calabaza|cannabis|chanvre|c[áa]ñamo)\b|"
+    r"espino amarillo|sacha inchi|nigelle|n[ée]gra|courge|calabaza|cannabis|chanvre|c[áa]ñamo|"
+    r"cam[ée]line|camelina)\b|"
     r"\b(perros?|gatos?|chiens?|chats?|mascotas?|pets?|dogs?|cats?|v[ée]t[ée]rinaire|veterinari[ao]|"
     r"caballos?|chevaux)\b|shampoo|champ[uú]|cr[eè]me|crema|s[ée]rum|lotion|gel douche|savon|"
     r"pienso|croquettes|t-shirt|shaker|libro|book|test kit|index test",
@@ -91,6 +92,19 @@ def shopify(src, http, log):
 
 
 # ---------------------------------------------------------------- WooCommerce Store API
+def _woo_price(prices):
+    pr = prices or {}
+    minor = 10 ** int(pr.get("currency_minor_unit", 2))
+    return (int(pr["price"]) / minor if pr.get("price") else None), pr.get("currency_code", "EUR")
+
+
+def _woo_variant_name(raw_variation):
+    if not raw_variation:
+        return None
+    parts = [re.sub(r"^[^:]+:\s*", "", part).strip() for part in raw_variation.split(",")]
+    return " ".join(p for p in parts if p) or None
+
+
 def woo(src, http, log):
     base = src["base"].rstrip("/")
     page = 1
@@ -104,27 +118,55 @@ def woo(src, http, log):
             break
         for p in products:
             name = htmllib.unescape(p["name"])
+            short = strip_html(p.get("short_description"))
             body = strip_html((p.get("short_description") or "") + " \n " + (p.get("description") or ""))
             cats = " ".join(c.get("name", "") for c in p.get("categories", []))
-            if not is_candidate(name, cats, p.get("slug")) or is_excluded(name):
+            if not is_candidate(name, cats, p.get("slug"), short) or is_excluded(name):
                 continue
-            pr = p.get("prices") or {}
-            minor = 10 ** int(pr.get("currency_minor_unit", 2))
-            price = int(pr["price"]) / minor if pr.get("price") else None
-            yield {
-                "url": p.get("permalink"),
-                "product_name": name,
-                "variant_name": None,
-                "brand": (p.get("brands") or [{}])[0].get("name") if p.get("brands") else None,
-                "gtin": None,
-                "sku": p.get("sku"),
-                "price": price,
-                "currency": pr.get("currency_code", "EUR"),
-                "available": p.get("is_in_stock"),
-                "image": (p.get("images") or [{}])[0].get("src"),
-                "text": body,
-                "_needs_page": True,
-            }
+            brand = (p.get("brands") or [{}])[0].get("name") if p.get("brands") else None
+            default_image = (p.get("images") or [{}])[0].get("src")
+            variations = []
+            for v in p.get("variations") or []:
+                vid = v.get("id")
+                if not vid:
+                    continue
+                vraw = http.get(f"{base}/wp-json/wc/store/v1/products/{vid}",
+                                accept="application/json", allow_404=True)
+                if vraw:
+                    variations.append(json.loads(vraw))
+            if variations:
+                for v in variations:
+                    price, currency = _woo_price(v.get("prices"))
+                    yield {
+                        "url": v.get("permalink") or p.get("permalink"),
+                        "product_name": name,
+                        "variant_name": _woo_variant_name(htmllib.unescape(v.get("variation") or "")),
+                        "brand": brand,
+                        "gtin": None,
+                        "sku": v.get("sku") or p.get("sku"),
+                        "price": price,
+                        "currency": currency,
+                        "available": v.get("is_in_stock"),
+                        "image": (v.get("images") or [{}])[0].get("src") or default_image,
+                        "text": body,
+                        "_needs_page": True,
+                    }
+            else:
+                price, currency = _woo_price(p.get("prices"))
+                yield {
+                    "url": p.get("permalink"),
+                    "product_name": name,
+                    "variant_name": None,
+                    "brand": brand,
+                    "gtin": None,
+                    "sku": p.get("sku"),
+                    "price": price,
+                    "currency": currency,
+                    "available": p.get("is_in_stock"),
+                    "image": default_image,
+                    "text": body,
+                    "_needs_page": True,
+                }
         page += 1
 
 

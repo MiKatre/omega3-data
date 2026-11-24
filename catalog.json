@@ -297,7 +297,8 @@
    "name": "Ecoceutics",
    "country": "ES",
    "kind": "woo",
-   "base": "https://www.ecoceutics.com"
+   "base": "https://www.ecoceutics.com",
+   "disabled": true
   },
   {
    "id": "belevels",

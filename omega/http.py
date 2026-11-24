@@ -83,7 +83,12 @@ class Http:
             ):
                 self.stats[host]["blocked"] += 1
                 err = Blocked(f"HTTP {status} {url}")
-                time.sleep(5 * (attempt + 1))
+                backoff = 5 * (attempt + 1)
+                if status in (429, 503):
+                    ra = (r.headers.get("retry-after") or r.headers.get("Retry-After") or "").strip()
+                    if ra.isdigit():
+                        backoff = max(1, min(60, int(ra)))
+                time.sleep(backoff)
                 continue
             if status >= 500:
                 err = FetchError(f"HTTP {status} {url}")

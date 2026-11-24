@@ -14,6 +14,7 @@ import hashlib
 import json
 import os
 import sys
+import threading
 import time
 import traceback
 from datetime import datetime, timezone
@@ -195,18 +196,47 @@ def main(argv=None):
     plain = [s for s in sources if not s.get("browser")]
     via_browser = [s for s in sources if s.get("browser")]
     delay = float(os.environ.get("OMEGA_DELAY", "1.0"))
+    (ROOT / "runs").mkdir(exist_ok=True)
+    report_path = ROOT / "runs" / ("report-browser.json" if args.browser_only else "report.json")
+    report_lock = threading.Lock()
+
+    def write_report(finished=False):
+        with report_lock:
+            if finished:
+                report["finished_at"] = now()
+                report["http"] = http.stats
+            report_path.write_text(json.dumps(report, indent=1))
+
     if not args.browser_only:
+        # Pace Shopify stores serially so all stores do not hit Shopify's shared edge in one burst.
+        shopify_lock = threading.Lock()
+
+        def run_plain(s):
+            client = Http(delay=delay, log=log)
+            if s["kind"] == "shopify":
+                with shopify_lock:
+                    st = run_source(s, client, cache)
+                    time.sleep(delay)
+            else:
+                st = run_source(s, client, cache)
+            with report_lock:
+                report["sources"].append(st)
+            write_report()
+            return st
+
         with cf.ThreadPoolExecutor(args.workers) as ex:
             # One client per source: curl sessions are not shared between threads.
-            for st in ex.map(lambda s: run_source(s, Http(delay=delay, log=log), cache), plain):
-                report["sources"].append(st)
+            list(ex.map(run_plain, plain))
     if args.browser_only:
         # Retry in Chromium the plain sources that were blocked in the HTTP phase.
         prev = ROOT / "runs" / "report.json"
         if prev.exists():
             blocked = {s["id"] for s in json.loads(prev.read_text())["sources"]
                        if not s["offers"] and (s["blocked"] or "blocked" in s["status"])}
-            via_browser += [s for s in plain if s["id"] in blocked]
+            via_browser += [
+                dict(s, budget_s=min(s.get("budget_s", 600), 600))
+                for s in plain if s["id"] in blocked
+            ]
             if blocked:
                 log(f"retrying in browser: {', '.join(sorted(blocked))}")
     if via_browser and not args.no_browser:
@@ -215,12 +245,9 @@ def main(argv=None):
         with Browser(log=log) as br:
             for s in via_browser:
                 report["sources"].append(run_source(s, http, cache, browser=br))
+                write_report()
 
-    report["finished_at"] = now()
-    report["http"] = http.stats
-    (ROOT / "runs").mkdir(exist_ok=True)
-    name = "report-browser.json" if args.browser_only else "report.json"
-    (ROOT / "runs" / name).write_text(json.dumps(report, indent=1))
+    write_report(finished=True)
     ok = sum(1 for s in report["sources"] if s["offers"])
     log(f"done: {ok}/{len(report['sources'])} sources with offers, "
         f"{sum(s['offers'] for s in report['sources'])} offers")
